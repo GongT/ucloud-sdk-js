@@ -13,11 +13,11 @@ export default class Response {
   }
 
   getMessage(): string {
-    return this.data['Message'] || '';
+    return this.data.Message || '';
   }
 
   getRetCode(): number {
-    return this.data['RetCode'] || 0;
+    return this.data.RetCode || 0;
   }
 
   getRequestId(): string {

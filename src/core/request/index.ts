@@ -1,9 +1,12 @@
 type argsT = { [index: string]: any };
 
 export default class Request {
-  data: argsT;
+  readonly data: argsT;
 
-  constructor(data: object, options?: object) {
+  constructor(
+    data: any,
+    protected readonly options?: object
+  ) {
     this.data = data;
   }
 
@@ -14,7 +17,7 @@ export default class Request {
   private encode(args: argsT): argsT {
     const result: argsT = {};
     for (const k in args) {
-      if (args.hasOwnProperty(k)) {
+      if (Object.hasOwn(args, k)) {
         const v: any = args[k];
         if (v == null) {
           continue;
@@ -23,17 +26,19 @@ export default class Request {
         if (Object.prototype.toString.call(v) === '[object Array]') {
           v.forEach((value: any, index: number) => {
             if (value instanceof Object) {
-              Object.entries(this.encode(value)).forEach(([key, value]) => {
-                result[`${k}.${index}.${key}`] = value;
-              });
+              for (const [key, encodedValue] of Object.entries(
+                this.encode(value)
+              )) {
+                result[`${k}.${index}.${key}`] = encodedValue;
+              }
             } else {
               result[`${k}.${index}`] = value;
             }
           });
         } else if (Object.prototype.toString.call(v) === '[object Object]') {
-          Object.entries(this.encode(v)).forEach(([key, value]) => {
+          for (const [key, value] of Object.entries(this.encode(v))) {
             result[`${k}.${key}`] = value;
-          });
+          }
         } else {
           result[k] = v;
         }

@@ -1,7 +1,7 @@
 import Client from '../../core/client';
 import Request from '../../core/request';
-import { ConfigOptions } from '../../core/config';
-import { CredentialOptions } from '../../core/credential';
+import type { ConfigOptions } from '../../core/config';
+import type { CredentialOptions } from '../../core/credential';
 
 /**
  * This client is used to call actions of **umem** service
@@ -27,7 +27,7 @@ export default class UMemClient extends Client {
   ): Promise<CheckUDredisSpaceAllowanceResponse> {
     const args = { Action: 'CheckUDredisSpaceAllowance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CheckUDredisSpaceAllowanceResponse
+      resp => resp.toObject() as CheckUDredisSpaceAllowanceResponse
     );
   }
 
@@ -41,7 +41,7 @@ export default class UMemClient extends Client {
   ): Promise<CheckURedisAllowanceResponse> {
     const args = { Action: 'CheckURedisAllowance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CheckURedisAllowanceResponse
+      resp => resp.toObject() as CheckURedisAllowanceResponse
     );
   }
 
@@ -55,7 +55,7 @@ export default class UMemClient extends Client {
   ): Promise<CreateUMemBackupResponse> {
     const args = { Action: 'CreateUMemBackup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUMemBackupResponse
+      resp => resp.toObject() as CreateUMemBackupResponse
     );
   }
 
@@ -69,7 +69,7 @@ export default class UMemClient extends Client {
   ): Promise<CreateUMemSpaceResponse> {
     const args = { Action: 'CreateUMemSpace', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUMemSpaceResponse
+      resp => resp.toObject() as CreateUMemSpaceResponse
     );
   }
 
@@ -83,7 +83,7 @@ export default class UMemClient extends Client {
   ): Promise<CreateUMemcacheGroupResponse> {
     const args = { Action: 'CreateUMemcacheGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUMemcacheGroupResponse
+      resp => resp.toObject() as CreateUMemcacheGroupResponse
     );
   }
 
@@ -97,7 +97,7 @@ export default class UMemClient extends Client {
   ): Promise<CreateURedisBackupResponse> {
     const args = { Action: 'CreateURedisBackup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateURedisBackupResponse
+      resp => resp.toObject() as CreateURedisBackupResponse
     );
   }
 
@@ -111,7 +111,7 @@ export default class UMemClient extends Client {
   ): Promise<CreateURedisGroupResponse> {
     const args = { Action: 'CreateURedisGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateURedisGroupResponse
+      resp => resp.toObject() as CreateURedisGroupResponse
     );
   }
 
@@ -125,7 +125,7 @@ export default class UMemClient extends Client {
   ): Promise<DeleteUMemSpaceResponse> {
     const args = { Action: 'DeleteUMemSpace', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUMemSpaceResponse
+      resp => resp.toObject() as DeleteUMemSpaceResponse
     );
   }
 
@@ -139,7 +139,7 @@ export default class UMemClient extends Client {
   ): Promise<DeleteUMemcacheGroupResponse> {
     const args = { Action: 'DeleteUMemcacheGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUMemcacheGroupResponse
+      resp => resp.toObject() as DeleteUMemcacheGroupResponse
     );
   }
 
@@ -153,7 +153,7 @@ export default class UMemClient extends Client {
   ): Promise<DeleteURedisGroupResponse> {
     const args = { Action: 'DeleteURedisGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteURedisGroupResponse
+      resp => resp.toObject() as DeleteURedisGroupResponse
     );
   }
 
@@ -167,7 +167,7 @@ export default class UMemClient extends Client {
   ): Promise<DescribeUDRedisProxyInfoResponse> {
     const args = { Action: 'DescribeUDRedisProxyInfo', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDRedisProxyInfoResponse
+      resp => resp.toObject() as DescribeUDRedisProxyInfoResponse
     );
   }
 
@@ -181,7 +181,7 @@ export default class UMemClient extends Client {
   ): Promise<DescribeUDRedisSlowlogResponse> {
     const args = { Action: 'DescribeUDRedisSlowlog', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDRedisSlowlogResponse
+      resp => resp.toObject() as DescribeUDRedisSlowlogResponse
     );
   }
 
@@ -193,7 +193,7 @@ export default class UMemClient extends Client {
   describeUMem(request?: DescribeUMemRequest): Promise<DescribeUMemResponse> {
     const args = { Action: 'DescribeUMem', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUMemResponse
+      resp => resp.toObject() as DescribeUMemResponse
     );
   }
 
@@ -207,7 +207,7 @@ export default class UMemClient extends Client {
   ): Promise<DescribeUMemBackupResponse> {
     const args = { Action: 'DescribeUMemBackup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUMemBackupResponse
+      resp => resp.toObject() as DescribeUMemBackupResponse
     );
   }
 
@@ -221,7 +221,7 @@ export default class UMemClient extends Client {
   ): Promise<DescribeUMemBackupURLResponse> {
     const args = { Action: 'DescribeUMemBackupURL', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUMemBackupURLResponse
+      resp => resp.toObject() as DescribeUMemBackupURLResponse
     );
   }
 
@@ -235,7 +235,7 @@ export default class UMemClient extends Client {
   ): Promise<DescribeUMemBlockInfoResponse> {
     const args = { Action: 'DescribeUMemBlockInfo', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUMemBlockInfoResponse
+      resp => resp.toObject() as DescribeUMemBlockInfoResponse
     );
   }
 
@@ -249,7 +249,7 @@ export default class UMemClient extends Client {
   ): Promise<DescribeUMemPriceResponse> {
     const args = { Action: 'DescribeUMemPrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUMemPriceResponse
+      resp => resp.toObject() as DescribeUMemPriceResponse
     );
   }
 
@@ -263,7 +263,7 @@ export default class UMemClient extends Client {
   ): Promise<DescribeUMemSpaceResponse> {
     const args = { Action: 'DescribeUMemSpace', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUMemSpaceResponse
+      resp => resp.toObject() as DescribeUMemSpaceResponse
     );
   }
 
@@ -277,7 +277,7 @@ export default class UMemClient extends Client {
   ): Promise<DescribeUMemUpgradePriceResponse> {
     const args = { Action: 'DescribeUMemUpgradePrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUMemUpgradePriceResponse
+      resp => resp.toObject() as DescribeUMemUpgradePriceResponse
     );
   }
 
@@ -291,7 +291,7 @@ export default class UMemClient extends Client {
   ): Promise<DescribeUMemcacheGroupResponse> {
     const args = { Action: 'DescribeUMemcacheGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUMemcacheGroupResponse
+      resp => resp.toObject() as DescribeUMemcacheGroupResponse
     );
   }
 
@@ -305,7 +305,7 @@ export default class UMemClient extends Client {
   ): Promise<DescribeUMemcachePriceResponse> {
     const args = { Action: 'DescribeUMemcachePrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUMemcachePriceResponse
+      resp => resp.toObject() as DescribeUMemcachePriceResponse
     );
   }
 
@@ -322,7 +322,7 @@ export default class UMemClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUMemcacheUpgradePriceResponse
+      resp => resp.toObject() as DescribeUMemcacheUpgradePriceResponse
     );
   }
 
@@ -336,7 +336,7 @@ export default class UMemClient extends Client {
   ): Promise<DescribeURedisBackupResponse> {
     const args = { Action: 'DescribeURedisBackup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeURedisBackupResponse
+      resp => resp.toObject() as DescribeURedisBackupResponse
     );
   }
 
@@ -350,7 +350,7 @@ export default class UMemClient extends Client {
   ): Promise<DescribeURedisBackupURLResponse> {
     const args = { Action: 'DescribeURedisBackupURL', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeURedisBackupURLResponse
+      resp => resp.toObject() as DescribeURedisBackupURLResponse
     );
   }
 
@@ -364,7 +364,7 @@ export default class UMemClient extends Client {
   ): Promise<DescribeURedisConfigResponse> {
     const args = { Action: 'DescribeURedisConfig', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeURedisConfigResponse
+      resp => resp.toObject() as DescribeURedisConfigResponse
     );
   }
 
@@ -378,7 +378,7 @@ export default class UMemClient extends Client {
   ): Promise<DescribeURedisGroupResponse> {
     const args = { Action: 'DescribeURedisGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeURedisGroupResponse
+      resp => resp.toObject() as DescribeURedisGroupResponse
     );
   }
 
@@ -392,7 +392,7 @@ export default class UMemClient extends Client {
   ): Promise<DescribeURedisPriceResponse> {
     const args = { Action: 'DescribeURedisPrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeURedisPriceResponse
+      resp => resp.toObject() as DescribeURedisPriceResponse
     );
   }
 
@@ -406,7 +406,7 @@ export default class UMemClient extends Client {
   ): Promise<DescribeURedisSlowlogResponse> {
     const args = { Action: 'DescribeURedisSlowlog', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeURedisSlowlogResponse
+      resp => resp.toObject() as DescribeURedisSlowlogResponse
     );
   }
 
@@ -420,7 +420,7 @@ export default class UMemClient extends Client {
   ): Promise<DescribeURedisUpgradePriceResponse> {
     const args = { Action: 'DescribeURedisUpgradePrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeURedisUpgradePriceResponse
+      resp => resp.toObject() as DescribeURedisUpgradePriceResponse
     );
   }
 
@@ -434,7 +434,7 @@ export default class UMemClient extends Client {
   ): Promise<DescribeURedisVersionResponse> {
     const args = { Action: 'DescribeURedisVersion', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeURedisVersionResponse
+      resp => resp.toObject() as DescribeURedisVersionResponse
     );
   }
 
@@ -448,7 +448,7 @@ export default class UMemClient extends Client {
   ): Promise<FlushallURedisGroupResponse> {
     const args = { Action: 'FlushallURedisGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as FlushallURedisGroupResponse
+      resp => resp.toObject() as FlushallURedisGroupResponse
     );
   }
 
@@ -462,7 +462,7 @@ export default class UMemClient extends Client {
   ): Promise<GetUMemSpaceStateResponse> {
     const args = { Action: 'GetUMemSpaceState', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUMemSpaceStateResponse
+      resp => resp.toObject() as GetUMemSpaceStateResponse
     );
   }
 
@@ -476,7 +476,7 @@ export default class UMemClient extends Client {
   ): Promise<ISolationURedisGroupResponse> {
     const args = { Action: 'ISolationURedisGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ISolationURedisGroupResponse
+      resp => resp.toObject() as ISolationURedisGroupResponse
     );
   }
 
@@ -490,7 +490,7 @@ export default class UMemClient extends Client {
   ): Promise<ModifyUMemSpaceNameResponse> {
     const args = { Action: 'ModifyUMemSpaceName', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyUMemSpaceNameResponse
+      resp => resp.toObject() as ModifyUMemSpaceNameResponse
     );
   }
 
@@ -504,7 +504,7 @@ export default class UMemClient extends Client {
   ): Promise<ModifyURedisGroupNameResponse> {
     const args = { Action: 'ModifyURedisGroupName', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyURedisGroupNameResponse
+      resp => resp.toObject() as ModifyURedisGroupNameResponse
     );
   }
 
@@ -518,7 +518,7 @@ export default class UMemClient extends Client {
   ): Promise<ModifyURedisGroupPasswordResponse> {
     const args = { Action: 'ModifyURedisGroupPassword', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyURedisGroupPasswordResponse
+      resp => resp.toObject() as ModifyURedisGroupPasswordResponse
     );
   }
 
@@ -532,7 +532,7 @@ export default class UMemClient extends Client {
   ): Promise<RemoveUDRedisDataResponse> {
     const args = { Action: 'RemoveUDRedisData', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RemoveUDRedisDataResponse
+      resp => resp.toObject() as RemoveUDRedisDataResponse
     );
   }
 
@@ -546,7 +546,7 @@ export default class UMemClient extends Client {
   ): Promise<ResizeUMemSpaceResponse> {
     const args = { Action: 'ResizeUMemSpace', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ResizeUMemSpaceResponse
+      resp => resp.toObject() as ResizeUMemSpaceResponse
     );
   }
 
@@ -560,7 +560,7 @@ export default class UMemClient extends Client {
   ): Promise<ResizeURedisGroupResponse> {
     const args = { Action: 'ResizeURedisGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ResizeURedisGroupResponse
+      resp => resp.toObject() as ResizeURedisGroupResponse
     );
   }
 
@@ -574,7 +574,7 @@ export default class UMemClient extends Client {
   ): Promise<RestartUMemcacheGroupResponse> {
     const args = { Action: 'RestartUMemcacheGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RestartUMemcacheGroupResponse
+      resp => resp.toObject() as RestartUMemcacheGroupResponse
     );
   }
 
@@ -588,7 +588,7 @@ export default class UMemClient extends Client {
   ): Promise<RestartURedisGroupResponse> {
     const args = { Action: 'RestartURedisGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RestartURedisGroupResponse
+      resp => resp.toObject() as RestartURedisGroupResponse
     );
   }
 
@@ -602,7 +602,7 @@ export default class UMemClient extends Client {
   ): Promise<UpdateURedisBackupStrategyResponse> {
     const args = { Action: 'UpdateURedisBackupStrategy', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateURedisBackupStrategyResponse
+      resp => resp.toObject() as UpdateURedisBackupStrategyResponse
     );
   }
 }
@@ -952,7 +952,7 @@ export interface DeleteUMemSpaceRequest {
 /**
  * DeleteUMemSpace - 删除UMem内存空间
  */
-export interface DeleteUMemSpaceResponse {}
+export type DeleteUMemSpaceResponse = {};
 
 /**
  * DeleteUMemcacheGroup - 删除单机Memcache
@@ -971,7 +971,7 @@ export interface DeleteUMemcacheGroupRequest {
 /**
  * DeleteUMemcacheGroup - 删除单机Memcache
  */
-export interface DeleteUMemcacheGroupResponse {}
+export type DeleteUMemcacheGroupResponse = {};
 
 /**
  * DeleteURedisGroup - 删除主备redis
@@ -986,7 +986,7 @@ export interface DeleteURedisGroupRequest {
 /**
  * DeleteURedisGroup - 删除主备redis
  */
-export interface DeleteURedisGroupResponse {}
+export type DeleteURedisGroupResponse = {};
 
 /**
  * DescribeUDRedisProxyInfo - 拉取udredis所有的代理信息
@@ -2383,7 +2383,7 @@ export interface FlushallURedisGroupRequest {
 /**
  * FlushallURedisGroup - 清除主备redis数据
  */
-export interface FlushallURedisGroupResponse {}
+export type FlushallURedisGroupResponse = {};
 
 /**
  * GetUMemSpaceState - 获取UMem内存空间列表
@@ -2434,7 +2434,7 @@ export interface ISolationURedisGroupRequest {
 /**
  * ISolationURedisGroup - 打开/关闭URedis
  */
-export interface ISolationURedisGroupResponse {}
+export type ISolationURedisGroupResponse = {};
 
 /**
  * ModifyUMemSpaceName - 修改UMem内存空间名称
@@ -2457,7 +2457,7 @@ export interface ModifyUMemSpaceNameRequest {
 /**
  * ModifyUMemSpaceName - 修改UMem内存空间名称
  */
-export interface ModifyUMemSpaceNameResponse {}
+export type ModifyUMemSpaceNameResponse = {};
 
 /**
  * ModifyURedisGroupName - 修改主备redis名称
@@ -2476,7 +2476,7 @@ export interface ModifyURedisGroupNameRequest {
 /**
  * ModifyURedisGroupName - 修改主备redis名称
  */
-export interface ModifyURedisGroupNameResponse {}
+export type ModifyURedisGroupNameResponse = {};
 
 /**
  * ModifyURedisGroupPassword - 修改主备密码/重置密码
@@ -2499,7 +2499,7 @@ export interface ModifyURedisGroupPasswordRequest {
 /**
  * ModifyURedisGroupPassword - 修改主备密码/重置密码
  */
-export interface ModifyURedisGroupPasswordResponse {}
+export type ModifyURedisGroupPasswordResponse = {};
 
 /**
  * RemoveUDRedisData - 清除udredis实例数据
@@ -2518,7 +2518,7 @@ export interface RemoveUDRedisDataRequest {
 /**
  * RemoveUDRedisData - 清除udredis实例数据
  */
-export interface RemoveUDRedisDataResponse {}
+export type RemoveUDRedisDataResponse = {};
 
 /**
  * ResizeUMemSpace - 调整内存空间容量
@@ -2545,7 +2545,7 @@ export interface ResizeUMemSpaceRequest {
 /**
  * ResizeUMemSpace - 调整内存空间容量
  */
-export interface ResizeUMemSpaceResponse {}
+export type ResizeUMemSpaceResponse = {};
 
 /**
  * ResizeURedisGroup - 通过调用CheckURedisAllowance接口，检查资源情况，根据不同情形来调整主备redis容量，其中主要包括可用区资源不足无法扩容，主备所在宿主机资源不足需要迁移完成扩容（需要主从切换，会闪断及负载升高），以及直接扩容（业务无感知）
@@ -2580,7 +2580,7 @@ export interface ResizeURedisGroupRequest {
 /**
  * ResizeURedisGroup - 通过调用CheckURedisAllowance接口，检查资源情况，根据不同情形来调整主备redis容量，其中主要包括可用区资源不足无法扩容，主备所在宿主机资源不足需要迁移完成扩容（需要主从切换，会闪断及负载升高），以及直接扩容（业务无感知）
  */
-export interface ResizeURedisGroupResponse {}
+export type ResizeURedisGroupResponse = {};
 
 /**
  * RestartUMemcacheGroup - 重启单机Memcache
@@ -2599,7 +2599,7 @@ export interface RestartUMemcacheGroupRequest {
 /**
  * RestartUMemcacheGroup - 重启单机Memcache
  */
-export interface RestartUMemcacheGroupResponse {}
+export type RestartUMemcacheGroupResponse = {};
 
 /**
  * RestartURedisGroup - 重启主备实例
@@ -2618,7 +2618,7 @@ export interface RestartURedisGroupRequest {
 /**
  * RestartURedisGroup - 重启主备实例
  */
-export interface RestartURedisGroupResponse {}
+export type RestartURedisGroupResponse = {};
 
 /**
  * UpdateURedisBackupStrategy - URedisBackupStrategy
@@ -2649,4 +2649,4 @@ export interface UpdateURedisBackupStrategyRequest {
 /**
  * UpdateURedisBackupStrategy - URedisBackupStrategy
  */
-export interface UpdateURedisBackupStrategyResponse {}
+export type UpdateURedisBackupStrategyResponse = {};

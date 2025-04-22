@@ -1,7 +1,7 @@
-import Request from '../request';
-import Response from '../response';
-import { UCloudError, EXC_TYPE_TRANSPORT } from '../exception';
 import axios from 'axios';
+import { EXC_TYPE_TRANSPORT, UCloudError } from '../exception';
+import type Request from '../request';
+import Response from '../response';
 
 export class Transport {
   baseUrl?: string;
@@ -25,7 +25,7 @@ export class Transport {
   }
 
   async invoke(req: Request): Promise<Response> {
-    let resp;
+    let resp: Response;
     try {
       const httpResp = await axios({
         method: 'post',
@@ -39,7 +39,7 @@ export class Transport {
       });
       const requestId = httpResp.headers['x-ucloud-request-uuid'];
       resp = new Response(httpResp.data, requestId);
-    } catch (e) {
+    } catch (e: any) {
       throw new UCloudError({
         typ: EXC_TYPE_TRANSPORT,
         message: e.message,
@@ -47,7 +47,7 @@ export class Transport {
       });
     }
 
-    if (resp != null && resp.getRetCode() != 0) {
+    if (resp != null && resp.getRetCode() !== 0) {
       throw new UCloudError({
         typ: EXC_TYPE_TRANSPORT,
         message: resp.getMessage(),

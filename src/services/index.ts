@@ -1,30 +1,29 @@
-import { ConfigOptions } from '../core/config';
-import { CredentialOptions } from '../core/credential';
-const BaseClient = require('../core/client').default;
-
-const CubeClient = require('./cube').default;
-const IPSecVPNClient = require('./ipsecvpn').default;
-const PathXClient = require('./pathx').default;
-const UAccountClient = require('./uaccount').default;
-const UBillClient = require('./ubill').default;
-const UCDNClient = require('./ucdn').default;
-const UDBClient = require('./udb').default;
-const UDDBClient = require('./uddb').default;
-const UDiskClient = require('./udisk').default;
-const UDPNClient = require('./udpn').default;
-const UECClient = require('./uec').default;
-const UFileClient = require('./ufile').default;
-const UFSClient = require('./ufs').default;
-const UHostClient = require('./uhost').default;
-const UK8SClient = require('./uk8s').default;
-const ULBClient = require('./ulb').default;
-const UMemClient = require('./umem').default;
-const UNetClient = require('./unet').default;
-const UPhoneClient = require('./uphone').default;
-const UPHostClient = require('./uphost').default;
-const USMSClient = require('./usms').default;
-const UVMSClient = require('./uvms').default;
-const VPCClient = require('./vpc').default;
+import BaseClient from '../core/client';
+import type { ConfigOptions } from '../core/config';
+import type { CredentialOptions } from '../core/credential/index.js';
+import CubeClient from './cube/index.js';
+import IPSecVPNClient from './ipsecvpn/index.js';
+import PathXClient from './pathx/index.js';
+import UAccountClient from './uaccount/index.js';
+import UBillClient from './ubill/index.js';
+import UCDNClient from './ucdn/index.js';
+import UDBClient from './udb/index.js';
+import UDDBClient from './uddb/index.js';
+import UDiskClient from './udisk/index.js';
+import UDPNClient from './udpn/index.js';
+import UECClient from './uec/index.js';
+import UFileClient from './ufile/index.js';
+import UFSClient from './ufs/index.js';
+import UHostClient from './uhost/index.js';
+import UK8SClient from './uk8s/index.js';
+import ULBClient from './ulb/index.js';
+import UMemClient from './umem/index.js';
+import UNetClient from './unet/index.js';
+import UPhoneClient from './uphone/index.js';
+import UPHostClient from './uphost/index.js';
+import USMSClient from './usms/index.js';
+import UVMSClient from './uvms/index.js';
+import VPCClient from './vpc/index.js';
 
 export class Client extends BaseClient {
   constructor({

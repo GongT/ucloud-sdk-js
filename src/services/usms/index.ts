@@ -1,7 +1,7 @@
 import Client from '../../core/client';
 import Request from '../../core/request';
-import { ConfigOptions } from '../../core/config';
-import { CredentialOptions } from '../../core/credential';
+import type { ConfigOptions } from '../../core/config';
+import type { CredentialOptions } from '../../core/credential';
 
 /**
  * This client is used to call actions of **usms** service
@@ -27,7 +27,7 @@ export default class USMSClient extends Client {
   ): Promise<CreateUSMSSignatureResponse> {
     const args = { Action: 'CreateUSMSSignature', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUSMSSignatureResponse
+      resp => resp.toObject() as CreateUSMSSignatureResponse
     );
   }
 
@@ -41,7 +41,7 @@ export default class USMSClient extends Client {
   ): Promise<CreateUSMSTemplateResponse> {
     const args = { Action: 'CreateUSMSTemplate', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUSMSTemplateResponse
+      resp => resp.toObject() as CreateUSMSTemplateResponse
     );
   }
 
@@ -55,7 +55,7 @@ export default class USMSClient extends Client {
   ): Promise<DeleteUSMSSignatureResponse> {
     const args = { Action: 'DeleteUSMSSignature', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUSMSSignatureResponse
+      resp => resp.toObject() as DeleteUSMSSignatureResponse
     );
   }
 
@@ -69,7 +69,7 @@ export default class USMSClient extends Client {
   ): Promise<DeleteUSMSTemplateResponse> {
     const args = { Action: 'DeleteUSMSTemplate', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUSMSTemplateResponse
+      resp => resp.toObject() as DeleteUSMSTemplateResponse
     );
   }
 
@@ -83,7 +83,7 @@ export default class USMSClient extends Client {
   ): Promise<GetUSMSSendReceiptResponse> {
     const args = { Action: 'GetUSMSSendReceipt', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUSMSSendReceiptResponse
+      resp => resp.toObject() as GetUSMSSendReceiptResponse
     );
   }
 
@@ -97,7 +97,7 @@ export default class USMSClient extends Client {
   ): Promise<QueryUSMSSignatureResponse> {
     const args = { Action: 'QueryUSMSSignature', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as QueryUSMSSignatureResponse
+      resp => resp.toObject() as QueryUSMSSignatureResponse
     );
   }
 
@@ -111,7 +111,7 @@ export default class USMSClient extends Client {
   ): Promise<QueryUSMSTemplateResponse> {
     const args = { Action: 'QueryUSMSTemplate', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as QueryUSMSTemplateResponse
+      resp => resp.toObject() as QueryUSMSTemplateResponse
     );
   }
 
@@ -125,7 +125,7 @@ export default class USMSClient extends Client {
   ): Promise<SendBatchUSMSMessageResponse> {
     const args = { Action: 'SendBatchUSMSMessage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as SendBatchUSMSMessageResponse
+      resp => resp.toObject() as SendBatchUSMSMessageResponse
     );
   }
 
@@ -139,7 +139,7 @@ export default class USMSClient extends Client {
   ): Promise<SendUSMSMessageResponse> {
     const args = { Action: 'SendUSMSMessage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as SendUSMSMessageResponse
+      resp => resp.toObject() as SendUSMSMessageResponse
     );
   }
 
@@ -153,7 +153,7 @@ export default class USMSClient extends Client {
   ): Promise<UpdateUSMSSignatureResponse> {
     const args = { Action: 'UpdateUSMSSignature', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateUSMSSignatureResponse
+      resp => resp.toObject() as UpdateUSMSSignatureResponse
     );
   }
 
@@ -167,7 +167,7 @@ export default class USMSClient extends Client {
   ): Promise<UpdateUSMSTemplateResponse> {
     const args = { Action: 'UpdateUSMSTemplate', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateUSMSTemplateResponse
+      resp => resp.toObject() as UpdateUSMSTemplateResponse
     );
   }
 }
@@ -277,7 +277,7 @@ export interface DeleteUSMSSignatureRequest {
 /**
  * DeleteUSMSSignature - 调用接口DeleteUSMSSignature删除短信签名
  */
-export interface DeleteUSMSSignatureResponse {}
+export type DeleteUSMSSignatureResponse = {};
 
 /**
  * DeleteUSMSTemplate - 调用接口DeleteUSMSTemplate删除短信模板
@@ -292,7 +292,7 @@ export interface DeleteUSMSTemplateRequest {
 /**
  * DeleteUSMSTemplate - 调用接口DeleteUSMSTemplate删除短信模板
  */
-export interface DeleteUSMSTemplateResponse {}
+export type DeleteUSMSTemplateResponse = {};
 
 /**
  * GetUSMSSendReceipt - 调用接口GetUSMSSendReceipt短信发送状态信息
@@ -617,7 +617,7 @@ export interface UpdateUSMSSignatureRequest {
 /**
  * UpdateUSMSSignature - 调用接口UpdateUSMSSignature修改未通过审核的短信签名，并重新提交审核
  */
-export interface UpdateUSMSSignatureResponse {}
+export type UpdateUSMSSignatureResponse = {};
 
 /**
  * UpdateUSMSTemplate - 调用接口UpdateUSMSTemplate修改未通过审核的短信模板，并重新提交审核
@@ -648,4 +648,4 @@ export interface UpdateUSMSTemplateRequest {
 /**
  * UpdateUSMSTemplate - 调用接口UpdateUSMSTemplate修改未通过审核的短信模板，并重新提交审核
  */
-export interface UpdateUSMSTemplateResponse {}
+export type UpdateUSMSTemplateResponse = {};

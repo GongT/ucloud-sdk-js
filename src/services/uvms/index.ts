@@ -1,7 +1,7 @@
 import Client from '../../core/client';
 import Request from '../../core/request';
-import { ConfigOptions } from '../../core/config';
-import { CredentialOptions } from '../../core/credential';
+import type { ConfigOptions } from '../../core/config';
+import type { CredentialOptions } from '../../core/credential';
 
 /**
  * This client is used to call actions of **uvms** service
@@ -27,7 +27,7 @@ export default class UVMSClient extends Client {
   ): Promise<SendUVMSMessageResponse> {
     const args = { Action: 'SendUVMSMessage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as SendUVMSMessageResponse
+      resp => resp.toObject() as SendUVMSMessageResponse
     );
   }
 }

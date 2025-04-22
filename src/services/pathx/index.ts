@@ -1,7 +1,7 @@
 import Client from '../../core/client';
 import Request from '../../core/request';
-import { ConfigOptions } from '../../core/config';
-import { CredentialOptions } from '../../core/credential';
+import type { ConfigOptions } from '../../core/config';
+import type { CredentialOptions } from '../../core/credential';
 
 /**
  * This client is used to call actions of **pathx** service
@@ -25,7 +25,7 @@ export default class PathXClient extends Client {
   bindPathXSSL(request?: BindPathXSSLRequest): Promise<BindPathXSSLResponse> {
     const args = { Action: 'BindPathXSSL', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as BindPathXSSLResponse
+      resp => resp.toObject() as BindPathXSSLResponse
     );
   }
 
@@ -39,7 +39,7 @@ export default class PathXClient extends Client {
   ): Promise<CreateGlobalSSHInstanceResponse> {
     const args = { Action: 'CreateGlobalSSHInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateGlobalSSHInstanceResponse
+      resp => resp.toObject() as CreateGlobalSSHInstanceResponse
     );
   }
 
@@ -53,7 +53,7 @@ export default class PathXClient extends Client {
   ): Promise<CreatePathXSSLResponse> {
     const args = { Action: 'CreatePathXSSL', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreatePathXSSLResponse
+      resp => resp.toObject() as CreatePathXSSLResponse
     );
   }
 
@@ -67,7 +67,7 @@ export default class PathXClient extends Client {
   ): Promise<CreateUGA3InstanceResponse> {
     const args = { Action: 'CreateUGA3Instance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUGA3InstanceResponse
+      resp => resp.toObject() as CreateUGA3InstanceResponse
     );
   }
 
@@ -81,7 +81,7 @@ export default class PathXClient extends Client {
   ): Promise<CreateUGA3PortResponse> {
     const args = { Action: 'CreateUGA3Port', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUGA3PortResponse
+      resp => resp.toObject() as CreateUGA3PortResponse
     );
   }
 
@@ -95,7 +95,7 @@ export default class PathXClient extends Client {
   ): Promise<CreateUGAForwarderResponse> {
     const args = { Action: 'CreateUGAForwarder', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUGAForwarderResponse
+      resp => resp.toObject() as CreateUGAForwarderResponse
     );
   }
 
@@ -109,7 +109,7 @@ export default class PathXClient extends Client {
   ): Promise<CreateUGAInstanceResponse> {
     const args = { Action: 'CreateUGAInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUGAInstanceResponse
+      resp => resp.toObject() as CreateUGAInstanceResponse
     );
   }
 
@@ -121,7 +121,7 @@ export default class PathXClient extends Client {
   createUPath(request?: CreateUPathRequest): Promise<CreateUPathResponse> {
     const args = { Action: 'CreateUPath', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUPathResponse
+      resp => resp.toObject() as CreateUPathResponse
     );
   }
 
@@ -135,7 +135,7 @@ export default class PathXClient extends Client {
   ): Promise<DeleteGlobalSSHInstanceResponse> {
     const args = { Action: 'DeleteGlobalSSHInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteGlobalSSHInstanceResponse
+      resp => resp.toObject() as DeleteGlobalSSHInstanceResponse
     );
   }
 
@@ -149,7 +149,7 @@ export default class PathXClient extends Client {
   ): Promise<DeletePathXSSLResponse> {
     const args = { Action: 'DeletePathXSSL', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeletePathXSSLResponse
+      resp => resp.toObject() as DeletePathXSSLResponse
     );
   }
 
@@ -163,7 +163,7 @@ export default class PathXClient extends Client {
   ): Promise<DeleteUGA3InstanceResponse> {
     const args = { Action: 'DeleteUGA3Instance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUGA3InstanceResponse
+      resp => resp.toObject() as DeleteUGA3InstanceResponse
     );
   }
 
@@ -177,7 +177,7 @@ export default class PathXClient extends Client {
   ): Promise<DeleteUGA3PortResponse> {
     const args = { Action: 'DeleteUGA3Port', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUGA3PortResponse
+      resp => resp.toObject() as DeleteUGA3PortResponse
     );
   }
 
@@ -191,7 +191,7 @@ export default class PathXClient extends Client {
   ): Promise<DeleteUGAForwarderResponse> {
     const args = { Action: 'DeleteUGAForwarder', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUGAForwarderResponse
+      resp => resp.toObject() as DeleteUGAForwarderResponse
     );
   }
 
@@ -205,7 +205,7 @@ export default class PathXClient extends Client {
   ): Promise<DeleteUGAInstanceResponse> {
     const args = { Action: 'DeleteUGAInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUGAInstanceResponse
+      resp => resp.toObject() as DeleteUGAInstanceResponse
     );
   }
 
@@ -217,7 +217,7 @@ export default class PathXClient extends Client {
   deleteUPath(request?: DeleteUPathRequest): Promise<DeleteUPathResponse> {
     const args = { Action: 'DeleteUPath', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUPathResponse
+      resp => resp.toObject() as DeleteUPathResponse
     );
   }
 
@@ -231,7 +231,7 @@ export default class PathXClient extends Client {
   ): Promise<DescribeGlobalSSHInstanceResponse> {
     const args = { Action: 'DescribeGlobalSSHInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeGlobalSSHInstanceResponse
+      resp => resp.toObject() as DescribeGlobalSSHInstanceResponse
     );
   }
 
@@ -245,7 +245,7 @@ export default class PathXClient extends Client {
   ): Promise<DescribePathXLineConfigResponse> {
     const args = { Action: 'DescribePathXLineConfig', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribePathXLineConfigResponse
+      resp => resp.toObject() as DescribePathXLineConfigResponse
     );
   }
 
@@ -259,7 +259,7 @@ export default class PathXClient extends Client {
   ): Promise<DescribePathXSSLResponse> {
     const args = { Action: 'DescribePathXSSL', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribePathXSSLResponse
+      resp => resp.toObject() as DescribePathXSSLResponse
     );
   }
 
@@ -273,7 +273,7 @@ export default class PathXClient extends Client {
   ): Promise<DescribeUGA3AreaResponse> {
     const args = { Action: 'DescribeUGA3Area', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUGA3AreaResponse
+      resp => resp.toObject() as DescribeUGA3AreaResponse
     );
   }
 
@@ -287,7 +287,7 @@ export default class PathXClient extends Client {
   ): Promise<DescribeUGA3InstanceResponse> {
     const args = { Action: 'DescribeUGA3Instance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUGA3InstanceResponse
+      resp => resp.toObject() as DescribeUGA3InstanceResponse
     );
   }
 
@@ -301,7 +301,7 @@ export default class PathXClient extends Client {
   ): Promise<DescribeUGA3OptimizationResponse> {
     const args = { Action: 'DescribeUGA3Optimization', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUGA3OptimizationResponse
+      resp => resp.toObject() as DescribeUGA3OptimizationResponse
     );
   }
 
@@ -315,7 +315,7 @@ export default class PathXClient extends Client {
   ): Promise<DescribeUGAInstanceResponse> {
     const args = { Action: 'DescribeUGAInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUGAInstanceResponse
+      resp => resp.toObject() as DescribeUGAInstanceResponse
     );
   }
 
@@ -329,7 +329,7 @@ export default class PathXClient extends Client {
   ): Promise<DescribeUPathResponse> {
     const args = { Action: 'DescribeUPath', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUPathResponse
+      resp => resp.toObject() as DescribeUPathResponse
     );
   }
 
@@ -343,7 +343,7 @@ export default class PathXClient extends Client {
   ): Promise<DescribeUPathTemplateResponse> {
     const args = { Action: 'DescribeUPathTemplate', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUPathTemplateResponse
+      resp => resp.toObject() as DescribeUPathTemplateResponse
     );
   }
 
@@ -357,7 +357,7 @@ export default class PathXClient extends Client {
   ): Promise<GetGlobalSSHPriceResponse> {
     const args = { Action: 'GetGlobalSSHPrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetGlobalSSHPriceResponse
+      resp => resp.toObject() as GetGlobalSSHPriceResponse
     );
   }
 
@@ -371,7 +371,7 @@ export default class PathXClient extends Client {
   ): Promise<GetGlobalSSHUpdatePriceResponse> {
     const args = { Action: 'GetGlobalSSHUpdatePrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetGlobalSSHUpdatePriceResponse
+      resp => resp.toObject() as GetGlobalSSHUpdatePriceResponse
     );
   }
 
@@ -385,7 +385,7 @@ export default class PathXClient extends Client {
   ): Promise<GetPathXMetricResponse> {
     const args = { Action: 'GetPathXMetric', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetPathXMetricResponse
+      resp => resp.toObject() as GetPathXMetricResponse
     );
   }
 
@@ -399,7 +399,7 @@ export default class PathXClient extends Client {
   ): Promise<GetUGA3MetricResponse> {
     const args = { Action: 'GetUGA3Metric', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUGA3MetricResponse
+      resp => resp.toObject() as GetUGA3MetricResponse
     );
   }
 
@@ -411,7 +411,7 @@ export default class PathXClient extends Client {
   getUGA3Price(request?: GetUGA3PriceRequest): Promise<GetUGA3PriceResponse> {
     const args = { Action: 'GetUGA3Price', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUGA3PriceResponse
+      resp => resp.toObject() as GetUGA3PriceResponse
     );
   }
 
@@ -425,7 +425,7 @@ export default class PathXClient extends Client {
   ): Promise<GetUGA3UpdatePriceResponse> {
     const args = { Action: 'GetUGA3UpdatePrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUGA3UpdatePriceResponse
+      resp => resp.toObject() as GetUGA3UpdatePriceResponse
     );
   }
 
@@ -439,7 +439,7 @@ export default class PathXClient extends Client {
   ): Promise<ModifyGlobalSSHPortResponse> {
     const args = { Action: 'ModifyGlobalSSHPort', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyGlobalSSHPortResponse
+      resp => resp.toObject() as ModifyGlobalSSHPortResponse
     );
   }
 
@@ -453,7 +453,7 @@ export default class PathXClient extends Client {
   ): Promise<ModifyGlobalSSHRemarkResponse> {
     const args = { Action: 'ModifyGlobalSSHRemark', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyGlobalSSHRemarkResponse
+      resp => resp.toObject() as ModifyGlobalSSHRemarkResponse
     );
   }
 
@@ -467,7 +467,7 @@ export default class PathXClient extends Client {
   ): Promise<ModifyGlobalSSHTypeResponse> {
     const args = { Action: 'ModifyGlobalSSHType', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyGlobalSSHTypeResponse
+      resp => resp.toObject() as ModifyGlobalSSHTypeResponse
     );
   }
 
@@ -481,7 +481,7 @@ export default class PathXClient extends Client {
   ): Promise<ModifyUGA3BandwidthResponse> {
     const args = { Action: 'ModifyUGA3Bandwidth', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyUGA3BandwidthResponse
+      resp => resp.toObject() as ModifyUGA3BandwidthResponse
     );
   }
 
@@ -495,7 +495,7 @@ export default class PathXClient extends Client {
   ): Promise<ModifyUGA3InstanceResponse> {
     const args = { Action: 'ModifyUGA3Instance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyUGA3InstanceResponse
+      resp => resp.toObject() as ModifyUGA3InstanceResponse
     );
   }
 
@@ -509,7 +509,7 @@ export default class PathXClient extends Client {
   ): Promise<ModifyUGA3OriginInfoResponse> {
     const args = { Action: 'ModifyUGA3OriginInfo', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyUGA3OriginInfoResponse
+      resp => resp.toObject() as ModifyUGA3OriginInfoResponse
     );
   }
 
@@ -523,7 +523,7 @@ export default class PathXClient extends Client {
   ): Promise<ModifyUGA3PortResponse> {
     const args = { Action: 'ModifyUGA3Port', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyUGA3PortResponse
+      resp => resp.toObject() as ModifyUGA3PortResponse
     );
   }
 
@@ -537,7 +537,7 @@ export default class PathXClient extends Client {
   ): Promise<ModifyUPathBandwidthResponse> {
     const args = { Action: 'ModifyUPathBandwidth', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyUPathBandwidthResponse
+      resp => resp.toObject() as ModifyUPathBandwidthResponse
     );
   }
 
@@ -551,7 +551,7 @@ export default class PathXClient extends Client {
   ): Promise<ModifyUPathTemplateResponse> {
     const args = { Action: 'ModifyUPathTemplate', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyUPathTemplateResponse
+      resp => resp.toObject() as ModifyUPathTemplateResponse
     );
   }
 
@@ -563,7 +563,7 @@ export default class PathXClient extends Client {
   uGABindUPath(request?: UGABindUPathRequest): Promise<UGABindUPathResponse> {
     const args = { Action: 'UGABindUPath', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UGABindUPathResponse
+      resp => resp.toObject() as UGABindUPathResponse
     );
   }
 
@@ -577,7 +577,7 @@ export default class PathXClient extends Client {
   ): Promise<UGAUnBindUPathResponse> {
     const args = { Action: 'UGAUnBindUPath', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UGAUnBindUPathResponse
+      resp => resp.toObject() as UGAUnBindUPathResponse
     );
   }
 
@@ -591,7 +591,7 @@ export default class PathXClient extends Client {
   ): Promise<UnBindPathXSSLResponse> {
     const args = { Action: 'UnBindPathXSSL', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UnBindPathXSSLResponse
+      resp => resp.toObject() as UnBindPathXSSLResponse
     );
   }
 
@@ -605,7 +605,7 @@ export default class PathXClient extends Client {
   ): Promise<UpdatePathXWhitelistResponse> {
     const args = { Action: 'UpdatePathXWhitelist', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdatePathXWhitelistResponse
+      resp => resp.toObject() as UpdatePathXWhitelistResponse
     );
   }
 }
@@ -631,7 +631,7 @@ export interface BindPathXSSLRequest {
 /**
  * BindPathXSSL - 绑定PathX SSL证书
  */
-export interface BindPathXSSLResponse {}
+export type BindPathXSSLResponse = {};
 
 /**
  * CreateGlobalSSHInstance - 创建GlobalSSH实例
@@ -818,7 +818,7 @@ export interface CreateUGA3PortRequest {
 /**
  * CreateUGA3Port - 创建统一接入加速实例端口，目前仅支持四层TCP端口
  */
-export interface CreateUGA3PortResponse {}
+export type CreateUGA3PortResponse = {};
 
 /**
  * CreateUGAForwarder - 创建加速实例转发器，支持HTTPS接入HTTPS回源、HTTPS接入HTTP回源、HTTP接入HTTP回源、TCP接入TCP回源、UDP接入UDP回源、 支持WSS接入WSS回源、WSS接入WS回源、WS接入WS回源
@@ -897,7 +897,7 @@ export interface CreateUGAForwarderRequest {
 /**
  * CreateUGAForwarder - 创建加速实例转发器，支持HTTPS接入HTTPS回源、HTTPS接入HTTP回源、HTTP接入HTTP回源、TCP接入TCP回源、UDP接入UDP回源、 支持WSS接入WSS回源、WSS接入WS回源、WS接入WS回源
  */
-export interface CreateUGAForwarderResponse {}
+export type CreateUGAForwarderResponse = {};
 
 /**
  * CreateUGAInstance - 创建全球加速配置项
@@ -1000,7 +1000,7 @@ export interface DeleteGlobalSSHInstanceRequest {
 /**
  * DeleteGlobalSSHInstance - 删除GlobalSSH实例
  */
-export interface DeleteGlobalSSHInstanceResponse {}
+export type DeleteGlobalSSHInstanceResponse = {};
 
 /**
  * DeletePathXSSL - 删除PathX SSL证书
@@ -1015,7 +1015,7 @@ export interface DeletePathXSSLRequest {
 /**
  * DeletePathXSSL - 删除PathX SSL证书
  */
-export interface DeletePathXSSLResponse {}
+export type DeletePathXSSLResponse = {};
 
 /**
  * DeleteUGA3Instance - 删除全球统一接入转发实例
@@ -1030,7 +1030,7 @@ export interface DeleteUGA3InstanceRequest {
 /**
  * DeleteUGA3Instance - 删除全球统一接入转发实例
  */
-export interface DeleteUGA3InstanceResponse {}
+export type DeleteUGA3InstanceResponse = {};
 
 /**
  * DeleteUGA3Port - 删除统一接入加速实例转发器 按接入端口删除
@@ -1049,7 +1049,7 @@ export interface DeleteUGA3PortRequest {
 /**
  * DeleteUGA3Port - 删除统一接入加速实例转发器 按接入端口删除
  */
-export interface DeleteUGA3PortResponse {}
+export type DeleteUGA3PortResponse = {};
 
 /**
  * DeleteUGAForwarder - 删除加速实例转发器 按接入端口删除
@@ -1096,7 +1096,7 @@ export interface DeleteUGAForwarderRequest {
 /**
  * DeleteUGAForwarder - 删除加速实例转发器 按接入端口删除
  */
-export interface DeleteUGAForwarderResponse {}
+export type DeleteUGAForwarderResponse = {};
 
 /**
  * DeleteUGAInstance - 删除全球加速服务加速配置
@@ -1111,7 +1111,7 @@ export interface DeleteUGAInstanceRequest {
 /**
  * DeleteUGAInstance - 删除全球加速服务加速配置
  */
-export interface DeleteUGAInstanceResponse {}
+export type DeleteUGAInstanceResponse = {};
 
 /**
  * DeleteUPath - 删除UPath
@@ -1126,7 +1126,7 @@ export interface DeleteUPathRequest {
 /**
  * DeleteUPath - 删除UPath
  */
-export interface DeleteUPathResponse {}
+export type DeleteUPathResponse = {};
 
 /**
  * DescribeGlobalSSHInstance - 获取GlobalSSH实例列表（传实例ID获取单个实例信息，不传获取项目下全部实例）
@@ -1208,7 +1208,7 @@ export interface DescribeGlobalSSHInstanceResponse {
 /**
  * DescribePathXLineConfig - 获取全球加速线路信息
  */
-export interface DescribePathXLineConfigRequest {}
+export type DescribePathXLineConfigRequest = {};
 
 /**
  * DescribePathXLineConfig - 获取全球加速线路信息
@@ -2398,7 +2398,7 @@ export interface ModifyGlobalSSHPortRequest {
 /**
  * ModifyGlobalSSHPort - 修改GlobalSSH端口
  */
-export interface ModifyGlobalSSHPortResponse {}
+export type ModifyGlobalSSHPortResponse = {};
 
 /**
  * ModifyGlobalSSHRemark - 修改GlobalSSH备注
@@ -2417,7 +2417,7 @@ export interface ModifyGlobalSSHRemarkRequest {
 /**
  * ModifyGlobalSSHRemark - 修改GlobalSSH备注
  */
-export interface ModifyGlobalSSHRemarkResponse {}
+export type ModifyGlobalSSHRemarkResponse = {};
 
 /**
  * ModifyGlobalSSHType - 修改GlobalSSH实例类型，仅支持低版本升级到高版本，不支持高版本降级到低版本
@@ -2448,7 +2448,7 @@ export interface ModifyGlobalSSHTypeRequest {
 /**
  * ModifyGlobalSSHType - 修改GlobalSSH实例类型，仅支持低版本升级到高版本，不支持高版本降级到低版本
  */
-export interface ModifyGlobalSSHTypeResponse {}
+export type ModifyGlobalSSHTypeResponse = {};
 
 /**
  * ModifyUGA3Bandwidth - 修改统一接入加速配置带宽
@@ -2471,7 +2471,7 @@ export interface ModifyUGA3BandwidthRequest {
 /**
  * ModifyUGA3Bandwidth - 修改统一接入加速配置带宽
  */
-export interface ModifyUGA3BandwidthResponse {}
+export type ModifyUGA3BandwidthResponse = {};
 
 /**
  * ModifyUGA3Instance - 修改统一接入加速配置属性，如Name，ReMark
@@ -2494,7 +2494,7 @@ export interface ModifyUGA3InstanceRequest {
 /**
  * ModifyUGA3Instance - 修改统一接入加速配置属性，如Name，ReMark
  */
-export interface ModifyUGA3InstanceResponse {}
+export type ModifyUGA3InstanceResponse = {};
 
 /**
  * ModifyUGA3OriginInfo - Domain， IPList注意：修改Domain或IPList时， 请确保源站服务端口已经开启且外网防火墙允许pathx出口ip访问。
@@ -2517,7 +2517,7 @@ export interface ModifyUGA3OriginInfoRequest {
 /**
  * ModifyUGA3OriginInfo - Domain， IPList注意：修改Domain或IPList时， 请确保源站服务端口已经开启且外网防火墙允许pathx出口ip访问。
  */
-export interface ModifyUGA3OriginInfoResponse {}
+export type ModifyUGA3OriginInfoResponse = {};
 
 /**
  * ModifyUGA3Port - 修改统一接入加速实例端口,目前仅支持四层TCP端口
@@ -2540,7 +2540,7 @@ export interface ModifyUGA3PortRequest {
 /**
  * ModifyUGA3Port - 修改统一接入加速实例端口,目前仅支持四层TCP端口
  */
-export interface ModifyUGA3PortResponse {}
+export type ModifyUGA3PortResponse = {};
 
 /**
  * ModifyUPathBandwidth - 修改加速线路带宽
@@ -2559,7 +2559,7 @@ export interface ModifyUPathBandwidthRequest {
 /**
  * ModifyUPathBandwidth - 修改加速线路带宽
  */
-export interface ModifyUPathBandwidthResponse {}
+export type ModifyUPathBandwidthResponse = {};
 
 /**
  * ModifyUPathTemplate - 修改UPath监控告警项
@@ -2602,7 +2602,7 @@ export interface ModifyUPathTemplateRequest {
 /**
  * ModifyUPathTemplate - 修改UPath监控告警项
  */
-export interface ModifyUPathTemplateResponse {}
+export type ModifyUPathTemplateResponse = {};
 
 /**
  * UGABindUPath - UGA绑定UPath
@@ -2625,7 +2625,7 @@ export interface UGABindUPathRequest {
 /**
  * UGABindUPath - UGA绑定UPath
  */
-export interface UGABindUPathResponse {}
+export type UGABindUPathResponse = {};
 
 /**
  * UGAUnBindUPath - UGA与UPath解绑
@@ -2644,7 +2644,7 @@ export interface UGAUnBindUPathRequest {
 /**
  * UGAUnBindUPath - UGA与UPath解绑
  */
-export interface UGAUnBindUPathResponse {}
+export type UGAUnBindUPathResponse = {};
 
 /**
  * UnBindPathXSSL - 解绑PathX SSL 证书
@@ -2667,7 +2667,7 @@ export interface UnBindPathXSSLRequest {
 /**
  * UnBindPathXSSL - 解绑PathX SSL 证书
  */
-export interface UnBindPathXSSLResponse {}
+export type UnBindPathXSSLResponse = {};
 
 /**
  * UpdatePathXWhitelist - 更新入口白名单,仅限GlobalSSH 实例使用。其他uga-实例不生效
@@ -2686,4 +2686,4 @@ export interface UpdatePathXWhitelistRequest {
 /**
  * UpdatePathXWhitelist - 更新入口白名单,仅限GlobalSSH 实例使用。其他uga-实例不生效
  */
-export interface UpdatePathXWhitelistResponse {}
+export type UpdatePathXWhitelistResponse = {};

@@ -1,16 +1,16 @@
-import Config, { ConfigOptions } from './config';
-import Credential, { CredentialOptions } from './credential';
-import Request from './request';
-import Response from './response';
-import { Context, MiddlewareOptions } from './middleware';
-import { Transport } from './transport';
 import { VERSION } from '../version';
+import Config, { type ConfigOptions } from './config';
+import Credential, { type CredentialOptions } from './credential';
 import { EXC_TYPE_TRANSPORT, UCloudError } from './exception';
+import { Context, type MiddlewareOptions } from './middleware';
 import {
   credentialMiddleware,
   defaultsMiddleware,
   logMiddleware,
 } from './middlewares';
+import type Request from './request';
+import type Response from './response';
+import { Transport } from './transport';
 
 export default class Client {
   config: Config;
@@ -37,7 +37,7 @@ export default class Client {
     ];
 
     let ua = `JS-SDK/${VERSION}`;
-    if (!!config.userAgent) {
+    if (config.userAgent) {
       ua += config.userAgent;
     }
     this.transport = new Transport({
@@ -62,42 +62,43 @@ export default class Client {
     });
 
     // resolve request
-    this.middlewares.forEach((middleware) => {
+    for (const middleware of this.middlewares) {
       if (!middleware.request) {
-        return;
+        continue;
       }
       ctx.request = middleware.request(ctx);
-    });
+    }
 
     // do invoking
-    let resp;
+    let resp: undefined | Response;
     const maxRetries = this.config.maxRetries || 3;
     for (let k = 0; k <= maxRetries; k++) {
       try {
         resp = await this.transport.invoke(ctx.request);
         break; // success, stop retrying
-      } catch (e) {
+      } catch (e: any) {
         ctx.exception = e;
-        this.middlewares.forEach((middleware) => {
+        for (const middleware of this.middlewares) {
           if (!middleware.error) {
-            return;
+            continue;
           }
           middleware.error(ctx);
-        });
-        if (k == maxRetries) {
-          throw e;
         }
       }
     }
 
+    if (!resp) {
+      throw ctx.exception!;
+    }
+
     // resolve response
     ctx.response = resp;
-    this.middlewares.forEach((middleware) => {
+    for (const middleware of this.middlewares) {
       if (!middleware.response) {
-        return;
+        continue;
       }
       ctx.response = middleware.response(ctx);
-    });
+    }
 
     if (!resp) {
       throw new UCloudError({

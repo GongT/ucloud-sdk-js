@@ -1,7 +1,7 @@
 import Client from '../../core/client';
 import Request from '../../core/request';
-import { ConfigOptions } from '../../core/config';
-import { CredentialOptions } from '../../core/credential';
+import type { ConfigOptions } from '../../core/config';
+import type { CredentialOptions } from '../../core/credential';
 
 /**
  * This client is used to call actions of **udisk** service
@@ -25,7 +25,7 @@ export default class UDiskClient extends Client {
   attachUDisk(request?: AttachUDiskRequest): Promise<AttachUDiskResponse> {
     const args = { Action: 'AttachUDisk', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as AttachUDiskResponse
+      resp => resp.toObject() as AttachUDiskResponse
     );
   }
 
@@ -37,7 +37,7 @@ export default class UDiskClient extends Client {
   cloneUDisk(request?: CloneUDiskRequest): Promise<CloneUDiskResponse> {
     const args = { Action: 'CloneUDisk', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CloneUDiskResponse
+      resp => resp.toObject() as CloneUDiskResponse
     );
   }
 
@@ -51,7 +51,7 @@ export default class UDiskClient extends Client {
   ): Promise<CloneUDiskSnapshotResponse> {
     const args = { Action: 'CloneUDiskSnapshot', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CloneUDiskSnapshotResponse
+      resp => resp.toObject() as CloneUDiskSnapshotResponse
     );
   }
 
@@ -65,7 +65,7 @@ export default class UDiskClient extends Client {
   ): Promise<CloneUDiskUDataArkResponse> {
     const args = { Action: 'CloneUDiskUDataArk', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CloneUDiskUDataArkResponse
+      resp => resp.toObject() as CloneUDiskUDataArkResponse
     );
   }
 
@@ -79,7 +79,7 @@ export default class UDiskClient extends Client {
   ): Promise<CreateAttachUDiskResponse> {
     const args = { Action: 'CreateAttachUDisk', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateAttachUDiskResponse
+      resp => resp.toObject() as CreateAttachUDiskResponse
     );
   }
 
@@ -91,7 +91,7 @@ export default class UDiskClient extends Client {
   createUDisk(request?: CreateUDiskRequest): Promise<CreateUDiskResponse> {
     const args = { Action: 'CreateUDisk', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUDiskResponse
+      resp => resp.toObject() as CreateUDiskResponse
     );
   }
 
@@ -105,7 +105,7 @@ export default class UDiskClient extends Client {
   ): Promise<CreateUDiskSnapshotResponse> {
     const args = { Action: 'CreateUDiskSnapshot', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUDiskSnapshotResponse
+      resp => resp.toObject() as CreateUDiskSnapshotResponse
     );
   }
 
@@ -117,7 +117,7 @@ export default class UDiskClient extends Client {
   deleteUDisk(request?: DeleteUDiskRequest): Promise<DeleteUDiskResponse> {
     const args = { Action: 'DeleteUDisk', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUDiskResponse
+      resp => resp.toObject() as DeleteUDiskResponse
     );
   }
 
@@ -131,7 +131,7 @@ export default class UDiskClient extends Client {
   ): Promise<DeleteUDiskSnapshotResponse> {
     const args = { Action: 'DeleteUDiskSnapshot', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUDiskSnapshotResponse
+      resp => resp.toObject() as DeleteUDiskSnapshotResponse
     );
   }
 
@@ -145,7 +145,7 @@ export default class UDiskClient extends Client {
   ): Promise<DescribeRecycleUDiskResponse> {
     const args = { Action: 'DescribeRecycleUDisk', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeRecycleUDiskResponse
+      resp => resp.toObject() as DescribeRecycleUDiskResponse
     );
   }
 
@@ -159,7 +159,7 @@ export default class UDiskClient extends Client {
   ): Promise<DescribeUDiskResponse> {
     const args = { Action: 'DescribeUDisk', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDiskResponse
+      resp => resp.toObject() as DescribeUDiskResponse
     );
   }
 
@@ -173,7 +173,7 @@ export default class UDiskClient extends Client {
   ): Promise<DescribeUDiskPriceResponse> {
     const args = { Action: 'DescribeUDiskPrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDiskPriceResponse
+      resp => resp.toObject() as DescribeUDiskPriceResponse
     );
   }
 
@@ -187,7 +187,7 @@ export default class UDiskClient extends Client {
   ): Promise<DescribeUDiskSnapshotResponse> {
     const args = { Action: 'DescribeUDiskSnapshot', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDiskSnapshotResponse
+      resp => resp.toObject() as DescribeUDiskSnapshotResponse
     );
   }
 
@@ -201,7 +201,7 @@ export default class UDiskClient extends Client {
   ): Promise<DescribeUDiskUpgradePriceResponse> {
     const args = { Action: 'DescribeUDiskUpgradePrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDiskUpgradePriceResponse
+      resp => resp.toObject() as DescribeUDiskUpgradePriceResponse
     );
   }
 
@@ -213,7 +213,7 @@ export default class UDiskClient extends Client {
   detachUDisk(request?: DetachUDiskRequest): Promise<DetachUDiskResponse> {
     const args = { Action: 'DetachUDisk', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DetachUDiskResponse
+      resp => resp.toObject() as DetachUDiskResponse
     );
   }
 
@@ -225,7 +225,7 @@ export default class UDiskClient extends Client {
   recoverUDisk(request?: RecoverUDiskRequest): Promise<RecoverUDiskResponse> {
     const args = { Action: 'RecoverUDisk', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RecoverUDiskResponse
+      resp => resp.toObject() as RecoverUDiskResponse
     );
   }
 
@@ -237,7 +237,7 @@ export default class UDiskClient extends Client {
   renameUDisk(request?: RenameUDiskRequest): Promise<RenameUDiskResponse> {
     const args = { Action: 'RenameUDisk', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RenameUDiskResponse
+      resp => resp.toObject() as RenameUDiskResponse
     );
   }
 
@@ -249,7 +249,7 @@ export default class UDiskClient extends Client {
   resizeUDisk(request?: ResizeUDiskRequest): Promise<ResizeUDiskResponse> {
     const args = { Action: 'ResizeUDisk', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ResizeUDiskResponse
+      resp => resp.toObject() as ResizeUDiskResponse
     );
   }
 
@@ -261,7 +261,7 @@ export default class UDiskClient extends Client {
   restoreUDisk(request?: RestoreUDiskRequest): Promise<RestoreUDiskResponse> {
     const args = { Action: 'RestoreUDisk', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RestoreUDiskResponse
+      resp => resp.toObject() as RestoreUDiskResponse
     );
   }
 
@@ -275,7 +275,7 @@ export default class UDiskClient extends Client {
   ): Promise<SetUDiskUDataArkModeResponse> {
     const args = { Action: 'SetUDiskUDataArkMode', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as SetUDiskUDataArkModeResponse
+      resp => resp.toObject() as SetUDiskUDataArkModeResponse
     );
   }
 }
@@ -745,7 +745,7 @@ export interface DeleteUDiskRequest {
 /**
  * DeleteUDisk - 删除UDisk
  */
-export interface DeleteUDiskResponse {}
+export type DeleteUDiskResponse = {};
 
 /**
  * DeleteUDiskSnapshot - 删除Snapshot
@@ -768,7 +768,7 @@ export interface DeleteUDiskSnapshotRequest {
 /**
  * DeleteUDiskSnapshot - 删除Snapshot
  */
-export interface DeleteUDiskSnapshotResponse {}
+export type DeleteUDiskSnapshotResponse = {};
 
 /**
  * DescribeRecycleUDisk - 拉取回收站中云硬盘列表
@@ -1347,7 +1347,7 @@ export interface RecoverUDiskRequest {
 /**
  * RecoverUDisk - 从回收站中恢复云硬盘
  */
-export interface RecoverUDiskResponse {}
+export type RecoverUDiskResponse = {};
 
 /**
  * RenameUDisk - 重命名UDisk
@@ -1370,7 +1370,7 @@ export interface RenameUDiskRequest {
 /**
  * RenameUDisk - 重命名UDisk
  */
-export interface RenameUDiskResponse {}
+export type RenameUDiskResponse = {};
 
 /**
  * ResizeUDisk - 调整UDisk容量
@@ -1401,7 +1401,7 @@ export interface ResizeUDiskRequest {
 /**
  * ResizeUDisk - 调整UDisk容量
  */
-export interface ResizeUDiskResponse {}
+export type ResizeUDiskResponse = {};
 
 /**
  * RestoreUDisk - 从备份恢复数据至UDisk
@@ -1428,7 +1428,7 @@ export interface RestoreUDiskRequest {
 /**
  * RestoreUDisk - 从备份恢复数据至UDisk
  */
-export interface RestoreUDiskResponse {}
+export type RestoreUDiskResponse = {};
 
 /**
  * SetUDiskUDataArkMode - 设置UDisk数据方舟的状态
@@ -1455,4 +1455,4 @@ export interface SetUDiskUDataArkModeRequest {
 /**
  * SetUDiskUDataArkMode - 设置UDisk数据方舟的状态
  */
-export interface SetUDiskUDataArkModeResponse {}
+export type SetUDiskUDataArkModeResponse = {};

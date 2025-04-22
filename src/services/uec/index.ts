@@ -1,7 +1,7 @@
 import Client from '../../core/client';
 import Request from '../../core/request';
-import { ConfigOptions } from '../../core/config';
-import { CredentialOptions } from '../../core/credential';
+import type { ConfigOptions } from '../../core/config';
+import type { CredentialOptions } from '../../core/credential';
 
 /**
  * This client is used to call actions of **uec** service
@@ -27,7 +27,7 @@ export default class UECClient extends Client {
   ): Promise<BindUEcFirewallResponse> {
     const args = { Action: 'BindUEcFirewall', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as BindUEcFirewallResponse
+      resp => resp.toObject() as BindUEcFirewallResponse
     );
   }
 
@@ -41,7 +41,7 @@ export default class UECClient extends Client {
   ): Promise<CreateUEcCustomImageResponse> {
     const args = { Action: 'CreateUEcCustomImage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUEcCustomImageResponse
+      resp => resp.toObject() as CreateUEcCustomImageResponse
     );
   }
 
@@ -55,7 +55,7 @@ export default class UECClient extends Client {
   ): Promise<CreateUEcFirewallResponse> {
     const args = { Action: 'CreateUEcFirewall', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUEcFirewallResponse
+      resp => resp.toObject() as CreateUEcFirewallResponse
     );
   }
 
@@ -69,7 +69,7 @@ export default class UECClient extends Client {
   ): Promise<CreateUEcHolderResponse> {
     const args = { Action: 'CreateUEcHolder', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUEcHolderResponse
+      resp => resp.toObject() as CreateUEcHolderResponse
     );
   }
 
@@ -83,7 +83,7 @@ export default class UECClient extends Client {
   ): Promise<CreateUEcSubnetResponse> {
     const args = { Action: 'CreateUEcSubnet', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUEcSubnetResponse
+      resp => resp.toObject() as CreateUEcSubnetResponse
     );
   }
 
@@ -97,7 +97,7 @@ export default class UECClient extends Client {
   ): Promise<CreateUEcVHostResponse> {
     const args = { Action: 'CreateUEcVHost', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUEcVHostResponse
+      resp => resp.toObject() as CreateUEcVHostResponse
     );
   }
 
@@ -111,7 +111,7 @@ export default class UECClient extends Client {
   ): Promise<DeleteUEcCustomImageResponse> {
     const args = { Action: 'DeleteUEcCustomImage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUEcCustomImageResponse
+      resp => resp.toObject() as DeleteUEcCustomImageResponse
     );
   }
 
@@ -125,7 +125,7 @@ export default class UECClient extends Client {
   ): Promise<DeleteUEcHolderResponse> {
     const args = { Action: 'DeleteUEcHolder', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUEcHolderResponse
+      resp => resp.toObject() as DeleteUEcHolderResponse
     );
   }
 
@@ -139,7 +139,7 @@ export default class UECClient extends Client {
   ): Promise<DeleteUEcSubnetResponse> {
     const args = { Action: 'DeleteUEcSubnet', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUEcSubnetResponse
+      resp => resp.toObject() as DeleteUEcSubnetResponse
     );
   }
 
@@ -153,7 +153,7 @@ export default class UECClient extends Client {
   ): Promise<DeleteUEcVHostResponse> {
     const args = { Action: 'DeleteUEcVHost', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUEcVHostResponse
+      resp => resp.toObject() as DeleteUEcVHostResponse
     );
   }
 
@@ -167,7 +167,7 @@ export default class UECClient extends Client {
   ): Promise<DescribeUEcFirewallResponse> {
     const args = { Action: 'DescribeUEcFirewall', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUEcFirewallResponse
+      resp => resp.toObject() as DescribeUEcFirewallResponse
     );
   }
 
@@ -181,7 +181,7 @@ export default class UECClient extends Client {
   ): Promise<DescribeUEcFirewallResourceResponse> {
     const args = { Action: 'DescribeUEcFirewallResource', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUEcFirewallResourceResponse
+      resp => resp.toObject() as DescribeUEcFirewallResourceResponse
     );
   }
 
@@ -195,7 +195,7 @@ export default class UECClient extends Client {
   ): Promise<DescribeUEcHolderResponse> {
     const args = { Action: 'DescribeUEcHolder', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUEcHolderResponse
+      resp => resp.toObject() as DescribeUEcHolderResponse
     );
   }
 
@@ -209,7 +209,7 @@ export default class UECClient extends Client {
   ): Promise<DescribeUEcHolderIDCResponse> {
     const args = { Action: 'DescribeUEcHolderIDC', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUEcHolderIDCResponse
+      resp => resp.toObject() as DescribeUEcHolderIDCResponse
     );
   }
 
@@ -223,7 +223,7 @@ export default class UECClient extends Client {
   ): Promise<DescribeUEcIDCResponse> {
     const args = { Action: 'DescribeUEcIDC', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUEcIDCResponse
+      resp => resp.toObject() as DescribeUEcIDCResponse
     );
   }
 
@@ -237,7 +237,7 @@ export default class UECClient extends Client {
   ): Promise<DescribeUEcSubnetResponse> {
     const args = { Action: 'DescribeUEcSubnet', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUEcSubnetResponse
+      resp => resp.toObject() as DescribeUEcSubnetResponse
     );
   }
 
@@ -251,7 +251,7 @@ export default class UECClient extends Client {
   ): Promise<DescribeUEcVHostResponse> {
     const args = { Action: 'DescribeUEcVHost', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUEcVHostResponse
+      resp => resp.toObject() as DescribeUEcVHostResponse
     );
   }
 
@@ -265,7 +265,7 @@ export default class UECClient extends Client {
   ): Promise<DescribeUEcVHostISPResponse> {
     const args = { Action: 'DescribeUEcVHostISP', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUEcVHostISPResponse
+      resp => resp.toObject() as DescribeUEcVHostISPResponse
     );
   }
 
@@ -279,7 +279,7 @@ export default class UECClient extends Client {
   ): Promise<GetUEcHolderLogResponse> {
     const args = { Action: 'GetUEcHolderLog', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUEcHolderLogResponse
+      resp => resp.toObject() as GetUEcHolderLogResponse
     );
   }
 
@@ -293,7 +293,7 @@ export default class UECClient extends Client {
   ): Promise<GetUEcHolderMetricsResponse> {
     const args = { Action: 'GetUEcHolderMetrics', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUEcHolderMetricsResponse
+      resp => resp.toObject() as GetUEcHolderMetricsResponse
     );
   }
 
@@ -307,7 +307,7 @@ export default class UECClient extends Client {
   ): Promise<GetUEcIDCCutInfoResponse> {
     const args = { Action: 'GetUEcIDCCutInfo', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUEcIDCCutInfoResponse
+      resp => resp.toObject() as GetUEcIDCCutInfoResponse
     );
   }
 
@@ -321,7 +321,7 @@ export default class UECClient extends Client {
   ): Promise<GetUEcIDCVHostDataResponse> {
     const args = { Action: 'GetUEcIDCVHostData', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUEcIDCVHostDataResponse
+      resp => resp.toObject() as GetUEcIDCVHostDataResponse
     );
   }
 
@@ -333,7 +333,7 @@ export default class UECClient extends Client {
   getUEcImage(request?: GetUEcImageRequest): Promise<GetUEcImageResponse> {
     const args = { Action: 'GetUEcImage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUEcImageResponse
+      resp => resp.toObject() as GetUEcImageResponse
     );
   }
 
@@ -347,7 +347,7 @@ export default class UECClient extends Client {
   ): Promise<GetUEcPodPriceResponse> {
     const args = { Action: 'GetUEcPodPrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUEcPodPriceResponse
+      resp => resp.toObject() as GetUEcPodPriceResponse
     );
   }
 
@@ -361,7 +361,7 @@ export default class UECClient extends Client {
   ): Promise<GetUEcUpgradePriceResponse> {
     const args = { Action: 'GetUEcUpgradePrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUEcUpgradePriceResponse
+      resp => resp.toObject() as GetUEcUpgradePriceResponse
     );
   }
 
@@ -375,7 +375,7 @@ export default class UECClient extends Client {
   ): Promise<GetUEcVHostDataResponse> {
     const args = { Action: 'GetUEcVHostData', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUEcVHostDataResponse
+      resp => resp.toObject() as GetUEcVHostDataResponse
     );
   }
 
@@ -389,7 +389,7 @@ export default class UECClient extends Client {
   ): Promise<GetUEcVHostPriceResponse> {
     const args = { Action: 'GetUEcVHostPrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUEcVHostPriceResponse
+      resp => resp.toObject() as GetUEcVHostPriceResponse
     );
   }
 
@@ -403,7 +403,7 @@ export default class UECClient extends Client {
   ): Promise<ImportUEcCustomImageResponse> {
     const args = { Action: 'ImportUEcCustomImage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ImportUEcCustomImageResponse
+      resp => resp.toObject() as ImportUEcCustomImageResponse
     );
   }
 
@@ -417,7 +417,7 @@ export default class UECClient extends Client {
   ): Promise<LoginUEcDockerResponse> {
     const args = { Action: 'LoginUEcDocker', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as LoginUEcDockerResponse
+      resp => resp.toObject() as LoginUEcDockerResponse
     );
   }
 
@@ -431,7 +431,7 @@ export default class UECClient extends Client {
   ): Promise<ModifyUEcBandwidthResponse> {
     const args = { Action: 'ModifyUEcBandwidth', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyUEcBandwidthResponse
+      resp => resp.toObject() as ModifyUEcBandwidthResponse
     );
   }
 
@@ -445,7 +445,7 @@ export default class UECClient extends Client {
   ): Promise<ModifyUEcHolderNameResponse> {
     const args = { Action: 'ModifyUEcHolderName', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyUEcHolderNameResponse
+      resp => resp.toObject() as ModifyUEcHolderNameResponse
     );
   }
 
@@ -459,7 +459,7 @@ export default class UECClient extends Client {
   ): Promise<ModifyUEcImageNameResponse> {
     const args = { Action: 'ModifyUEcImageName', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyUEcImageNameResponse
+      resp => resp.toObject() as ModifyUEcImageNameResponse
     );
   }
 
@@ -473,7 +473,7 @@ export default class UECClient extends Client {
   ): Promise<PoweroffUEcVHostResponse> {
     const args = { Action: 'PoweroffUEcVHost', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as PoweroffUEcVHostResponse
+      resp => resp.toObject() as PoweroffUEcVHostResponse
     );
   }
 
@@ -487,7 +487,7 @@ export default class UECClient extends Client {
   ): Promise<ReinstallUEcVHostResponse> {
     const args = { Action: 'ReinstallUEcVHost', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ReinstallUEcVHostResponse
+      resp => resp.toObject() as ReinstallUEcVHostResponse
     );
   }
 
@@ -501,7 +501,7 @@ export default class UECClient extends Client {
   ): Promise<RestartUEcHolderResponse> {
     const args = { Action: 'RestartUEcHolder', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RestartUEcHolderResponse
+      resp => resp.toObject() as RestartUEcHolderResponse
     );
   }
 
@@ -515,7 +515,7 @@ export default class UECClient extends Client {
   ): Promise<RestartUEcVHostResponse> {
     const args = { Action: 'RestartUEcVHost', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RestartUEcVHostResponse
+      resp => resp.toObject() as RestartUEcVHostResponse
     );
   }
 
@@ -529,7 +529,7 @@ export default class UECClient extends Client {
   ): Promise<StartUEcVHostResponse> {
     const args = { Action: 'StartUEcVHost', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as StartUEcVHostResponse
+      resp => resp.toObject() as StartUEcVHostResponse
     );
   }
 
@@ -541,7 +541,7 @@ export default class UECClient extends Client {
   stopUEcVHost(request?: StopUEcVHostRequest): Promise<StopUEcVHostResponse> {
     const args = { Action: 'StopUEcVHost', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as StopUEcVHostResponse
+      resp => resp.toObject() as StopUEcVHostResponse
     );
   }
 
@@ -555,7 +555,7 @@ export default class UECClient extends Client {
   ): Promise<UnBindUEcFirewallResponse> {
     const args = { Action: 'UnBindUEcFirewall', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UnBindUEcFirewallResponse
+      resp => resp.toObject() as UnBindUEcFirewallResponse
     );
   }
 
@@ -569,7 +569,7 @@ export default class UECClient extends Client {
   ): Promise<UpdateUEcFirewallResponse> {
     const args = { Action: 'UpdateUEcFirewall', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateUEcFirewallResponse
+      resp => resp.toObject() as UpdateUEcFirewallResponse
     );
   }
 
@@ -583,7 +583,7 @@ export default class UECClient extends Client {
   ): Promise<UpdateUEcFirewallAttributeResponse> {
     const args = { Action: 'UpdateUEcFirewallAttribute', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateUEcFirewallAttributeResponse
+      resp => resp.toObject() as UpdateUEcFirewallAttributeResponse
     );
   }
 
@@ -597,7 +597,7 @@ export default class UECClient extends Client {
   ): Promise<UpdateUEcSubnetResponse> {
     const args = { Action: 'UpdateUEcSubnet', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateUEcSubnetResponse
+      resp => resp.toObject() as UpdateUEcSubnetResponse
     );
   }
 }
@@ -619,7 +619,7 @@ export interface BindUEcFirewallRequest {
 /**
  * BindUEcFirewall - 绑定防火墙，应用防火墙规则
  */
-export interface BindUEcFirewallResponse {}
+export type BindUEcFirewallResponse = {};
 
 /**
  * CreateUEcCustomImage - 从指定虚拟机，生成自定义镜像。
@@ -1003,7 +1003,7 @@ export interface DeleteUEcHolderRequest {
 /**
  * DeleteUEcHolder - 删除容器组
  */
-export interface DeleteUEcHolderResponse {}
+export type DeleteUEcHolderResponse = {};
 
 /**
  * DeleteUEcSubnet - 删除子网
@@ -1018,7 +1018,7 @@ export interface DeleteUEcSubnetRequest {
 /**
  * DeleteUEcSubnet - 删除子网
  */
-export interface DeleteUEcSubnetResponse {}
+export type DeleteUEcSubnetResponse = {};
 
 /**
  * DeleteUEcVHost - 删除vhost虚拟机 v2.0
@@ -1033,7 +1033,7 @@ export interface DeleteUEcVHostRequest {
 /**
  * DeleteUEcVHost - 删除vhost虚拟机 v2.0
  */
-export interface DeleteUEcVHostResponse {}
+export type DeleteUEcVHostResponse = {};
 
 /**
  * DescribeUEcFirewall - 获取防火墙信息
@@ -1909,7 +1909,7 @@ export interface GetUEcHolderMetricsResponse {
 /**
  * GetUEcIDCCutInfo - 获取机房割接信息
  */
-export interface GetUEcIDCCutInfoRequest {}
+export type GetUEcIDCCutInfoRequest = {};
 
 /**
  * GetUEcIDCCutInfo - 获取机房割接信息
@@ -2628,7 +2628,7 @@ export interface ModifyUEcBandwidthRequest {
 /**
  * ModifyUEcBandwidth - 修改节点带宽限制
  */
-export interface ModifyUEcBandwidthResponse {}
+export type ModifyUEcBandwidthResponse = {};
 
 /**
  * ModifyUEcHolderName - 修改容器组名称
@@ -2647,7 +2647,7 @@ export interface ModifyUEcHolderNameRequest {
 /**
  * ModifyUEcHolderName - 修改容器组名称
  */
-export interface ModifyUEcHolderNameResponse {}
+export type ModifyUEcHolderNameResponse = {};
 
 /**
  * ModifyUEcImageName - 修改镜像名称
@@ -2670,7 +2670,7 @@ export interface ModifyUEcImageNameRequest {
 /**
  * ModifyUEcImageName - 修改镜像名称
  */
-export interface ModifyUEcImageNameResponse {}
+export type ModifyUEcImageNameResponse = {};
 
 /**
  * PoweroffUEcVHost - 虚拟机断电
@@ -2685,7 +2685,7 @@ export interface PoweroffUEcVHostRequest {
 /**
  * PoweroffUEcVHost - 虚拟机断电
  */
-export interface PoweroffUEcVHostResponse {}
+export type PoweroffUEcVHostResponse = {};
 
 /**
  * ReinstallUEcVHost - 虚拟机重装系统
@@ -2716,7 +2716,7 @@ export interface ReinstallUEcVHostRequest {
 /**
  * ReinstallUEcVHost - 虚拟机重装系统
  */
-export interface ReinstallUEcVHostResponse {}
+export type ReinstallUEcVHostResponse = {};
 
 /**
  * RestartUEcHolder - 重启容器组
@@ -2731,7 +2731,7 @@ export interface RestartUEcHolderRequest {
 /**
  * RestartUEcHolder - 重启容器组
  */
-export interface RestartUEcHolderResponse {}
+export type RestartUEcHolderResponse = {};
 
 /**
  * RestartUEcVHost - 重启虚拟机v2.0
@@ -2746,7 +2746,7 @@ export interface RestartUEcVHostRequest {
 /**
  * RestartUEcVHost - 重启虚拟机v2.0
  */
-export interface RestartUEcVHostResponse {}
+export type RestartUEcVHostResponse = {};
 
 /**
  * StartUEcVHost - 启动UEC虚拟机
@@ -2761,7 +2761,7 @@ export interface StartUEcVHostRequest {
 /**
  * StartUEcVHost - 启动UEC虚拟机
  */
-export interface StartUEcVHostResponse {}
+export type StartUEcVHostResponse = {};
 
 /**
  * StopUEcVHost - 停止UEC虚拟机
@@ -2776,7 +2776,7 @@ export interface StopUEcVHostRequest {
 /**
  * StopUEcVHost - 停止UEC虚拟机
  */
-export interface StopUEcVHostResponse {}
+export type StopUEcVHostResponse = {};
 
 /**
  * UnBindUEcFirewall - 解绑防火墙
@@ -2795,7 +2795,7 @@ export interface UnBindUEcFirewallRequest {
 /**
  * UnBindUEcFirewall - 解绑防火墙
  */
-export interface UnBindUEcFirewallResponse {}
+export type UnBindUEcFirewallResponse = {};
 
 /**
  * UpdateUEcFirewall - 更新防火墙信息，新增和删除规则
@@ -2839,7 +2839,7 @@ export interface UpdateUEcFirewallRequest {
 /**
  * UpdateUEcFirewall - 更新防火墙信息，新增和删除规则
  */
-export interface UpdateUEcFirewallResponse {}
+export type UpdateUEcFirewallResponse = {};
 
 /**
  * UpdateUEcFirewallAttribute - 更新防火墙名称及描述
@@ -2862,7 +2862,7 @@ export interface UpdateUEcFirewallAttributeRequest {
 /**
  * UpdateUEcFirewallAttribute - 更新防火墙名称及描述
  */
-export interface UpdateUEcFirewallAttributeResponse {}
+export type UpdateUEcFirewallAttributeResponse = {};
 
 /**
  * UpdateUEcSubnet - 更新子网信息
@@ -2885,4 +2885,4 @@ export interface UpdateUEcSubnetRequest {
 /**
  * UpdateUEcSubnet - 更新子网信息
  */
-export interface UpdateUEcSubnetResponse {}
+export type UpdateUEcSubnetResponse = {};

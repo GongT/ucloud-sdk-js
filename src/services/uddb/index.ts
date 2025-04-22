@@ -1,7 +1,7 @@
 import Client from '../../core/client';
 import Request from '../../core/request';
-import { ConfigOptions } from '../../core/config';
-import { CredentialOptions } from '../../core/credential';
+import type { ConfigOptions } from '../../core/config';
+import type { CredentialOptions } from '../../core/credential';
 
 /**
  * This client is used to call actions of **uddb** service
@@ -27,7 +27,7 @@ export default class UDDBClient extends Client {
   ): Promise<ChangeUDDBInstanceNameResponse> {
     const args = { Action: 'ChangeUDDBInstanceName', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ChangeUDDBInstanceNameResponse
+      resp => resp.toObject() as ChangeUDDBInstanceNameResponse
     );
   }
 
@@ -47,7 +47,7 @@ Running: 系统正常运行中
   ): Promise<ChangeUDDBSlaveCountResponse> {
     const args = { Action: 'ChangeUDDBSlaveCount', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ChangeUDDBSlaveCountResponse
+      resp => resp.toObject() as ChangeUDDBSlaveCountResponse
     );
   }
 
@@ -61,7 +61,7 @@ Running: 系统正常运行中
   ): Promise<CreateUDDBInstanceResponse> {
     const args = { Action: 'CreateUDDBInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUDDBInstanceResponse
+      resp => resp.toObject() as CreateUDDBInstanceResponse
     );
   }
 
@@ -79,7 +79,7 @@ Shutoff: 已关闭
   ): Promise<DeleteUDDBInstanceResponse> {
     const args = { Action: 'DeleteUDDBInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUDDBInstanceResponse
+      resp => resp.toObject() as DeleteUDDBInstanceResponse
     );
   }
 
@@ -93,7 +93,7 @@ Shutoff: 已关闭
   ): Promise<DescribeUDDBInstanceResponse> {
     const args = { Action: 'DescribeUDDBInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDDBInstanceResponse
+      resp => resp.toObject() as DescribeUDDBInstanceResponse
     );
   }
 
@@ -107,7 +107,7 @@ Shutoff: 已关闭
   ): Promise<DescribeUDDBInstancePriceResponse> {
     const args = { Action: 'DescribeUDDBInstancePrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDDBInstancePriceResponse
+      resp => resp.toObject() as DescribeUDDBInstancePriceResponse
     );
   }
 
@@ -124,7 +124,7 @@ Shutoff: 已关闭
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDDBInstanceUpgradePriceResponse
+      resp => resp.toObject() as DescribeUDDBInstanceUpgradePriceResponse
     );
   }
 
@@ -144,7 +144,7 @@ Abnormal: 异常运行中
   ): Promise<RestartUDDBInstanceResponse> {
     const args = { Action: 'RestartUDDBInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RestartUDDBInstanceResponse
+      resp => resp.toObject() as RestartUDDBInstanceResponse
     );
   }
 
@@ -163,7 +163,7 @@ Shutoff: 已关闭
   ): Promise<StartUDDBInstanceResponse> {
     const args = { Action: 'StartUDDBInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as StartUDDBInstanceResponse
+      resp => resp.toObject() as StartUDDBInstanceResponse
     );
   }
 
@@ -183,7 +183,7 @@ Abnormal: 异常运行中
   ): Promise<StopUDDBInstanceResponse> {
     const args = { Action: 'StopUDDBInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as StopUDDBInstanceResponse
+      resp => resp.toObject() as StopUDDBInstanceResponse
     );
   }
 
@@ -206,7 +206,7 @@ Shutoff: 已关闭
   ): Promise<UpgradeUDDBDataNodeResponse> {
     const args = { Action: 'UpgradeUDDBDataNode', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpgradeUDDBDataNodeResponse
+      resp => resp.toObject() as UpgradeUDDBDataNodeResponse
     );
   }
 
@@ -227,7 +227,7 @@ Running: 系统正常运行中
   ): Promise<UpgradeUDDBInstanceResponse> {
     const args = { Action: 'UpgradeUDDBInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpgradeUDDBInstanceResponse
+      resp => resp.toObject() as UpgradeUDDBInstanceResponse
     );
   }
 }
@@ -253,7 +253,7 @@ export interface ChangeUDDBInstanceNameRequest {
 /**
  * ChangeUDDBInstanceName - 修改分布式数据库中间件名称
  */
-export interface ChangeUDDBInstanceNameResponse {}
+export type ChangeUDDBInstanceNameResponse = {};
 
 /**
  * ChangeUDDBSlaveCount - 改变分布式数据库数据节点的只读实例个数
@@ -288,7 +288,7 @@ export interface ChangeUDDBSlaveCountRequest {
 Running: 系统正常运行中
 当请求返回成功之后，UDDB实例的状态变成"ChangingSlaveCount"; 如果返回失败, UDDB实例状态保持不变 当UDDB更改数据分区的只读实例个数成功之后, UDDB实例的状态变成"Running"(正常运行中); 如果更改过程中出现异常, 状态变成"Abnormal"(异常运行中)或者"Error"(运行错误)
  */
-export interface ChangeUDDBSlaveCountResponse {}
+export type ChangeUDDBSlaveCountResponse = {};
 
 /**
  * CreateUDDBInstance - 创建创建分布式数据库UDDB实例, 简称UDDB实例。
@@ -407,7 +407,7 @@ InitFail: 初始化失败
 Shutoff: 已关闭
 当请求返回成功之后，UDDB实例就已经被删除, 列表上看不到对应的UDDB实例
  */
-export interface DeleteUDDBInstanceResponse {}
+export type DeleteUDDBInstanceResponse = {};
 
 /**
  * DescribeUDDBInstance - 获取分布式数据库UDDB的详细信息
@@ -735,7 +735,7 @@ Running: 正常运行中
 Abnormal: 异常运行中
 当请求返回成功之后，UDDB实例的状态变成"Starting"(启动中); 如果返回失败, UDDB实例状态保持不变 UDDB实例在重启过程中, 当UDDB实例启动成功之后, UDDB实例的状态变成"Running"(正常运行中); 如果启动过程中出现异常, 状态变成"Abnormal"(异常运行中), 或者"Shutoff"(已关闭
  */
-export interface RestartUDDBInstanceResponse {}
+export type RestartUDDBInstanceResponse = {};
 
 /**
  * StartUDDBInstance - 启动UDDB实例，开始提供服务。
@@ -764,7 +764,7 @@ export interface StartUDDBInstanceRequest {
 Shutoff: 已关闭
 当请求返回成功之后，UDDB实例的状态变成"Starting"(启动中); 如果返回失败, UDDB实例状态保持不变 UDDB实例在启动过程中, 当UDDB实例启动成功之后, UDDB实例的状态变成"Running"(正常运行中); 如果启动过程中出现异常, 状态变成"Abnormal"(异常运行中), 或者"Shutoff"(已关闭)
  */
-export interface StartUDDBInstanceResponse {}
+export type StartUDDBInstanceResponse = {};
 
 /**
  * StopUDDBInstance - 关闭UDDB实例，停止提供服务。
@@ -795,7 +795,7 @@ Running: 正常运行中
 Abnormal: 异常运行中
 当请求返回成功之后，UDDB实例的状态变成"Shutdown"(关闭中); 如果返回失败, UDDB实例状态保持不变 UDDB实例在关闭过程中, 当UDDB实例关闭成功之后, UDDB实例的状态变成"Shutoff"(已关闭); 如果关闭过程中出现异常, 根据UDDB实例的情况, 状态变成"Abnormal"(异常运行中), 或者"Running"(正常运行中)
  */
-export interface StopUDDBInstanceResponse {}
+export type StopUDDBInstanceResponse = {};
 
 /**
  * UpgradeUDDBDataNode - 升降级分布式数据库数据节点的配置, 提高/降低数据节点的数据容量和内存
@@ -844,7 +844,7 @@ export interface UpgradeUDDBDataNodeRequest {
 Shutoff: 已关闭
 当请求返回成功之后，UDDB实例的状态变成"UpgradingDataNode"，相关数据节点的状态变成"Upgrading"; 如果返回失败, UDDB实例状态保持不变 当UDDB实例升级结束之后, UDDB实例的状态变成"Shutoff"
  */
-export interface UpgradeUDDBDataNodeResponse {}
+export type UpgradeUDDBDataNodeResponse = {};
 
 /**
  * UpgradeUDDBInstance - 升降级分布式数据库中间件的配置, 提高/降低请求处理的并发性
@@ -889,4 +889,4 @@ export interface UpgradeUDDBInstanceRequest {
 Running: 系统正常运行中
 当请求返回成功之后，UDDB实例的状态变成"UpgradingUDDB"; 如果返回失败, UDDB实例状态保持不变 当UDDB实例升级成功之后, UDDB实例的状态变成"Running"; 如果更改过程中出现异常, 状态变成"Abnormal", 或者"Error"
  */
-export interface UpgradeUDDBInstanceResponse {}
+export type UpgradeUDDBInstanceResponse = {};

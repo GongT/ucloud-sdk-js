@@ -1,7 +1,7 @@
 import Client from '../../core/client';
 import Request from '../../core/request';
-import { ConfigOptions } from '../../core/config';
-import { CredentialOptions } from '../../core/credential';
+import type { ConfigOptions } from '../../core/config';
+import type { CredentialOptions } from '../../core/credential';
 
 /**
  * This client is used to call actions of **ubill** service
@@ -25,7 +25,7 @@ export default class UBillClient extends Client {
   getBalance(request?: GetBalanceRequest): Promise<GetBalanceResponse> {
     const args = { Action: 'GetBalance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetBalanceResponse
+      resp => resp.toObject() as GetBalanceResponse
     );
   }
 
@@ -39,7 +39,7 @@ export default class UBillClient extends Client {
   ): Promise<GetBillDataFileUrlResponse> {
     const args = { Action: 'GetBillDataFileUrl', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetBillDataFileUrlResponse
+      resp => resp.toObject() as GetBillDataFileUrlResponse
     );
   }
 
@@ -53,7 +53,7 @@ export default class UBillClient extends Client {
   ): Promise<ListUBillDetailResponse> {
     const args = { Action: 'ListUBillDetail', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ListUBillDetailResponse
+      resp => resp.toObject() as ListUBillDetailResponse
     );
   }
 
@@ -67,7 +67,7 @@ export default class UBillClient extends Client {
   ): Promise<ListUBillOverviewResponse> {
     const args = { Action: 'ListUBillOverview', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ListUBillOverviewResponse
+      resp => resp.toObject() as ListUBillOverviewResponse
     );
   }
 }
@@ -75,7 +75,7 @@ export default class UBillClient extends Client {
 /**
  * GetBalance - 获取账户余额
  */
-export interface GetBalanceRequest {}
+export type GetBalanceRequest = {};
 
 /**
  * GetBalance - 获取账户余额

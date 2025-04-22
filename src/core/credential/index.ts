@@ -1,4 +1,4 @@
-const { createHash } = require('crypto');
+const { createHash } = require('node:crypto');
 
 type argsT = { [index: string]: any };
 
@@ -19,7 +19,7 @@ export default class Credential {
 
   verifyAc(args: argsT) {
     const obj = { ...args };
-    obj['PublicKey'] = this.publicKey;
+    obj.PublicKey = this.publicKey;
 
     // key sorting
     const keys = Object.keys(obj);
@@ -27,26 +27,26 @@ export default class Credential {
 
     // concat string
     let s = '';
-    keys.forEach((key) => {
+    for (const key of keys) {
       const value = obj[key];
       if (value == null) {
-        return;
+        continue;
       }
       s += key;
       s += value.toString();
-    });
+    }
     s += this.privateKey;
 
     // hash by sha1
-    let hash = createHash('sha1');
+    const hash = createHash('sha1');
     hash.update(s);
     return hash.digest('hex');
   }
 
   sign(args: argsT): argsT {
     const obj = { ...args };
-    obj['Signature'] = this.verifyAc(obj);
-    obj['PublicKey'] = this.publicKey;
+    obj.Signature = this.verifyAc(obj);
+    obj.PublicKey = this.publicKey;
     return obj;
   }
 }

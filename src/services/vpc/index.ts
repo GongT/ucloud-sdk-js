@@ -1,7 +1,7 @@
 import Client from '../../core/client';
 import Request from '../../core/request';
-import { ConfigOptions } from '../../core/config';
-import { CredentialOptions } from '../../core/credential';
+import type { ConfigOptions } from '../../core/config';
+import type { CredentialOptions } from '../../core/credential';
 
 /**
  * This client is used to call actions of **vpc** service
@@ -25,7 +25,7 @@ export default class VPCClient extends Client {
   addSnatRule(request?: AddSnatRuleRequest): Promise<AddSnatRuleResponse> {
     const args = { Action: 'AddSnatRule', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as AddSnatRuleResponse
+      resp => resp.toObject() as AddSnatRuleResponse
     );
   }
 
@@ -39,7 +39,7 @@ export default class VPCClient extends Client {
   ): Promise<AddVPCNetworkResponse> {
     const args = { Action: 'AddVPCNetwork', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as AddVPCNetworkResponse
+      resp => resp.toObject() as AddVPCNetworkResponse
     );
   }
 
@@ -53,7 +53,7 @@ export default class VPCClient extends Client {
   ): Promise<AddWhiteListResourceResponse> {
     const args = { Action: 'AddWhiteListResource', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as AddWhiteListResourceResponse
+      resp => resp.toObject() as AddWhiteListResourceResponse
     );
   }
 
@@ -67,7 +67,7 @@ export default class VPCClient extends Client {
   ): Promise<AllocateBatchSecondaryIpResponse> {
     const args = { Action: 'AllocateBatchSecondaryIp', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as AllocateBatchSecondaryIpResponse
+      resp => resp.toObject() as AllocateBatchSecondaryIpResponse
     );
   }
 
@@ -81,7 +81,7 @@ export default class VPCClient extends Client {
   ): Promise<AllocateSecondaryIpResponse> {
     const args = { Action: 'AllocateSecondaryIp', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as AllocateSecondaryIpResponse
+      resp => resp.toObject() as AllocateSecondaryIpResponse
     );
   }
 
@@ -93,7 +93,7 @@ export default class VPCClient extends Client {
   allocateVIP(request?: AllocateVIPRequest): Promise<AllocateVIPResponse> {
     const args = { Action: 'AllocateVIP', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as AllocateVIPResponse
+      resp => resp.toObject() as AllocateVIPResponse
     );
   }
 
@@ -107,7 +107,7 @@ export default class VPCClient extends Client {
   ): Promise<AssociateRouteTableResponse> {
     const args = { Action: 'AssociateRouteTable', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as AssociateRouteTableResponse
+      resp => resp.toObject() as AssociateRouteTableResponse
     );
   }
 
@@ -121,7 +121,7 @@ export default class VPCClient extends Client {
   ): Promise<CloneRouteTableResponse> {
     const args = { Action: 'CloneRouteTable', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CloneRouteTableResponse
+      resp => resp.toObject() as CloneRouteTableResponse
     );
   }
 
@@ -133,7 +133,7 @@ export default class VPCClient extends Client {
   createNATGW(request?: CreateNATGWRequest): Promise<CreateNATGWResponse> {
     const args = { Action: 'CreateNATGW', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateNATGWResponse
+      resp => resp.toObject() as CreateNATGWResponse
     );
   }
 
@@ -147,7 +147,7 @@ export default class VPCClient extends Client {
   ): Promise<CreateNATGWPolicyResponse> {
     const args = { Action: 'CreateNATGWPolicy', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateNATGWPolicyResponse
+      resp => resp.toObject() as CreateNATGWPolicyResponse
     );
   }
 
@@ -161,7 +161,7 @@ export default class VPCClient extends Client {
   ): Promise<CreateNetworkAclResponse> {
     const args = { Action: 'CreateNetworkAcl', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateNetworkAclResponse
+      resp => resp.toObject() as CreateNetworkAclResponse
     );
   }
 
@@ -175,7 +175,7 @@ export default class VPCClient extends Client {
   ): Promise<CreateNetworkAclAssociationResponse> {
     const args = { Action: 'CreateNetworkAclAssociation', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateNetworkAclAssociationResponse
+      resp => resp.toObject() as CreateNetworkAclAssociationResponse
     );
   }
 
@@ -189,7 +189,7 @@ export default class VPCClient extends Client {
   ): Promise<CreateNetworkAclEntryResponse> {
     const args = { Action: 'CreateNetworkAclEntry', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateNetworkAclEntryResponse
+      resp => resp.toObject() as CreateNetworkAclEntryResponse
     );
   }
 
@@ -203,7 +203,7 @@ export default class VPCClient extends Client {
   ): Promise<CreateNetworkInterfaceResponse> {
     const args = { Action: 'CreateNetworkInterface', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateNetworkInterfaceResponse
+      resp => resp.toObject() as CreateNetworkInterfaceResponse
     );
   }
 
@@ -217,7 +217,7 @@ export default class VPCClient extends Client {
   ): Promise<CreateRouteTableResponse> {
     const args = { Action: 'CreateRouteTable', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateRouteTableResponse
+      resp => resp.toObject() as CreateRouteTableResponse
     );
   }
 
@@ -231,7 +231,7 @@ export default class VPCClient extends Client {
   ): Promise<CreateSnatDnatRuleResponse> {
     const args = { Action: 'CreateSnatDnatRule', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateSnatDnatRuleResponse
+      resp => resp.toObject() as CreateSnatDnatRuleResponse
     );
   }
 
@@ -243,7 +243,7 @@ export default class VPCClient extends Client {
   createSubnet(request?: CreateSubnetRequest): Promise<CreateSubnetResponse> {
     const args = { Action: 'CreateSubnet', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateSubnetResponse
+      resp => resp.toObject() as CreateSubnetResponse
     );
   }
 
@@ -255,7 +255,7 @@ export default class VPCClient extends Client {
   createVPC(request?: CreateVPCRequest): Promise<CreateVPCResponse> {
     const args = { Action: 'CreateVPC', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateVPCResponse
+      resp => resp.toObject() as CreateVPCResponse
     );
   }
 
@@ -269,7 +269,7 @@ export default class VPCClient extends Client {
   ): Promise<CreateVPCIntercomResponse> {
     const args = { Action: 'CreateVPCIntercom', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateVPCIntercomResponse
+      resp => resp.toObject() as CreateVPCIntercomResponse
     );
   }
 
@@ -281,7 +281,7 @@ export default class VPCClient extends Client {
   deleteNATGW(request?: DeleteNATGWRequest): Promise<DeleteNATGWResponse> {
     const args = { Action: 'DeleteNATGW', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteNATGWResponse
+      resp => resp.toObject() as DeleteNATGWResponse
     );
   }
 
@@ -295,7 +295,7 @@ export default class VPCClient extends Client {
   ): Promise<DeleteNATGWPolicyResponse> {
     const args = { Action: 'DeleteNATGWPolicy', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteNATGWPolicyResponse
+      resp => resp.toObject() as DeleteNATGWPolicyResponse
     );
   }
 
@@ -309,7 +309,7 @@ export default class VPCClient extends Client {
   ): Promise<DeleteNetworkAclResponse> {
     const args = { Action: 'DeleteNetworkAcl', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteNetworkAclResponse
+      resp => resp.toObject() as DeleteNetworkAclResponse
     );
   }
 
@@ -323,7 +323,7 @@ export default class VPCClient extends Client {
   ): Promise<DeleteNetworkAclAssociationResponse> {
     const args = { Action: 'DeleteNetworkAclAssociation', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteNetworkAclAssociationResponse
+      resp => resp.toObject() as DeleteNetworkAclAssociationResponse
     );
   }
 
@@ -337,7 +337,7 @@ export default class VPCClient extends Client {
   ): Promise<DeleteNetworkAclEntryResponse> {
     const args = { Action: 'DeleteNetworkAclEntry', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteNetworkAclEntryResponse
+      resp => resp.toObject() as DeleteNetworkAclEntryResponse
     );
   }
 
@@ -351,7 +351,7 @@ export default class VPCClient extends Client {
   ): Promise<DeleteRouteTableResponse> {
     const args = { Action: 'DeleteRouteTable', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteRouteTableResponse
+      resp => resp.toObject() as DeleteRouteTableResponse
     );
   }
 
@@ -365,7 +365,7 @@ export default class VPCClient extends Client {
   ): Promise<DeleteSecondaryIpResponse> {
     const args = { Action: 'DeleteSecondaryIp', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteSecondaryIpResponse
+      resp => resp.toObject() as DeleteSecondaryIpResponse
     );
   }
 
@@ -379,7 +379,7 @@ export default class VPCClient extends Client {
   ): Promise<DeleteSnatDnatRuleResponse> {
     const args = { Action: 'DeleteSnatDnatRule', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteSnatDnatRuleResponse
+      resp => resp.toObject() as DeleteSnatDnatRuleResponse
     );
   }
 
@@ -393,7 +393,7 @@ export default class VPCClient extends Client {
   ): Promise<DeleteSnatRuleResponse> {
     const args = { Action: 'DeleteSnatRule', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteSnatRuleResponse
+      resp => resp.toObject() as DeleteSnatRuleResponse
     );
   }
 
@@ -405,7 +405,7 @@ export default class VPCClient extends Client {
   deleteSubnet(request?: DeleteSubnetRequest): Promise<DeleteSubnetResponse> {
     const args = { Action: 'DeleteSubnet', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteSubnetResponse
+      resp => resp.toObject() as DeleteSubnetResponse
     );
   }
 
@@ -417,7 +417,7 @@ export default class VPCClient extends Client {
   deleteVPC(request?: DeleteVPCRequest): Promise<DeleteVPCResponse> {
     const args = { Action: 'DeleteVPC', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteVPCResponse
+      resp => resp.toObject() as DeleteVPCResponse
     );
   }
 
@@ -431,7 +431,7 @@ export default class VPCClient extends Client {
   ): Promise<DeleteVPCIntercomResponse> {
     const args = { Action: 'DeleteVPCIntercom', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteVPCIntercomResponse
+      resp => resp.toObject() as DeleteVPCIntercomResponse
     );
   }
 
@@ -445,7 +445,7 @@ export default class VPCClient extends Client {
   ): Promise<DeleteWhiteListResourceResponse> {
     const args = { Action: 'DeleteWhiteListResource', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteWhiteListResourceResponse
+      resp => resp.toObject() as DeleteWhiteListResourceResponse
     );
   }
 
@@ -462,7 +462,7 @@ export default class VPCClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeInstanceNetworkInterfaceResponse
+      resp => resp.toObject() as DescribeInstanceNetworkInterfaceResponse
     );
   }
 
@@ -476,7 +476,7 @@ export default class VPCClient extends Client {
   ): Promise<DescribeNATGWResponse> {
     const args = { Action: 'DescribeNATGW', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeNATGWResponse
+      resp => resp.toObject() as DescribeNATGWResponse
     );
   }
 
@@ -490,7 +490,7 @@ export default class VPCClient extends Client {
   ): Promise<DescribeNATGWPolicyResponse> {
     const args = { Action: 'DescribeNATGWPolicy', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeNATGWPolicyResponse
+      resp => resp.toObject() as DescribeNATGWPolicyResponse
     );
   }
 
@@ -504,7 +504,7 @@ export default class VPCClient extends Client {
   ): Promise<DescribeNetworkAclResponse> {
     const args = { Action: 'DescribeNetworkAcl', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeNetworkAclResponse
+      resp => resp.toObject() as DescribeNetworkAclResponse
     );
   }
 
@@ -521,7 +521,7 @@ export default class VPCClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeNetworkAclAssociationResponse
+      resp => resp.toObject() as DescribeNetworkAclAssociationResponse
     );
   }
 
@@ -538,7 +538,7 @@ export default class VPCClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeNetworkAclAssociationBySubnetResponse
+      resp => resp.toObject() as DescribeNetworkAclAssociationBySubnetResponse
     );
   }
 
@@ -552,7 +552,7 @@ export default class VPCClient extends Client {
   ): Promise<DescribeNetworkAclEntryResponse> {
     const args = { Action: 'DescribeNetworkAclEntry', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeNetworkAclEntryResponse
+      resp => resp.toObject() as DescribeNetworkAclEntryResponse
     );
   }
 
@@ -566,7 +566,7 @@ export default class VPCClient extends Client {
   ): Promise<DescribeNetworkInterfaceResponse> {
     const args = { Action: 'DescribeNetworkInterface', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeNetworkInterfaceResponse
+      resp => resp.toObject() as DescribeNetworkInterfaceResponse
     );
   }
 
@@ -580,7 +580,7 @@ export default class VPCClient extends Client {
   ): Promise<DescribeRouteTableResponse> {
     const args = { Action: 'DescribeRouteTable', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeRouteTableResponse
+      resp => resp.toObject() as DescribeRouteTableResponse
     );
   }
 
@@ -594,7 +594,7 @@ export default class VPCClient extends Client {
   ): Promise<DescribeSecondaryIpResponse> {
     const args = { Action: 'DescribeSecondaryIp', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeSecondaryIpResponse
+      resp => resp.toObject() as DescribeSecondaryIpResponse
     );
   }
 
@@ -608,7 +608,7 @@ export default class VPCClient extends Client {
   ): Promise<DescribeSnatDnatRuleResponse> {
     const args = { Action: 'DescribeSnatDnatRule', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeSnatDnatRuleResponse
+      resp => resp.toObject() as DescribeSnatDnatRuleResponse
     );
   }
 
@@ -622,7 +622,7 @@ export default class VPCClient extends Client {
   ): Promise<DescribeSnatRuleResponse> {
     const args = { Action: 'DescribeSnatRule', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeSnatRuleResponse
+      resp => resp.toObject() as DescribeSnatRuleResponse
     );
   }
 
@@ -636,7 +636,7 @@ export default class VPCClient extends Client {
   ): Promise<DescribeSubnetResponse> {
     const args = { Action: 'DescribeSubnet', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeSubnetResponse
+      resp => resp.toObject() as DescribeSubnetResponse
     );
   }
 
@@ -650,7 +650,7 @@ export default class VPCClient extends Client {
   ): Promise<DescribeSubnetResourceResponse> {
     const args = { Action: 'DescribeSubnetResource', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeSubnetResourceResponse
+      resp => resp.toObject() as DescribeSubnetResourceResponse
     );
   }
 
@@ -662,7 +662,7 @@ export default class VPCClient extends Client {
   describeVIP(request?: DescribeVIPRequest): Promise<DescribeVIPResponse> {
     const args = { Action: 'DescribeVIP', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeVIPResponse
+      resp => resp.toObject() as DescribeVIPResponse
     );
   }
 
@@ -674,7 +674,7 @@ export default class VPCClient extends Client {
   describeVPC(request?: DescribeVPCRequest): Promise<DescribeVPCResponse> {
     const args = { Action: 'DescribeVPC', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeVPCResponse
+      resp => resp.toObject() as DescribeVPCResponse
     );
   }
 
@@ -688,7 +688,7 @@ export default class VPCClient extends Client {
   ): Promise<DescribeVPCIntercomResponse> {
     const args = { Action: 'DescribeVPCIntercom', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeVPCIntercomResponse
+      resp => resp.toObject() as DescribeVPCIntercomResponse
     );
   }
 
@@ -702,7 +702,7 @@ export default class VPCClient extends Client {
   ): Promise<DescribeWhiteListResourceResponse> {
     const args = { Action: 'DescribeWhiteListResource', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeWhiteListResourceResponse
+      resp => resp.toObject() as DescribeWhiteListResourceResponse
     );
   }
 
@@ -716,7 +716,7 @@ export default class VPCClient extends Client {
   ): Promise<EnableWhiteListResponse> {
     const args = { Action: 'EnableWhiteList', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as EnableWhiteListResponse
+      resp => resp.toObject() as EnableWhiteListResponse
     );
   }
 
@@ -733,7 +733,7 @@ export default class VPCClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetAvailableResourceForPolicyResponse
+      resp => resp.toObject() as GetAvailableResourceForPolicyResponse
     );
   }
 
@@ -750,7 +750,7 @@ export default class VPCClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetAvailableResourceForSnatRuleResponse
+      resp => resp.toObject() as GetAvailableResourceForSnatRuleResponse
     );
   }
 
@@ -767,7 +767,7 @@ export default class VPCClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetAvailableResourceForWhiteListResponse
+      resp => resp.toObject() as GetAvailableResourceForWhiteListResponse
     );
   }
 
@@ -781,7 +781,7 @@ export default class VPCClient extends Client {
   ): Promise<GetNetworkAclTargetResourceResponse> {
     const args = { Action: 'GetNetworkAclTargetResource', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetNetworkAclTargetResourceResponse
+      resp => resp.toObject() as GetNetworkAclTargetResourceResponse
     );
   }
 
@@ -795,7 +795,7 @@ export default class VPCClient extends Client {
   ): Promise<ListSubnetForNATGWResponse> {
     const args = { Action: 'ListSubnetForNATGW', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ListSubnetForNATGWResponse
+      resp => resp.toObject() as ListSubnetForNATGWResponse
     );
   }
 
@@ -809,7 +809,7 @@ export default class VPCClient extends Client {
   ): Promise<ModifyRouteRuleResponse> {
     const args = { Action: 'ModifyRouteRule', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyRouteRuleResponse
+      resp => resp.toObject() as ModifyRouteRuleResponse
     );
   }
 
@@ -823,7 +823,7 @@ export default class VPCClient extends Client {
   ): Promise<MoveSecondaryIPMacResponse> {
     const args = { Action: 'MoveSecondaryIPMac', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as MoveSecondaryIPMacResponse
+      resp => resp.toObject() as MoveSecondaryIPMacResponse
     );
   }
 
@@ -835,7 +835,7 @@ export default class VPCClient extends Client {
   releaseVIP(request?: ReleaseVIPRequest): Promise<ReleaseVIPResponse> {
     const args = { Action: 'ReleaseVIP', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ReleaseVIPResponse
+      resp => resp.toObject() as ReleaseVIPResponse
     );
   }
 
@@ -849,7 +849,7 @@ export default class VPCClient extends Client {
   ): Promise<SetGwDefaultExportResponse> {
     const args = { Action: 'SetGwDefaultExport', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as SetGwDefaultExportResponse
+      resp => resp.toObject() as SetGwDefaultExportResponse
     );
   }
 
@@ -863,7 +863,7 @@ export default class VPCClient extends Client {
   ): Promise<UpdateNATGWPolicyResponse> {
     const args = { Action: 'UpdateNATGWPolicy', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateNATGWPolicyResponse
+      resp => resp.toObject() as UpdateNATGWPolicyResponse
     );
   }
 
@@ -877,7 +877,7 @@ export default class VPCClient extends Client {
   ): Promise<UpdateNATGWSubnetResponse> {
     const args = { Action: 'UpdateNATGWSubnet', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateNATGWSubnetResponse
+      resp => resp.toObject() as UpdateNATGWSubnetResponse
     );
   }
 
@@ -891,7 +891,7 @@ export default class VPCClient extends Client {
   ): Promise<UpdateNetworkAclResponse> {
     const args = { Action: 'UpdateNetworkAcl', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateNetworkAclResponse
+      resp => resp.toObject() as UpdateNetworkAclResponse
     );
   }
 
@@ -905,7 +905,7 @@ export default class VPCClient extends Client {
   ): Promise<UpdateNetworkAclEntryResponse> {
     const args = { Action: 'UpdateNetworkAclEntry', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateNetworkAclEntryResponse
+      resp => resp.toObject() as UpdateNetworkAclEntryResponse
     );
   }
 
@@ -919,7 +919,7 @@ export default class VPCClient extends Client {
   ): Promise<UpdateRouteTableAttributeResponse> {
     const args = { Action: 'UpdateRouteTableAttribute', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateRouteTableAttributeResponse
+      resp => resp.toObject() as UpdateRouteTableAttributeResponse
     );
   }
 
@@ -933,7 +933,7 @@ export default class VPCClient extends Client {
   ): Promise<UpdateSnatRuleResponse> {
     const args = { Action: 'UpdateSnatRule', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateSnatRuleResponse
+      resp => resp.toObject() as UpdateSnatRuleResponse
     );
   }
 
@@ -947,7 +947,7 @@ export default class VPCClient extends Client {
   ): Promise<UpdateSubnetAttributeResponse> {
     const args = { Action: 'UpdateSubnetAttribute', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateSubnetAttributeResponse
+      resp => resp.toObject() as UpdateSubnetAttributeResponse
     );
   }
 
@@ -961,7 +961,7 @@ export default class VPCClient extends Client {
   ): Promise<UpdateVIPAttributeResponse> {
     const args = { Action: 'UpdateVIPAttribute', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateVIPAttributeResponse
+      resp => resp.toObject() as UpdateVIPAttributeResponse
     );
   }
 
@@ -975,7 +975,7 @@ export default class VPCClient extends Client {
   ): Promise<UpdateVPCNetworkResponse> {
     const args = { Action: 'UpdateVPCNetwork', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateVPCNetworkResponse
+      resp => resp.toObject() as UpdateVPCNetworkResponse
     );
   }
 }
@@ -1005,7 +1005,7 @@ export interface AddSnatRuleRequest {
 /**
  * AddSnatRule - 对于绑定了多个EIP的NAT网关，您可以将一个子网下的某台云主机映射到某个特定的EIP上，规则生效后，则该云主机通过该特定的EIP访问互联网。
  */
-export interface AddSnatRuleResponse {}
+export type AddSnatRuleResponse = {};
 
 /**
  * AddVPCNetwork - 添加VPC网段
@@ -1024,7 +1024,7 @@ export interface AddVPCNetworkRequest {
 /**
  * AddVPCNetwork - 添加VPC网段
  */
-export interface AddVPCNetworkResponse {}
+export type AddVPCNetworkResponse = {};
 
 /**
  * AddWhiteListResource - 添加NAT网关白名单
@@ -1043,7 +1043,7 @@ export interface AddWhiteListResourceRequest {
 /**
  * AddWhiteListResource - 添加NAT网关白名单
  */
-export interface AddWhiteListResourceResponse {}
+export type AddWhiteListResourceResponse = {};
 
 /**
  * AllocateBatchSecondaryIp - 批量申请虚拟网卡辅助IP
@@ -1278,7 +1278,7 @@ export interface AssociateRouteTableRequest {
 /**
  * AssociateRouteTable - 绑定子网的路由表
  */
-export interface AssociateRouteTableResponse {}
+export type AssociateRouteTableResponse = {};
 
 /**
  * CloneRouteTable - 将现有的路由表复制为一张新的路由表
@@ -1675,7 +1675,7 @@ export interface CreateSnatDnatRuleRequest {
 /**
  * CreateSnatDnatRule - 调用接口后会自动创建内外网IP之间的SNAT和DNAT规则，支持TCP、UDP协议全端口
  */
-export interface CreateSnatDnatRuleResponse {}
+export type CreateSnatDnatRuleResponse = {};
 
 /**
  * CreateSubnet - 创建子网
@@ -1774,7 +1774,7 @@ export interface CreateVPCIntercomRequest {
 /**
  * CreateVPCIntercom - 新建VPC互通关系
  */
-export interface CreateVPCIntercomResponse {}
+export type CreateVPCIntercomResponse = {};
 
 /**
  * DeleteNATGW - 删除NAT网关
@@ -1793,7 +1793,7 @@ export interface DeleteNATGWRequest {
 /**
  * DeleteNATGW - 删除NAT网关
  */
-export interface DeleteNATGWResponse {}
+export type DeleteNATGWResponse = {};
 
 /**
  * DeleteNATGWPolicy - 删除NAT网关端口转发规则
@@ -1812,7 +1812,7 @@ export interface DeleteNATGWPolicyRequest {
 /**
  * DeleteNATGWPolicy - 删除NAT网关端口转发规则
  */
-export interface DeleteNATGWPolicyResponse {}
+export type DeleteNATGWPolicyResponse = {};
 
 /**
  * DeleteNetworkAcl - 删除网络ACL
@@ -1827,7 +1827,7 @@ export interface DeleteNetworkAclRequest {
 /**
  * DeleteNetworkAcl - 删除网络ACL
  */
-export interface DeleteNetworkAclResponse {}
+export type DeleteNetworkAclResponse = {};
 
 /**
  * DeleteNetworkAclAssociation - 删除网络ACL绑定关系
@@ -1846,7 +1846,7 @@ export interface DeleteNetworkAclAssociationRequest {
 /**
  * DeleteNetworkAclAssociation - 删除网络ACL绑定关系
  */
-export interface DeleteNetworkAclAssociationResponse {}
+export type DeleteNetworkAclAssociationResponse = {};
 
 /**
  * DeleteNetworkAclEntry - 删除ACL的规则
@@ -1865,7 +1865,7 @@ export interface DeleteNetworkAclEntryRequest {
 /**
  * DeleteNetworkAclEntry - 删除ACL的规则
  */
-export interface DeleteNetworkAclEntryResponse {}
+export type DeleteNetworkAclEntryResponse = {};
 
 /**
  * DeleteRouteTable - 删除自定义路由表
@@ -1880,7 +1880,7 @@ export interface DeleteRouteTableRequest {
 /**
  * DeleteRouteTable - 删除自定义路由表
  */
-export interface DeleteRouteTableResponse {}
+export type DeleteRouteTableResponse = {};
 
 /**
  * DeleteSecondaryIp - 删除ip（用于uk8s使用）
@@ -1915,7 +1915,7 @@ export interface DeleteSecondaryIpRequest {
 /**
  * DeleteSecondaryIp - 删除ip（用于uk8s使用）
  */
-export interface DeleteSecondaryIpResponse {}
+export type DeleteSecondaryIpResponse = {};
 
 /**
  * DeleteSnatDnatRule - 删除NAT创建内外网IP映射规则
@@ -1938,7 +1938,7 @@ export interface DeleteSnatDnatRuleRequest {
 /**
  * DeleteSnatDnatRule - 删除NAT创建内外网IP映射规则
  */
-export interface DeleteSnatDnatRuleResponse {}
+export type DeleteSnatDnatRuleResponse = {};
 
 /**
  * DeleteSnatRule - 删除指定的出口规则（SNAT规则）
@@ -1957,7 +1957,7 @@ export interface DeleteSnatRuleRequest {
 /**
  * DeleteSnatRule - 删除指定的出口规则（SNAT规则）
  */
-export interface DeleteSnatRuleResponse {}
+export type DeleteSnatRuleResponse = {};
 
 /**
  * DeleteSubnet - 删除子网
@@ -1972,7 +1972,7 @@ export interface DeleteSubnetRequest {
 /**
  * DeleteSubnet - 删除子网
  */
-export interface DeleteSubnetResponse {}
+export type DeleteSubnetResponse = {};
 
 /**
  * DeleteVPC - 删除VPC
@@ -1987,7 +1987,7 @@ export interface DeleteVPCRequest {
 /**
  * DeleteVPC - 删除VPC
  */
-export interface DeleteVPCResponse {}
+export type DeleteVPCResponse = {};
 
 /**
  * DeleteVPCIntercom - 删除VPC互通关系
@@ -2014,7 +2014,7 @@ export interface DeleteVPCIntercomRequest {
 /**
  * DeleteVPCIntercom - 删除VPC互通关系
  */
-export interface DeleteVPCIntercomResponse {}
+export type DeleteVPCIntercomResponse = {};
 
 /**
  * DeleteWhiteListResource - 删除NAT网关白名单列表
@@ -2033,7 +2033,7 @@ export interface DeleteWhiteListResourceRequest {
 /**
  * DeleteWhiteListResource - 删除NAT网关白名单列表
  */
-export interface DeleteWhiteListResourceResponse {}
+export type DeleteWhiteListResourceResponse = {};
 
 /**
  * DescribeInstanceNetworkInterface - 展示云主机绑定的网卡信息
@@ -3610,7 +3610,7 @@ export interface EnableWhiteListRequest {
 /**
  * EnableWhiteList - 修改NAT网关白名单开关
  */
-export interface EnableWhiteListResponse {}
+export type EnableWhiteListResponse = {};
 
 /**
  * GetAvailableResourceForPolicy - 获取NAT网关可配置端口转发规则的资源信息
@@ -3894,7 +3894,7 @@ export interface ModifyRouteRuleRequest {
 /**
  * ModifyRouteRule - 路由策略增、删、改
  */
-export interface ModifyRouteRuleResponse {}
+export type ModifyRouteRuleResponse = {};
 
 /**
  * MoveSecondaryIPMac - 把 Secondary IP 从旧 MAC 迁移到新 MAC
@@ -3921,7 +3921,7 @@ export interface MoveSecondaryIPMacRequest {
 /**
  * MoveSecondaryIPMac - 把 Secondary IP 从旧 MAC 迁移到新 MAC
  */
-export interface MoveSecondaryIPMacResponse {}
+export type MoveSecondaryIPMacResponse = {};
 
 /**
  * ReleaseVIP - 释放VIP资源
@@ -3940,7 +3940,7 @@ export interface ReleaseVIPRequest {
 /**
  * ReleaseVIP - 释放VIP资源
  */
-export interface ReleaseVIPResponse {}
+export type ReleaseVIPResponse = {};
 
 /**
  * SetGwDefaultExport - 设置NAT网关的默认出口
@@ -3963,7 +3963,7 @@ export interface SetGwDefaultExportRequest {
 /**
  * SetGwDefaultExport - 设置NAT网关的默认出口
  */
-export interface SetGwDefaultExportResponse {}
+export type SetGwDefaultExportResponse = {};
 
 /**
  * UpdateNATGWPolicy - 更新NAT网关端口转发规则
@@ -4006,7 +4006,7 @@ export interface UpdateNATGWPolicyRequest {
 /**
  * UpdateNATGWPolicy - 更新NAT网关端口转发规则
  */
-export interface UpdateNATGWPolicyResponse {}
+export type UpdateNATGWPolicyResponse = {};
 
 /**
  * UpdateNATGWSubnet - 更新NAT网关绑定的子网
@@ -4025,7 +4025,7 @@ export interface UpdateNATGWSubnetRequest {
 /**
  * UpdateNATGWSubnet - 更新NAT网关绑定的子网
  */
-export interface UpdateNATGWSubnetResponse {}
+export type UpdateNATGWSubnetResponse = {};
 
 /**
  * UpdateNetworkAcl - 更改ACL
@@ -4048,7 +4048,7 @@ export interface UpdateNetworkAclRequest {
 /**
  * UpdateNetworkAcl - 更改ACL
  */
-export interface UpdateNetworkAclResponse {}
+export type UpdateNetworkAclResponse = {};
 
 /**
  * UpdateNetworkAclEntry - 更新ACL的规则
@@ -4103,7 +4103,7 @@ export interface UpdateNetworkAclEntryRequest {
 /**
  * UpdateNetworkAclEntry - 更新ACL的规则
  */
-export interface UpdateNetworkAclEntryResponse {}
+export type UpdateNetworkAclEntryResponse = {};
 
 /**
  * UpdateRouteTableAttribute - 更新路由表基本信息
@@ -4130,7 +4130,7 @@ export interface UpdateRouteTableAttributeRequest {
 /**
  * UpdateRouteTableAttribute - 更新路由表基本信息
  */
-export interface UpdateRouteTableAttributeResponse {}
+export type UpdateRouteTableAttributeResponse = {};
 
 /**
  * UpdateSnatRule - 更新指定的出口规则（SNAT规则）
@@ -4157,7 +4157,7 @@ export interface UpdateSnatRuleRequest {
 /**
  * UpdateSnatRule - 更新指定的出口规则（SNAT规则）
  */
-export interface UpdateSnatRuleResponse {}
+export type UpdateSnatRuleResponse = {};
 
 /**
  * UpdateSubnetAttribute - 更新子网信息
@@ -4180,7 +4180,7 @@ export interface UpdateSubnetAttributeRequest {
 /**
  * UpdateSubnetAttribute - 更新子网信息
  */
-export interface UpdateSubnetAttributeResponse {}
+export type UpdateSubnetAttributeResponse = {};
 
 /**
  * UpdateVIPAttribute - 更新VIP信息
@@ -4207,7 +4207,7 @@ export interface UpdateVIPAttributeRequest {
 /**
  * UpdateVIPAttribute - 更新VIP信息
  */
-export interface UpdateVIPAttributeResponse {}
+export type UpdateVIPAttributeResponse = {};
 
 /**
  * UpdateVPCNetwork - 更新VPC网段
@@ -4226,4 +4226,4 @@ export interface UpdateVPCNetworkRequest {
 /**
  * UpdateVPCNetwork - 更新VPC网段
  */
-export interface UpdateVPCNetworkResponse {}
+export type UpdateVPCNetworkResponse = {};

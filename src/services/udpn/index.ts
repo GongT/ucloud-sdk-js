@@ -1,7 +1,7 @@
 import Client from '../../core/client';
 import Request from '../../core/request';
-import { ConfigOptions } from '../../core/config';
-import { CredentialOptions } from '../../core/credential';
+import type { ConfigOptions } from '../../core/config';
+import type { CredentialOptions } from '../../core/credential';
 
 /**
  * This client is used to call actions of **udpn** service
@@ -25,7 +25,7 @@ export default class UDPNClient extends Client {
   allocateUDPN(request?: AllocateUDPNRequest): Promise<AllocateUDPNResponse> {
     const args = { Action: 'AllocateUDPN', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as AllocateUDPNResponse
+      resp => resp.toObject() as AllocateUDPNResponse
     );
   }
 
@@ -37,7 +37,7 @@ export default class UDPNClient extends Client {
   describeUDPN(request?: DescribeUDPNRequest): Promise<DescribeUDPNResponse> {
     const args = { Action: 'DescribeUDPN', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDPNResponse
+      resp => resp.toObject() as DescribeUDPNResponse
     );
   }
 
@@ -51,7 +51,7 @@ export default class UDPNClient extends Client {
   ): Promise<GetUDPNLineListResponse> {
     const args = { Action: 'GetUDPNLineList', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUDPNLineListResponse
+      resp => resp.toObject() as GetUDPNLineListResponse
     );
   }
 
@@ -63,7 +63,7 @@ export default class UDPNClient extends Client {
   getUDPNPrice(request?: GetUDPNPriceRequest): Promise<GetUDPNPriceResponse> {
     const args = { Action: 'GetUDPNPrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUDPNPriceResponse
+      resp => resp.toObject() as GetUDPNPriceResponse
     );
   }
 
@@ -77,7 +77,7 @@ export default class UDPNClient extends Client {
   ): Promise<GetUDPNUpgradePriceResponse> {
     const args = { Action: 'GetUDPNUpgradePrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUDPNUpgradePriceResponse
+      resp => resp.toObject() as GetUDPNUpgradePriceResponse
     );
   }
 
@@ -91,7 +91,7 @@ export default class UDPNClient extends Client {
   ): Promise<ModifyUDPNBandwidthResponse> {
     const args = { Action: 'ModifyUDPNBandwidth', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyUDPNBandwidthResponse
+      resp => resp.toObject() as ModifyUDPNBandwidthResponse
     );
   }
 
@@ -103,7 +103,7 @@ export default class UDPNClient extends Client {
   releaseUDPN(request?: ReleaseUDPNRequest): Promise<ReleaseUDPNResponse> {
     const args = { Action: 'ReleaseUDPN', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ReleaseUDPNResponse
+      resp => resp.toObject() as ReleaseUDPNResponse
     );
   }
 }
@@ -216,7 +216,7 @@ export interface DescribeUDPNResponse {
 /**
  * GetUDPNLineList - 获取当前支持的专线线路列表
  */
-export interface GetUDPNLineListRequest {}
+export type GetUDPNLineListRequest = {};
 
 /**
  * GetUDPNLineList - 获取当前支持的专线线路列表
@@ -334,7 +334,7 @@ export interface ModifyUDPNBandwidthRequest {
 /**
  * ModifyUDPNBandwidth - 修改带宽值
  */
-export interface ModifyUDPNBandwidthResponse {}
+export type ModifyUDPNBandwidthResponse = {};
 
 /**
  * ReleaseUDPN - 释放 UDPN
@@ -349,4 +349,4 @@ export interface ReleaseUDPNRequest {
 /**
  * ReleaseUDPN - 释放 UDPN
  */
-export interface ReleaseUDPNResponse {}
+export type ReleaseUDPNResponse = {};

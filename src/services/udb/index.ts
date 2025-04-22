@@ -1,7 +1,7 @@
 import Client from '../../core/client';
 import Request from '../../core/request';
-import { ConfigOptions } from '../../core/config';
-import { CredentialOptions } from '../../core/credential';
+import type { ConfigOptions } from '../../core/config';
+import type { CredentialOptions } from '../../core/credential';
 
 /**
  * This client is used to call actions of **udb** service
@@ -27,7 +27,7 @@ export default class UDBClient extends Client {
   ): Promise<BackupUDBInstanceResponse> {
     const args = { Action: 'BackupUDBInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as BackupUDBInstanceResponse
+      resp => resp.toObject() as BackupUDBInstanceResponse
     );
   }
 
@@ -41,7 +41,7 @@ export default class UDBClient extends Client {
   ): Promise<BackupUDBInstanceBinlogResponse> {
     const args = { Action: 'BackupUDBInstanceBinlog', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as BackupUDBInstanceBinlogResponse
+      resp => resp.toObject() as BackupUDBInstanceBinlogResponse
     );
   }
 
@@ -55,7 +55,7 @@ export default class UDBClient extends Client {
   ): Promise<BackupUDBInstanceErrorLogResponse> {
     const args = { Action: 'BackupUDBInstanceErrorLog', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as BackupUDBInstanceErrorLogResponse
+      resp => resp.toObject() as BackupUDBInstanceErrorLogResponse
     );
   }
 
@@ -69,7 +69,7 @@ export default class UDBClient extends Client {
   ): Promise<BackupUDBInstanceSlowLogResponse> {
     const args = { Action: 'BackupUDBInstanceSlowLog', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as BackupUDBInstanceSlowLogResponse
+      resp => resp.toObject() as BackupUDBInstanceSlowLogResponse
     );
   }
 
@@ -83,7 +83,7 @@ export default class UDBClient extends Client {
   ): Promise<ChangeUDBParamGroupResponse> {
     const args = { Action: 'ChangeUDBParamGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ChangeUDBParamGroupResponse
+      resp => resp.toObject() as ChangeUDBParamGroupResponse
     );
   }
 
@@ -97,7 +97,7 @@ export default class UDBClient extends Client {
   ): Promise<CheckRecoverUDBInstanceResponse> {
     const args = { Action: 'CheckRecoverUDBInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CheckRecoverUDBInstanceResponse
+      resp => resp.toObject() as CheckRecoverUDBInstanceResponse
     );
   }
 
@@ -114,7 +114,7 @@ export default class UDBClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CheckUDBInstanceToHAAllowanceResponse
+      resp => resp.toObject() as CheckUDBInstanceToHAAllowanceResponse
     );
   }
 
@@ -126,7 +126,7 @@ export default class UDBClient extends Client {
   clearUDBLog(request?: ClearUDBLogRequest): Promise<ClearUDBLogResponse> {
     const args = { Action: 'ClearUDBLog', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ClearUDBLogResponse
+      resp => resp.toObject() as ClearUDBLogResponse
     );
   }
 
@@ -140,7 +140,7 @@ export default class UDBClient extends Client {
   ): Promise<CreateMongoDBReplicaSetResponse> {
     const args = { Action: 'CreateMongoDBReplicaSet', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateMongoDBReplicaSetResponse
+      resp => resp.toObject() as CreateMongoDBReplicaSetResponse
     );
   }
 
@@ -154,7 +154,7 @@ export default class UDBClient extends Client {
   ): Promise<CreateUDBInstanceResponse> {
     const args = { Action: 'CreateUDBInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUDBInstanceResponse
+      resp => resp.toObject() as CreateUDBInstanceResponse
     );
   }
 
@@ -168,7 +168,7 @@ export default class UDBClient extends Client {
   ): Promise<CreateUDBInstanceByRecoveryResponse> {
     const args = { Action: 'CreateUDBInstanceByRecovery', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUDBInstanceByRecoveryResponse
+      resp => resp.toObject() as CreateUDBInstanceByRecoveryResponse
     );
   }
 
@@ -182,7 +182,7 @@ export default class UDBClient extends Client {
   ): Promise<CreateUDBParamGroupResponse> {
     const args = { Action: 'CreateUDBParamGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUDBParamGroupResponse
+      resp => resp.toObject() as CreateUDBParamGroupResponse
     );
   }
 
@@ -196,7 +196,7 @@ export default class UDBClient extends Client {
   ): Promise<CreateUDBReplicationInstanceResponse> {
     const args = { Action: 'CreateUDBReplicationInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUDBReplicationInstanceResponse
+      resp => resp.toObject() as CreateUDBReplicationInstanceResponse
     );
   }
 
@@ -210,7 +210,7 @@ export default class UDBClient extends Client {
   ): Promise<CreateUDBRouteInstanceResponse> {
     const args = { Action: 'CreateUDBRouteInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUDBRouteInstanceResponse
+      resp => resp.toObject() as CreateUDBRouteInstanceResponse
     );
   }
 
@@ -224,7 +224,7 @@ export default class UDBClient extends Client {
   ): Promise<CreateUDBSlaveResponse> {
     const args = { Action: 'CreateUDBSlave', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUDBSlaveResponse
+      resp => resp.toObject() as CreateUDBSlaveResponse
     );
   }
 
@@ -238,7 +238,7 @@ export default class UDBClient extends Client {
   ): Promise<DeleteUDBInstanceResponse> {
     const args = { Action: 'DeleteUDBInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUDBInstanceResponse
+      resp => resp.toObject() as DeleteUDBInstanceResponse
     );
   }
 
@@ -252,7 +252,7 @@ export default class UDBClient extends Client {
   ): Promise<DeleteUDBLogPackageResponse> {
     const args = { Action: 'DeleteUDBLogPackage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUDBLogPackageResponse
+      resp => resp.toObject() as DeleteUDBLogPackageResponse
     );
   }
 
@@ -266,7 +266,7 @@ export default class UDBClient extends Client {
   ): Promise<DeleteUDBParamGroupResponse> {
     const args = { Action: 'DeleteUDBParamGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUDBParamGroupResponse
+      resp => resp.toObject() as DeleteUDBParamGroupResponse
     );
   }
 
@@ -280,7 +280,7 @@ export default class UDBClient extends Client {
   ): Promise<DescribeUDBBackupResponse> {
     const args = { Action: 'DescribeUDBBackup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDBBackupResponse
+      resp => resp.toObject() as DescribeUDBBackupResponse
     );
   }
 
@@ -294,7 +294,7 @@ export default class UDBClient extends Client {
   ): Promise<DescribeUDBBackupBlacklistResponse> {
     const args = { Action: 'DescribeUDBBackupBlacklist', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDBBackupBlacklistResponse
+      resp => resp.toObject() as DescribeUDBBackupBlacklistResponse
     );
   }
 
@@ -308,7 +308,7 @@ export default class UDBClient extends Client {
   ): Promise<DescribeUDBBinlogBackupURLResponse> {
     const args = { Action: 'DescribeUDBBinlogBackupURL', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDBBinlogBackupURLResponse
+      resp => resp.toObject() as DescribeUDBBinlogBackupURLResponse
     );
   }
 
@@ -322,7 +322,7 @@ export default class UDBClient extends Client {
   ): Promise<DescribeUDBInstanceResponse> {
     const args = { Action: 'DescribeUDBInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDBInstanceResponse
+      resp => resp.toObject() as DescribeUDBInstanceResponse
     );
   }
 
@@ -339,7 +339,7 @@ export default class UDBClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDBInstanceBackupStateResponse
+      resp => resp.toObject() as DescribeUDBInstanceBackupStateResponse
     );
   }
 
@@ -353,7 +353,7 @@ export default class UDBClient extends Client {
   ): Promise<DescribeUDBInstanceBackupURLResponse> {
     const args = { Action: 'DescribeUDBInstanceBackupURL', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDBInstanceBackupURLResponse
+      resp => resp.toObject() as DescribeUDBInstanceBackupURLResponse
     );
   }
 
@@ -367,7 +367,7 @@ export default class UDBClient extends Client {
   ): Promise<DescribeUDBInstanceBinlogResponse> {
     const args = { Action: 'DescribeUDBInstanceBinlog', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDBInstanceBinlogResponse
+      resp => resp.toObject() as DescribeUDBInstanceBinlogResponse
     );
   }
 
@@ -384,7 +384,7 @@ export default class UDBClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDBInstanceBinlogBackupStateResponse
+      resp => resp.toObject() as DescribeUDBInstanceBinlogBackupStateResponse
     );
   }
 
@@ -398,7 +398,7 @@ export default class UDBClient extends Client {
   ): Promise<DescribeUDBInstanceLogResponse> {
     const args = { Action: 'DescribeUDBInstanceLog', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDBInstanceLogResponse
+      resp => resp.toObject() as DescribeUDBInstanceLogResponse
     );
   }
 
@@ -412,7 +412,7 @@ export default class UDBClient extends Client {
   ): Promise<DescribeUDBInstancePriceResponse> {
     const args = { Action: 'DescribeUDBInstancePrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDBInstancePriceResponse
+      resp => resp.toObject() as DescribeUDBInstancePriceResponse
     );
   }
 
@@ -426,7 +426,7 @@ export default class UDBClient extends Client {
   ): Promise<DescribeUDBInstanceStateResponse> {
     const args = { Action: 'DescribeUDBInstanceState', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDBInstanceStateResponse
+      resp => resp.toObject() as DescribeUDBInstanceStateResponse
     );
   }
 
@@ -443,7 +443,7 @@ export default class UDBClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDBInstanceUpgradePriceResponse
+      resp => resp.toObject() as DescribeUDBInstanceUpgradePriceResponse
     );
   }
 
@@ -457,7 +457,7 @@ export default class UDBClient extends Client {
   ): Promise<DescribeUDBLogBackupURLResponse> {
     const args = { Action: 'DescribeUDBLogBackupURL', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDBLogBackupURLResponse
+      resp => resp.toObject() as DescribeUDBLogBackupURLResponse
     );
   }
 
@@ -471,7 +471,7 @@ export default class UDBClient extends Client {
   ): Promise<DescribeUDBLogPackageResponse> {
     const args = { Action: 'DescribeUDBLogPackage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDBLogPackageResponse
+      resp => resp.toObject() as DescribeUDBLogPackageResponse
     );
   }
 
@@ -485,7 +485,7 @@ export default class UDBClient extends Client {
   ): Promise<DescribeUDBParamGroupResponse> {
     const args = { Action: 'DescribeUDBParamGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDBParamGroupResponse
+      resp => resp.toObject() as DescribeUDBParamGroupResponse
     );
   }
 
@@ -499,7 +499,7 @@ export default class UDBClient extends Client {
   ): Promise<DescribeUDBSplittingInfoResponse> {
     const args = { Action: 'DescribeUDBSplittingInfo', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDBSplittingInfoResponse
+      resp => resp.toObject() as DescribeUDBSplittingInfoResponse
     );
   }
 
@@ -513,7 +513,7 @@ export default class UDBClient extends Client {
   ): Promise<DescribeUDBTypeResponse> {
     const args = { Action: 'DescribeUDBType', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUDBTypeResponse
+      resp => resp.toObject() as DescribeUDBTypeResponse
     );
   }
 
@@ -527,7 +527,7 @@ export default class UDBClient extends Client {
   ): Promise<DisableUDBRWSplittingResponse> {
     const args = { Action: 'DisableUDBRWSplitting', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DisableUDBRWSplittingResponse
+      resp => resp.toObject() as DisableUDBRWSplittingResponse
     );
   }
 
@@ -541,7 +541,7 @@ export default class UDBClient extends Client {
   ): Promise<EditUDBBackupBlacklistResponse> {
     const args = { Action: 'EditUDBBackupBlacklist', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as EditUDBBackupBlacklistResponse
+      resp => resp.toObject() as EditUDBBackupBlacklistResponse
     );
   }
 
@@ -555,7 +555,7 @@ export default class UDBClient extends Client {
   ): Promise<EnableUDBRWSplittingResponse> {
     const args = { Action: 'EnableUDBRWSplitting', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as EnableUDBRWSplittingResponse
+      resp => resp.toObject() as EnableUDBRWSplittingResponse
     );
   }
 
@@ -569,7 +569,7 @@ export default class UDBClient extends Client {
   ): Promise<ExtractUDBParamGroupResponse> {
     const args = { Action: 'ExtractUDBParamGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ExtractUDBParamGroupResponse
+      resp => resp.toObject() as ExtractUDBParamGroupResponse
     );
   }
 
@@ -586,7 +586,7 @@ export default class UDBClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as FetchUDBInstanceEarliestRecoverTimeResponse
+      resp => resp.toObject() as FetchUDBInstanceEarliestRecoverTimeResponse
     );
   }
 
@@ -600,7 +600,7 @@ export default class UDBClient extends Client {
   ): Promise<GetUDBClientConnNumResponse> {
     const args = { Action: 'GetUDBClientConnNum', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUDBClientConnNumResponse
+      resp => resp.toObject() as GetUDBClientConnNumResponse
     );
   }
 
@@ -614,7 +614,7 @@ export default class UDBClient extends Client {
   ): Promise<ModifyUDBInstanceNameResponse> {
     const args = { Action: 'ModifyUDBInstanceName', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyUDBInstanceNameResponse
+      resp => resp.toObject() as ModifyUDBInstanceNameResponse
     );
   }
 
@@ -628,7 +628,7 @@ export default class UDBClient extends Client {
   ): Promise<ModifyUDBInstancePasswordResponse> {
     const args = { Action: 'ModifyUDBInstancePassword', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyUDBInstancePasswordResponse
+      resp => resp.toObject() as ModifyUDBInstancePasswordResponse
     );
   }
 
@@ -642,7 +642,7 @@ export default class UDBClient extends Client {
   ): Promise<PromoteUDBInstanceToHAResponse> {
     const args = { Action: 'PromoteUDBInstanceToHA', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as PromoteUDBInstanceToHAResponse
+      resp => resp.toObject() as PromoteUDBInstanceToHAResponse
     );
   }
 
@@ -656,7 +656,7 @@ export default class UDBClient extends Client {
   ): Promise<PromoteUDBSlaveResponse> {
     const args = { Action: 'PromoteUDBSlave', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as PromoteUDBSlaveResponse
+      resp => resp.toObject() as PromoteUDBSlaveResponse
     );
   }
 
@@ -670,7 +670,7 @@ export default class UDBClient extends Client {
   ): Promise<ResizeUDBInstanceResponse> {
     const args = { Action: 'ResizeUDBInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ResizeUDBInstanceResponse
+      resp => resp.toObject() as ResizeUDBInstanceResponse
     );
   }
 
@@ -684,7 +684,7 @@ export default class UDBClient extends Client {
   ): Promise<RestartRWSplittingResponse> {
     const args = { Action: 'RestartRWSplitting', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RestartRWSplittingResponse
+      resp => resp.toObject() as RestartRWSplittingResponse
     );
   }
 
@@ -698,7 +698,7 @@ export default class UDBClient extends Client {
   ): Promise<RestartUDBInstanceResponse> {
     const args = { Action: 'RestartUDBInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RestartUDBInstanceResponse
+      resp => resp.toObject() as RestartUDBInstanceResponse
     );
   }
 
@@ -712,7 +712,7 @@ export default class UDBClient extends Client {
   ): Promise<SetUDBRWSplittingResponse> {
     const args = { Action: 'SetUDBRWSplitting', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as SetUDBRWSplittingResponse
+      resp => resp.toObject() as SetUDBRWSplittingResponse
     );
   }
 
@@ -726,7 +726,7 @@ export default class UDBClient extends Client {
   ): Promise<StartUDBInstanceResponse> {
     const args = { Action: 'StartUDBInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as StartUDBInstanceResponse
+      resp => resp.toObject() as StartUDBInstanceResponse
     );
   }
 
@@ -740,7 +740,7 @@ export default class UDBClient extends Client {
   ): Promise<StopUDBInstanceResponse> {
     const args = { Action: 'StopUDBInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as StopUDBInstanceResponse
+      resp => resp.toObject() as StopUDBInstanceResponse
     );
   }
 
@@ -754,7 +754,7 @@ export default class UDBClient extends Client {
   ): Promise<SwitchUDBHAToSentinelResponse> {
     const args = { Action: 'SwitchUDBHAToSentinel', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as SwitchUDBHAToSentinelResponse
+      resp => resp.toObject() as SwitchUDBHAToSentinelResponse
     );
   }
 
@@ -768,7 +768,7 @@ export default class UDBClient extends Client {
   ): Promise<SwitchUDBInstanceToHAResponse> {
     const args = { Action: 'SwitchUDBInstanceToHA', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as SwitchUDBInstanceToHAResponse
+      resp => resp.toObject() as SwitchUDBInstanceToHAResponse
     );
   }
 
@@ -785,7 +785,7 @@ export default class UDBClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateUDBInstanceBackupStrategyResponse
+      resp => resp.toObject() as UpdateUDBInstanceBackupStrategyResponse
     );
   }
 
@@ -802,7 +802,7 @@ export default class UDBClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateUDBInstanceSlaveBackupSwitchResponse
+      resp => resp.toObject() as UpdateUDBInstanceSlaveBackupSwitchResponse
     );
   }
 
@@ -816,7 +816,7 @@ export default class UDBClient extends Client {
   ): Promise<UpdateUDBParamGroupResponse> {
     const args = { Action: 'UpdateUDBParamGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateUDBParamGroupResponse
+      resp => resp.toObject() as UpdateUDBParamGroupResponse
     );
   }
 
@@ -830,7 +830,7 @@ export default class UDBClient extends Client {
   ): Promise<UpgradeUDBInstanceToHAResponse> {
     const args = { Action: 'UpgradeUDBInstanceToHA', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpgradeUDBInstanceToHAResponse
+      resp => resp.toObject() as UpgradeUDBInstanceToHAResponse
     );
   }
 
@@ -844,7 +844,7 @@ export default class UDBClient extends Client {
   ): Promise<UploadUDBParamGroupResponse> {
     const args = { Action: 'UploadUDBParamGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UploadUDBParamGroupResponse
+      resp => resp.toObject() as UploadUDBParamGroupResponse
     );
   }
 }
@@ -886,7 +886,7 @@ export interface BackupUDBInstanceRequest {
 /**
  * BackupUDBInstance - 备份UDB实例
  */
-export interface BackupUDBInstanceResponse {}
+export type BackupUDBInstanceResponse = {};
 
 /**
  * BackupUDBInstanceBinlog - 备份UDB指定时间段的binlog列表
@@ -913,7 +913,7 @@ export interface BackupUDBInstanceBinlogRequest {
 /**
  * BackupUDBInstanceBinlog - 备份UDB指定时间段的binlog列表
  */
-export interface BackupUDBInstanceBinlogResponse {}
+export type BackupUDBInstanceBinlogResponse = {};
 
 /**
  * BackupUDBInstanceErrorLog - 备份UDB指定时间段的errorlog
@@ -936,7 +936,7 @@ export interface BackupUDBInstanceErrorLogRequest {
 /**
  * BackupUDBInstanceErrorLog - 备份UDB指定时间段的errorlog
  */
-export interface BackupUDBInstanceErrorLogResponse {}
+export type BackupUDBInstanceErrorLogResponse = {};
 
 /**
  * BackupUDBInstanceSlowLog - 备份UDB指定时间段的slowlog分析结果
@@ -963,7 +963,7 @@ export interface BackupUDBInstanceSlowLogRequest {
 /**
  * BackupUDBInstanceSlowLog - 备份UDB指定时间段的slowlog分析结果
  */
-export interface BackupUDBInstanceSlowLogResponse {}
+export type BackupUDBInstanceSlowLogResponse = {};
 
 /**
  * ChangeUDBParamGroup - 修改配置文件
@@ -986,7 +986,7 @@ export interface ChangeUDBParamGroupRequest {
 /**
  * ChangeUDBParamGroup - 修改配置文件
  */
-export interface ChangeUDBParamGroupResponse {}
+export type ChangeUDBParamGroupResponse = {};
 
 /**
  * CheckRecoverUDBInstance - 核查db是否可以使用回档功能
@@ -1057,7 +1057,7 @@ export interface ClearUDBLogRequest {
 /**
  * ClearUDBLog - 清除UDB实例的log
  */
-export interface ClearUDBLogResponse {}
+export type ClearUDBLogResponse = {};
 
 /**
  * CreateMongoDBReplicaSet - 一键创建DB副本集
@@ -1612,7 +1612,7 @@ export interface DeleteUDBInstanceRequest {
 /**
  * DeleteUDBInstance - 删除UDB实例
  */
-export interface DeleteUDBInstanceResponse {}
+export type DeleteUDBInstanceResponse = {};
 
 /**
  * DeleteUDBLogPackage - 删除UDB日志包
@@ -1635,7 +1635,7 @@ export interface DeleteUDBLogPackageRequest {
 /**
  * DeleteUDBLogPackage - 删除UDB日志包
  */
-export interface DeleteUDBLogPackageResponse {}
+export type DeleteUDBLogPackageResponse = {};
 
 /**
  * DeleteUDBParamGroup - 删除配置参数组
@@ -1658,7 +1658,7 @@ export interface DeleteUDBParamGroupRequest {
 /**
  * DeleteUDBParamGroup - 删除配置参数组
  */
-export interface DeleteUDBParamGroupResponse {}
+export type DeleteUDBParamGroupResponse = {};
 
 /**
  * DescribeUDBBackup - 列表UDB实例备份信息
@@ -2852,7 +2852,7 @@ export interface DisableUDBRWSplittingRequest {
 /**
  * DisableUDBRWSplitting - 关闭DB的读写分离功能
  */
-export interface DisableUDBRWSplittingResponse {}
+export type DisableUDBRWSplittingResponse = {};
 
 /**
  * EditUDBBackupBlacklist - 编辑UDB实例的备份黑名单
@@ -2875,7 +2875,7 @@ export interface EditUDBBackupBlacklistRequest {
 /**
  * EditUDBBackupBlacklist - 编辑UDB实例的备份黑名单
  */
-export interface EditUDBBackupBlacklistResponse {}
+export type EditUDBBackupBlacklistResponse = {};
 
 /**
  * EnableUDBRWSplitting - 开启DB的读写分离功能
@@ -3015,7 +3015,7 @@ export interface ModifyUDBInstanceNameRequest {
 /**
  * ModifyUDBInstanceName - 重命名UDB实例
  */
-export interface ModifyUDBInstanceNameResponse {}
+export type ModifyUDBInstanceNameResponse = {};
 
 /**
  * ModifyUDBInstancePassword - 修改DB实例的管理员密码
@@ -3042,7 +3042,7 @@ export interface ModifyUDBInstancePasswordRequest {
 /**
  * ModifyUDBInstancePassword - 修改DB实例的管理员密码
  */
-export interface ModifyUDBInstancePasswordResponse {}
+export type ModifyUDBInstancePasswordResponse = {};
 
 /**
  * PromoteUDBInstanceToHA - 普通db升级为高可用(只针对mysql5.5及以上版本SSD机型的实例)  ，对于NVMe机型的单点升级高可用，虽然也能使用该操作再加上SwitchUDBInstanceToHA，但是更建议直接调用新的API接口（UpgradeUDBInstanceToHA）
@@ -3057,7 +3057,7 @@ export interface PromoteUDBInstanceToHARequest {
 /**
  * PromoteUDBInstanceToHA - 普通db升级为高可用(只针对mysql5.5及以上版本SSD机型的实例)  ，对于NVMe机型的单点升级高可用，虽然也能使用该操作再加上SwitchUDBInstanceToHA，但是更建议直接调用新的API接口（UpgradeUDBInstanceToHA）
  */
-export interface PromoteUDBInstanceToHAResponse {}
+export type PromoteUDBInstanceToHAResponse = {};
 
 /**
  * PromoteUDBSlave - 从库提升为独立库
@@ -3080,7 +3080,7 @@ export interface PromoteUDBSlaveRequest {
 /**
  * PromoteUDBSlave - 从库提升为独立库
  */
-export interface PromoteUDBSlaveResponse {}
+export type PromoteUDBSlaveResponse = {};
 
 /**
  * ResizeUDBInstance - 修改（升级和降级）UDB实例的配置，包括内存和磁盘的配置，对于内存升级无需关闭实例，其他场景需要事先关闭实例。两套参数可以配置升降机：1.配置UseSSD和SSDType  2.配置InstanceType，不需要配置InstanceMode。这两套第二套参数的优先级更高
@@ -3135,7 +3135,7 @@ export interface ResizeUDBInstanceRequest {
 /**
  * ResizeUDBInstance - 修改（升级和降级）UDB实例的配置，包括内存和磁盘的配置，对于内存升级无需关闭实例，其他场景需要事先关闭实例。两套参数可以配置升降机：1.配置UseSSD和SSDType  2.配置InstanceType，不需要配置InstanceMode。这两套第二套参数的优先级更高
  */
-export interface ResizeUDBInstanceResponse {}
+export type ResizeUDBInstanceResponse = {};
 
 /**
  * RestartRWSplitting - 读写分离中间件重启，对应docker重启，但是ip不变
@@ -3154,7 +3154,7 @@ export interface RestartRWSplittingRequest {
 /**
  * RestartRWSplitting - 读写分离中间件重启，对应docker重启，但是ip不变
  */
-export interface RestartRWSplittingResponse {}
+export type RestartRWSplittingResponse = {};
 
 /**
  * RestartUDBInstance - 重启UDB实例
@@ -3173,7 +3173,7 @@ export interface RestartUDBInstanceRequest {
 /**
  * RestartUDBInstance - 重启UDB实例
  */
-export interface RestartUDBInstanceResponse {}
+export type RestartUDBInstanceResponse = {};
 
 /**
  * SetUDBRWSplitting - 设置读写分离的模式
@@ -3208,7 +3208,7 @@ export interface SetUDBRWSplittingRequest {
 /**
  * SetUDBRWSplitting - 设置读写分离的模式
  */
-export interface SetUDBRWSplittingResponse {}
+export type SetUDBRWSplittingResponse = {};
 
 /**
  * StartUDBInstance - 启动UDB实例
@@ -3227,7 +3227,7 @@ export interface StartUDBInstanceRequest {
 /**
  * StartUDBInstance - 启动UDB实例
  */
-export interface StartUDBInstanceResponse {}
+export type StartUDBInstanceResponse = {};
 
 /**
  * StopUDBInstance - 关闭UDB实例
@@ -3250,7 +3250,7 @@ export interface StopUDBInstanceRequest {
 /**
  * StopUDBInstance - 关闭UDB实例
  */
-export interface StopUDBInstanceResponse {}
+export type StopUDBInstanceResponse = {};
 
 /**
  * SwitchUDBHAToSentinel - UDB高可用实例从HAProxy版本升级为Sentinel版本（不带HAProxy）升级耗时5-10秒
@@ -3273,7 +3273,7 @@ export interface SwitchUDBHAToSentinelRequest {
 /**
  * SwitchUDBHAToSentinel - UDB高可用实例从HAProxy版本升级为Sentinel版本（不带HAProxy）升级耗时5-10秒
  */
-export interface SwitchUDBHAToSentinelResponse {}
+export type SwitchUDBHAToSentinelResponse = {};
 
 /**
  * SwitchUDBInstanceToHA - 普通UDB切换为高可用(只针对mysql5.5及以上版本SSD机型的实例) ，原db状态为WaitForSwitch时，调用该api； 对于NVMe机型的单点升级高可用，虽然也能使用PromoteUDBInstanceToHA再加上该操作，但是更建议直接调用新的API接口（UpgradeUDBInstanceToHA）
@@ -3340,7 +3340,7 @@ export interface UpdateUDBInstanceBackupStrategyRequest {
 /**
  * UpdateUDBInstanceBackupStrategy - 修改UDB自动备份策略
  */
-export interface UpdateUDBInstanceBackupStrategyResponse {}
+export type UpdateUDBInstanceBackupStrategyResponse = {};
 
 /**
  * UpdateUDBInstanceSlaveBackupSwitch - 开启或者关闭UDB从库备份
@@ -3367,7 +3367,7 @@ export interface UpdateUDBInstanceSlaveBackupSwitchRequest {
 /**
  * UpdateUDBInstanceSlaveBackupSwitch - 开启或者关闭UDB从库备份
  */
-export interface UpdateUDBInstanceSlaveBackupSwitchResponse {}
+export type UpdateUDBInstanceSlaveBackupSwitchResponse = {};
 
 /**
  * UpdateUDBParamGroup - 更新UDB配置参数项
@@ -3406,7 +3406,7 @@ export interface UpdateUDBParamGroupRequest {
 /**
  * UpdateUDBParamGroup - 更新UDB配置参数项
  */
-export interface UpdateUDBParamGroupResponse {}
+export type UpdateUDBParamGroupResponse = {};
 
 /**
  * UpgradeUDBInstanceToHA - 快杰普通db升级为高可用(只针对mysql5.5及以上版本Nvme机型的实例)
@@ -3425,7 +3425,7 @@ export interface UpgradeUDBInstanceToHARequest {
 /**
  * UpgradeUDBInstanceToHA - 快杰普通db升级为高可用(只针对mysql5.5及以上版本Nvme机型的实例)
  */
-export interface UpgradeUDBInstanceToHAResponse {}
+export type UpgradeUDBInstanceToHAResponse = {};
 
 /**
  * UploadUDBParamGroup - 导入UDB配置

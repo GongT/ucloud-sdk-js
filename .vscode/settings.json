@@ -1,0 +1,34 @@
+{
+  "files.associations": {
+    ".code-workspace": "jsonc",
+    ".stylelintrc": "jsonc",
+    "stylelintrc": "jsonc",
+    "README": "markdown"
+  },
+  "search.useIgnoreFiles": true,
+  "search.exclude": {
+    "**/dist": true,
+    "**/*.log": true,
+    "**/*.pid": true,
+    "**/.git": true,
+    "**/node_modules": true
+  },
+  //
+  "editor.rulers": [120],
+  "typescript.preferences.organizeImports": {
+    "sortImports": true,
+    "removeUnusedImports": true
+  },
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  //
+  "cSpell.diagnosticLevel": "Hint",
+  "biome.lspBin": "node_modules/@biomejs/biome/bin/biome",
+  "editor.defaultFormatter": "biomejs.biome",
+  "[typescriptreact][typescript][jsonc][json]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "biome.searchInPath": false
+}

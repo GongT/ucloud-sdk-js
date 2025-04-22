@@ -1,7 +1,7 @@
 import Client from '../../core/client';
 import Request from '../../core/request';
-import { ConfigOptions } from '../../core/config';
-import { CredentialOptions } from '../../core/credential';
+import type { ConfigOptions } from '../../core/config';
+import type { CredentialOptions } from '../../core/credential';
 
 /**
  * This client is used to call actions of **ufile** service
@@ -25,7 +25,7 @@ export default class UFileClient extends Client {
   createBucket(request?: CreateBucketRequest): Promise<CreateBucketResponse> {
     const args = { Action: 'CreateBucket', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateBucketResponse
+      resp => resp.toObject() as CreateBucketResponse
     );
   }
 
@@ -39,7 +39,7 @@ export default class UFileClient extends Client {
   ): Promise<CreateUFileLifeCycleResponse> {
     const args = { Action: 'CreateUFileLifeCycle', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUFileLifeCycleResponse
+      resp => resp.toObject() as CreateUFileLifeCycleResponse
     );
   }
 
@@ -53,7 +53,7 @@ export default class UFileClient extends Client {
   ): Promise<CreateUFileTokenResponse> {
     const args = { Action: 'CreateUFileToken', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUFileTokenResponse
+      resp => resp.toObject() as CreateUFileTokenResponse
     );
   }
 
@@ -65,7 +65,7 @@ export default class UFileClient extends Client {
   deleteBucket(request?: DeleteBucketRequest): Promise<DeleteBucketResponse> {
     const args = { Action: 'DeleteBucket', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteBucketResponse
+      resp => resp.toObject() as DeleteBucketResponse
     );
   }
 
@@ -79,7 +79,7 @@ export default class UFileClient extends Client {
   ): Promise<DeleteUFileLifeCycleResponse> {
     const args = { Action: 'DeleteUFileLifeCycle', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUFileLifeCycleResponse
+      resp => resp.toObject() as DeleteUFileLifeCycleResponse
     );
   }
 
@@ -93,7 +93,7 @@ export default class UFileClient extends Client {
   ): Promise<DeleteUFileTokenResponse> {
     const args = { Action: 'DeleteUFileToken', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUFileTokenResponse
+      resp => resp.toObject() as DeleteUFileTokenResponse
     );
   }
 
@@ -107,7 +107,7 @@ export default class UFileClient extends Client {
   ): Promise<DescribeBucketResponse> {
     const args = { Action: 'DescribeBucket', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeBucketResponse
+      resp => resp.toObject() as DescribeBucketResponse
     );
   }
 
@@ -121,7 +121,7 @@ export default class UFileClient extends Client {
   ): Promise<DescribeUFileLifeCycleResponse> {
     const args = { Action: 'DescribeUFileLifeCycle', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUFileLifeCycleResponse
+      resp => resp.toObject() as DescribeUFileLifeCycleResponse
     );
   }
 
@@ -135,7 +135,7 @@ export default class UFileClient extends Client {
   ): Promise<DescribeUFileTokenResponse> {
     const args = { Action: 'DescribeUFileToken', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUFileTokenResponse
+      resp => resp.toObject() as DescribeUFileTokenResponse
     );
   }
 
@@ -149,7 +149,7 @@ export default class UFileClient extends Client {
   ): Promise<GetUFileDailyReportResponse> {
     const args = { Action: 'GetUFileDailyReport', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUFileDailyReportResponse
+      resp => resp.toObject() as GetUFileDailyReportResponse
     );
   }
 
@@ -163,7 +163,7 @@ export default class UFileClient extends Client {
   ): Promise<GetUFileQuotaResponse> {
     const args = { Action: 'GetUFileQuota', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUFileQuotaResponse
+      resp => resp.toObject() as GetUFileQuotaResponse
     );
   }
 
@@ -177,7 +177,7 @@ export default class UFileClient extends Client {
   ): Promise<GetUFileQuotaInfoResponse> {
     const args = { Action: 'GetUFileQuotaInfo', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUFileQuotaInfoResponse
+      resp => resp.toObject() as GetUFileQuotaInfoResponse
     );
   }
 
@@ -191,7 +191,7 @@ export default class UFileClient extends Client {
   ): Promise<GetUFileQuotaPriceResponse> {
     const args = { Action: 'GetUFileQuotaPrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUFileQuotaPriceResponse
+      resp => resp.toObject() as GetUFileQuotaPriceResponse
     );
   }
 
@@ -205,7 +205,7 @@ export default class UFileClient extends Client {
   ): Promise<GetUFileReportResponse> {
     const args = { Action: 'GetUFileReport', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUFileReportResponse
+      resp => resp.toObject() as GetUFileReportResponse
     );
   }
 
@@ -219,7 +219,7 @@ export default class UFileClient extends Client {
   ): Promise<SetUFileRefererResponse> {
     const args = { Action: 'SetUFileReferer', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as SetUFileRefererResponse
+      resp => resp.toObject() as SetUFileRefererResponse
     );
   }
 
@@ -231,7 +231,7 @@ export default class UFileClient extends Client {
   updateBucket(request?: UpdateBucketRequest): Promise<UpdateBucketResponse> {
     const args = { Action: 'UpdateBucket', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateBucketResponse
+      resp => resp.toObject() as UpdateBucketResponse
     );
   }
 
@@ -245,7 +245,7 @@ export default class UFileClient extends Client {
   ): Promise<UpdateUFileLifeCycleResponse> {
     const args = { Action: 'UpdateUFileLifeCycle', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateUFileLifeCycleResponse
+      resp => resp.toObject() as UpdateUFileLifeCycleResponse
     );
   }
 
@@ -259,7 +259,7 @@ export default class UFileClient extends Client {
   ): Promise<UpdateUFileTokenResponse> {
     const args = { Action: 'UpdateUFileToken', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateUFileTokenResponse
+      resp => resp.toObject() as UpdateUFileTokenResponse
     );
   }
 }
@@ -413,7 +413,7 @@ export interface DeleteUFileLifeCycleRequest {
 /**
  * DeleteUFileLifeCycle - 删除生命周期管理
  */
-export interface DeleteUFileLifeCycleResponse {}
+export type DeleteUFileLifeCycleResponse = {};
 
 /**
  * DeleteUFileToken - 删除令牌
@@ -428,7 +428,7 @@ export interface DeleteUFileTokenRequest {
 /**
  * DeleteUFileToken - 删除令牌
  */
-export interface DeleteUFileTokenResponse {}
+export type DeleteUFileTokenResponse = {};
 
 /**
  * DescribeBucket - 获取Bucket的描述信息
@@ -927,7 +927,7 @@ export interface SetUFileRefererRequest {
 /**
  * SetUFileReferer - 设置对象存储防盗链
  */
-export interface SetUFileRefererResponse {}
+export type SetUFileRefererResponse = {};
 
 /**
  * UpdateBucket - 更改Bucket的属性
@@ -998,7 +998,7 @@ export interface UpdateUFileLifeCycleRequest {
 /**
  * UpdateUFileLifeCycle - 更新生命周期管理
  */
-export interface UpdateUFileLifeCycleResponse {}
+export type UpdateUFileLifeCycleResponse = {};
 
 /**
  * UpdateUFileToken - 更新令牌的操作权限，可操作key的前缀，可操作bucket和令牌超时时间点
@@ -1033,4 +1033,4 @@ export interface UpdateUFileTokenRequest {
 /**
  * UpdateUFileToken - 更新令牌的操作权限，可操作key的前缀，可操作bucket和令牌超时时间点
  */
-export interface UpdateUFileTokenResponse {}
+export type UpdateUFileTokenResponse = {};

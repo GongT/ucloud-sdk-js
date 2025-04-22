@@ -22,16 +22,16 @@ export class DefaultLogger {
   log(level: LogLevel, message: string, extras?: object) {
     switch (level) {
       case LogLevel.Debug:
-        console.log(message);
+        console.error(message, extras);
         break;
       case LogLevel.Info:
-        console.log(message);
+        console.error(message, extras);
         break;
       case LogLevel.Error:
-        console.log(message);
+        console.error(message, extras);
         break;
       default:
-        console.log(message);
+        console.error(message, extras);
     }
   }
 

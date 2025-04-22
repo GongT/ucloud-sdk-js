@@ -1,7 +1,7 @@
 import Client from '../../core/client';
 import Request from '../../core/request';
-import { ConfigOptions } from '../../core/config';
-import { CredentialOptions } from '../../core/credential';
+import type { ConfigOptions } from '../../core/config';
+import type { CredentialOptions } from '../../core/credential';
 
 /**
  * This client is used to call actions of **uk8s** service
@@ -27,7 +27,7 @@ export default class UK8SClient extends Client {
   ): Promise<AddUK8SExistingUHostResponse> {
     const args = { Action: 'AddUK8SExistingUHost', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as AddUK8SExistingUHostResponse
+      resp => resp.toObject() as AddUK8SExistingUHostResponse
     );
   }
 
@@ -41,7 +41,7 @@ export default class UK8SClient extends Client {
   ): Promise<AddUK8SNodeGroupResponse> {
     const args = { Action: 'AddUK8SNodeGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as AddUK8SNodeGroupResponse
+      resp => resp.toObject() as AddUK8SNodeGroupResponse
     );
   }
 
@@ -55,7 +55,7 @@ export default class UK8SClient extends Client {
   ): Promise<AddUK8SPHostNodeResponse> {
     const args = { Action: 'AddUK8SPHostNode', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as AddUK8SPHostNodeResponse
+      resp => resp.toObject() as AddUK8SPHostNodeResponse
     );
   }
 
@@ -69,7 +69,7 @@ export default class UK8SClient extends Client {
   ): Promise<AddUK8SUHostNodeResponse> {
     const args = { Action: 'AddUK8SUHostNode', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as AddUK8SUHostNodeResponse
+      resp => resp.toObject() as AddUK8SUHostNodeResponse
     );
   }
 
@@ -83,7 +83,7 @@ export default class UK8SClient extends Client {
   ): Promise<CreateUK8SClusterV2Response> {
     const args = { Action: 'CreateUK8SClusterV2', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUK8SClusterV2Response
+      resp => resp.toObject() as CreateUK8SClusterV2Response
     );
   }
 
@@ -97,7 +97,7 @@ export default class UK8SClient extends Client {
   ): Promise<DelUK8SClusterResponse> {
     const args = { Action: 'DelUK8SCluster', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DelUK8SClusterResponse
+      resp => resp.toObject() as DelUK8SClusterResponse
     );
   }
 
@@ -111,7 +111,7 @@ export default class UK8SClient extends Client {
   ): Promise<DelUK8SClusterNodeV2Response> {
     const args = { Action: 'DelUK8SClusterNodeV2', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DelUK8SClusterNodeV2Response
+      resp => resp.toObject() as DelUK8SClusterNodeV2Response
     );
   }
 
@@ -125,7 +125,7 @@ export default class UK8SClient extends Client {
   ): Promise<DescribeUK8SClusterResponse> {
     const args = { Action: 'DescribeUK8SCluster', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUK8SClusterResponse
+      resp => resp.toObject() as DescribeUK8SClusterResponse
     );
   }
 
@@ -139,7 +139,7 @@ export default class UK8SClient extends Client {
   ): Promise<DescribeUK8SImageResponse> {
     const args = { Action: 'DescribeUK8SImage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUK8SImageResponse
+      resp => resp.toObject() as DescribeUK8SImageResponse
     );
   }
 
@@ -153,7 +153,7 @@ export default class UK8SClient extends Client {
   ): Promise<DescribeUK8SNodeResponse> {
     const args = { Action: 'DescribeUK8SNode', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUK8SNodeResponse
+      resp => resp.toObject() as DescribeUK8SNodeResponse
     );
   }
 
@@ -167,7 +167,7 @@ export default class UK8SClient extends Client {
   ): Promise<ListUK8SClusterNodeV2Response> {
     const args = { Action: 'ListUK8SClusterNodeV2', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ListUK8SClusterNodeV2Response
+      resp => resp.toObject() as ListUK8SClusterNodeV2Response
     );
   }
 
@@ -181,7 +181,7 @@ export default class UK8SClient extends Client {
   ): Promise<ListUK8SClusterV2Response> {
     const args = { Action: 'ListUK8SClusterV2', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ListUK8SClusterV2Response
+      resp => resp.toObject() as ListUK8SClusterV2Response
     );
   }
 
@@ -195,7 +195,7 @@ export default class UK8SClient extends Client {
   ): Promise<ListUK8SNodeGroupResponse> {
     const args = { Action: 'ListUK8SNodeGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ListUK8SNodeGroupResponse
+      resp => resp.toObject() as ListUK8SNodeGroupResponse
     );
   }
 
@@ -209,7 +209,7 @@ export default class UK8SClient extends Client {
   ): Promise<RemoveUK8SNodeGroupResponse> {
     const args = { Action: 'RemoveUK8SNodeGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RemoveUK8SNodeGroupResponse
+      resp => resp.toObject() as RemoveUK8SNodeGroupResponse
     );
   }
 }
@@ -267,7 +267,7 @@ export interface AddUK8SExistingUHostRequest {
 /**
  * AddUK8SExistingUHost - 将预先创建好的云主机加入到UK8S集群，需要注意的是，该云主机依然会执行重装系统的操作。
  */
-export interface AddUK8SExistingUHostResponse {}
+export type AddUK8SExistingUHostResponse = {};
 
 /**
  * AddUK8SNodeGroup - 添加UK8S节点池
@@ -414,7 +414,7 @@ export interface AddUK8SPHostNodeRequest {
 /**
  * AddUK8SPHostNode - 为UK8S集群添加一台或多台物理云主机类型的节点。
  */
-export interface AddUK8SPHostNodeResponse {}
+export type AddUK8SPHostNodeResponse = {};
 
 /**
  * AddUK8SUHostNode - 为UK8S集群添加一台Node节点，机型类型为云主机
@@ -716,7 +716,7 @@ export interface DelUK8SClusterRequest {
 /**
  * DelUK8SCluster - 删除UK8S集群
  */
-export interface DelUK8SClusterResponse {}
+export type DelUK8SClusterResponse = {};
 
 /**
  * DelUK8SClusterNodeV2 - 删除集群中的Node节点，删除前务必先将其中的Pod驱逐。
@@ -739,7 +739,7 @@ export interface DelUK8SClusterNodeV2Request {
 /**
  * DelUK8SClusterNodeV2 - 删除集群中的Node节点，删除前务必先将其中的Pod驱逐。
  */
-export interface DelUK8SClusterNodeV2Response {}
+export type DelUK8SClusterNodeV2Response = {};
 
 /**
  * DescribeUK8SCluster - 获取集群信息
@@ -1609,4 +1609,4 @@ export interface RemoveUK8SNodeGroupRequest {
 /**
  * RemoveUK8SNodeGroup - 删除UK8S节点池
  */
-export interface RemoveUK8SNodeGroupResponse {}
+export type RemoveUK8SNodeGroupResponse = {};

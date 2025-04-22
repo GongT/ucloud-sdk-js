@@ -1,7 +1,7 @@
 import Client from '../../core/client';
 import Request from '../../core/request';
-import { ConfigOptions } from '../../core/config';
-import { CredentialOptions } from '../../core/credential';
+import type { ConfigOptions } from '../../core/config';
+import type { CredentialOptions } from '../../core/credential';
 
 /**
  * This client is used to call actions of **uhost** service
@@ -27,7 +27,7 @@ export default class UHostClient extends Client {
   ): Promise<CopyCustomImageResponse> {
     const args = { Action: 'CopyCustomImage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CopyCustomImageResponse
+      resp => resp.toObject() as CopyCustomImageResponse
     );
   }
 
@@ -41,7 +41,7 @@ export default class UHostClient extends Client {
   ): Promise<CreateCustomImageResponse> {
     const args = { Action: 'CreateCustomImage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateCustomImageResponse
+      resp => resp.toObject() as CreateCustomImageResponse
     );
   }
 
@@ -55,7 +55,7 @@ export default class UHostClient extends Client {
   ): Promise<CreateIsolationGroupResponse> {
     const args = { Action: 'CreateIsolationGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateIsolationGroupResponse
+      resp => resp.toObject() as CreateIsolationGroupResponse
     );
   }
 
@@ -69,7 +69,7 @@ export default class UHostClient extends Client {
   ): Promise<CreateUHostInstanceResponse> {
     const args = { Action: 'CreateUHostInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUHostInstanceResponse
+      resp => resp.toObject() as CreateUHostInstanceResponse
     );
   }
 
@@ -83,7 +83,7 @@ export default class UHostClient extends Client {
   ): Promise<CreateUHostKeyPairResponse> {
     const args = { Action: 'CreateUHostKeyPair', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUHostKeyPairResponse
+      resp => resp.toObject() as CreateUHostKeyPairResponse
     );
   }
 
@@ -97,7 +97,7 @@ export default class UHostClient extends Client {
   ): Promise<DeleteIsolationGroupResponse> {
     const args = { Action: 'DeleteIsolationGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteIsolationGroupResponse
+      resp => resp.toObject() as DeleteIsolationGroupResponse
     );
   }
 
@@ -111,7 +111,7 @@ export default class UHostClient extends Client {
   ): Promise<DeleteUHostKeyPairsResponse> {
     const args = { Action: 'DeleteUHostKeyPairs', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUHostKeyPairsResponse
+      resp => resp.toObject() as DeleteUHostKeyPairsResponse
     );
   }
 
@@ -128,7 +128,7 @@ export default class UHostClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeAvailableInstanceTypesResponse
+      resp => resp.toObject() as DescribeAvailableInstanceTypesResponse
     );
   }
 
@@ -142,7 +142,7 @@ export default class UHostClient extends Client {
   ): Promise<DescribeImageResponse> {
     const args = { Action: 'DescribeImage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeImageResponse
+      resp => resp.toObject() as DescribeImageResponse
     );
   }
 
@@ -156,7 +156,7 @@ export default class UHostClient extends Client {
   ): Promise<DescribeIsolationGroupResponse> {
     const args = { Action: 'DescribeIsolationGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeIsolationGroupResponse
+      resp => resp.toObject() as DescribeIsolationGroupResponse
     );
   }
 
@@ -170,7 +170,7 @@ export default class UHostClient extends Client {
   ): Promise<DescribeUHostInstanceResponse> {
     const args = { Action: 'DescribeUHostInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUHostInstanceResponse
+      resp => resp.toObject() as DescribeUHostInstanceResponse
     );
   }
 
@@ -184,7 +184,7 @@ export default class UHostClient extends Client {
   ): Promise<DescribeUHostKeyPairsResponse> {
     const args = { Action: 'DescribeUHostKeyPairs', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUHostKeyPairsResponse
+      resp => resp.toObject() as DescribeUHostKeyPairsResponse
     );
   }
 
@@ -198,7 +198,7 @@ export default class UHostClient extends Client {
   ): Promise<DescribeUHostTagsResponse> {
     const args = { Action: 'DescribeUHostTags', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUHostTagsResponse
+      resp => resp.toObject() as DescribeUHostTagsResponse
     );
   }
 
@@ -212,7 +212,7 @@ export default class UHostClient extends Client {
   ): Promise<GetAttachedDiskUpgradePriceResponse> {
     const args = { Action: 'GetAttachedDiskUpgradePrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetAttachedDiskUpgradePriceResponse
+      resp => resp.toObject() as GetAttachedDiskUpgradePriceResponse
     );
   }
 
@@ -226,7 +226,7 @@ export default class UHostClient extends Client {
   ): Promise<GetUHostInstancePriceResponse> {
     const args = { Action: 'GetUHostInstancePrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUHostInstancePriceResponse
+      resp => resp.toObject() as GetUHostInstancePriceResponse
     );
   }
 
@@ -240,7 +240,7 @@ export default class UHostClient extends Client {
   ): Promise<GetUHostInstanceVncInfoResponse> {
     const args = { Action: 'GetUHostInstanceVncInfo', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUHostInstanceVncInfoResponse
+      resp => resp.toObject() as GetUHostInstanceVncInfoResponse
     );
   }
 
@@ -254,7 +254,7 @@ export default class UHostClient extends Client {
   ): Promise<GetUHostUpgradePriceResponse> {
     const args = { Action: 'GetUHostUpgradePrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUHostUpgradePriceResponse
+      resp => resp.toObject() as GetUHostUpgradePriceResponse
     );
   }
 
@@ -268,7 +268,7 @@ export default class UHostClient extends Client {
   ): Promise<ImportCustomImageResponse> {
     const args = { Action: 'ImportCustomImage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ImportCustomImageResponse
+      resp => resp.toObject() as ImportCustomImageResponse
     );
   }
 
@@ -282,7 +282,7 @@ export default class UHostClient extends Client {
   ): Promise<ImportUHostKeyPairsResponse> {
     const args = { Action: 'ImportUHostKeyPairs', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ImportUHostKeyPairsResponse
+      resp => resp.toObject() as ImportUHostKeyPairsResponse
     );
   }
 
@@ -296,7 +296,7 @@ export default class UHostClient extends Client {
   ): Promise<LeaveIsolationGroupResponse> {
     const args = { Action: 'LeaveIsolationGroup', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as LeaveIsolationGroupResponse
+      resp => resp.toObject() as LeaveIsolationGroupResponse
     );
   }
 
@@ -310,7 +310,7 @@ export default class UHostClient extends Client {
   ): Promise<ModifyUHostIPResponse> {
     const args = { Action: 'ModifyUHostIP', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyUHostIPResponse
+      resp => resp.toObject() as ModifyUHostIPResponse
     );
   }
 
@@ -324,7 +324,7 @@ export default class UHostClient extends Client {
   ): Promise<ModifyUHostInstanceNameResponse> {
     const args = { Action: 'ModifyUHostInstanceName', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyUHostInstanceNameResponse
+      resp => resp.toObject() as ModifyUHostInstanceNameResponse
     );
   }
 
@@ -338,7 +338,7 @@ export default class UHostClient extends Client {
   ): Promise<ModifyUHostInstanceRemarkResponse> {
     const args = { Action: 'ModifyUHostInstanceRemark', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyUHostInstanceRemarkResponse
+      resp => resp.toObject() as ModifyUHostInstanceRemarkResponse
     );
   }
 
@@ -352,7 +352,7 @@ export default class UHostClient extends Client {
   ): Promise<ModifyUHostInstanceTagResponse> {
     const args = { Action: 'ModifyUHostInstanceTag', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyUHostInstanceTagResponse
+      resp => resp.toObject() as ModifyUHostInstanceTagResponse
     );
   }
 
@@ -366,7 +366,7 @@ export default class UHostClient extends Client {
   ): Promise<PoweroffUHostInstanceResponse> {
     const args = { Action: 'PoweroffUHostInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as PoweroffUHostInstanceResponse
+      resp => resp.toObject() as PoweroffUHostInstanceResponse
     );
   }
 
@@ -380,7 +380,7 @@ export default class UHostClient extends Client {
   ): Promise<RebootUHostInstanceResponse> {
     const args = { Action: 'RebootUHostInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RebootUHostInstanceResponse
+      resp => resp.toObject() as RebootUHostInstanceResponse
     );
   }
 
@@ -394,7 +394,7 @@ export default class UHostClient extends Client {
   ): Promise<ReinstallUHostInstanceResponse> {
     const args = { Action: 'ReinstallUHostInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ReinstallUHostInstanceResponse
+      resp => resp.toObject() as ReinstallUHostInstanceResponse
     );
   }
 
@@ -408,7 +408,7 @@ export default class UHostClient extends Client {
   ): Promise<ResetUHostInstancePasswordResponse> {
     const args = { Action: 'ResetUHostInstancePassword', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ResetUHostInstancePasswordResponse
+      resp => resp.toObject() as ResetUHostInstancePasswordResponse
     );
   }
 
@@ -422,7 +422,7 @@ export default class UHostClient extends Client {
   ): Promise<ResizeAttachedDiskResponse> {
     const args = { Action: 'ResizeAttachedDisk', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ResizeAttachedDiskResponse
+      resp => resp.toObject() as ResizeAttachedDiskResponse
     );
   }
 
@@ -436,7 +436,7 @@ export default class UHostClient extends Client {
   ): Promise<ResizeUHostInstanceResponse> {
     const args = { Action: 'ResizeUHostInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ResizeUHostInstanceResponse
+      resp => resp.toObject() as ResizeUHostInstanceResponse
     );
   }
 
@@ -450,7 +450,7 @@ export default class UHostClient extends Client {
   ): Promise<StartUHostInstanceResponse> {
     const args = { Action: 'StartUHostInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as StartUHostInstanceResponse
+      resp => resp.toObject() as StartUHostInstanceResponse
     );
   }
 
@@ -464,7 +464,7 @@ export default class UHostClient extends Client {
   ): Promise<StopUHostInstanceResponse> {
     const args = { Action: 'StopUHostInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as StopUHostInstanceResponse
+      resp => resp.toObject() as StopUHostInstanceResponse
     );
   }
 
@@ -478,7 +478,7 @@ export default class UHostClient extends Client {
   ): Promise<TerminateCustomImageResponse> {
     const args = { Action: 'TerminateCustomImage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as TerminateCustomImageResponse
+      resp => resp.toObject() as TerminateCustomImageResponse
     );
   }
 
@@ -492,7 +492,7 @@ export default class UHostClient extends Client {
   ): Promise<TerminateUHostInstanceResponse> {
     const args = { Action: 'TerminateUHostInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as TerminateUHostInstanceResponse
+      resp => resp.toObject() as TerminateUHostInstanceResponse
     );
   }
 
@@ -506,7 +506,7 @@ export default class UHostClient extends Client {
   ): Promise<UpgradeToArkUHostInstanceResponse> {
     const args = { Action: 'UpgradeToArkUHostInstance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpgradeToArkUHostInstanceResponse
+      resp => resp.toObject() as UpgradeToArkUHostInstanceResponse
     );
   }
 }
@@ -917,7 +917,7 @@ export interface DeleteUHostKeyPairsRequest {
 /**
  * DeleteUHostKeyPairs - 删除一对或者多对密钥对。
  */
-export interface DeleteUHostKeyPairsResponse {}
+export type DeleteUHostKeyPairsResponse = {};
 
 /**
  * DescribeAvailableInstanceTypes - DescribeAvailableInstanceTypes

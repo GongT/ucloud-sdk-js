@@ -1,7 +1,7 @@
 import Client from '../../core/client';
 import Request from '../../core/request';
-import { ConfigOptions } from '../../core/config';
-import { CredentialOptions } from '../../core/credential';
+import type { ConfigOptions } from '../../core/config';
+import type { CredentialOptions } from '../../core/credential';
 
 /**
  * This client is used to call actions of **ulb** service
@@ -27,7 +27,7 @@ export default class ULBClient extends Client {
   ): Promise<AllocateBackendResponse> {
     const args = { Action: 'AllocateBackend', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as AllocateBackendResponse
+      resp => resp.toObject() as AllocateBackendResponse
     );
   }
 
@@ -39,7 +39,7 @@ export default class ULBClient extends Client {
   bindSSL(request?: BindSSLRequest): Promise<BindSSLResponse> {
     const args = { Action: 'BindSSL', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as BindSSLResponse
+      resp => resp.toObject() as BindSSLResponse
     );
   }
 
@@ -51,7 +51,7 @@ export default class ULBClient extends Client {
   createPolicy(request?: CreatePolicyRequest): Promise<CreatePolicyResponse> {
     const args = { Action: 'CreatePolicy', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreatePolicyResponse
+      resp => resp.toObject() as CreatePolicyResponse
     );
   }
 
@@ -63,7 +63,7 @@ export default class ULBClient extends Client {
   createSSL(request?: CreateSSLRequest): Promise<CreateSSLResponse> {
     const args = { Action: 'CreateSSL', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateSSLResponse
+      resp => resp.toObject() as CreateSSLResponse
     );
   }
 
@@ -75,7 +75,7 @@ export default class ULBClient extends Client {
   createULB(request?: CreateULBRequest): Promise<CreateULBResponse> {
     const args = { Action: 'CreateULB', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateULBResponse
+      resp => resp.toObject() as CreateULBResponse
     );
   }
 
@@ -89,7 +89,7 @@ export default class ULBClient extends Client {
   ): Promise<CreateVServerResponse> {
     const args = { Action: 'CreateVServer', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateVServerResponse
+      resp => resp.toObject() as CreateVServerResponse
     );
   }
 
@@ -101,7 +101,7 @@ export default class ULBClient extends Client {
   deletePolicy(request?: DeletePolicyRequest): Promise<DeletePolicyResponse> {
     const args = { Action: 'DeletePolicy', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeletePolicyResponse
+      resp => resp.toObject() as DeletePolicyResponse
     );
   }
 
@@ -113,7 +113,7 @@ export default class ULBClient extends Client {
   deleteSSL(request?: DeleteSSLRequest): Promise<DeleteSSLResponse> {
     const args = { Action: 'DeleteSSL', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteSSLResponse
+      resp => resp.toObject() as DeleteSSLResponse
     );
   }
 
@@ -125,7 +125,7 @@ export default class ULBClient extends Client {
   deleteULB(request?: DeleteULBRequest): Promise<DeleteULBResponse> {
     const args = { Action: 'DeleteULB', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteULBResponse
+      resp => resp.toObject() as DeleteULBResponse
     );
   }
 
@@ -139,7 +139,7 @@ export default class ULBClient extends Client {
   ): Promise<DeleteVServerResponse> {
     const args = { Action: 'DeleteVServer', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteVServerResponse
+      resp => resp.toObject() as DeleteVServerResponse
     );
   }
 
@@ -151,7 +151,7 @@ export default class ULBClient extends Client {
   describeSSL(request?: DescribeSSLRequest): Promise<DescribeSSLResponse> {
     const args = { Action: 'DescribeSSL', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeSSLResponse
+      resp => resp.toObject() as DescribeSSLResponse
     );
   }
 
@@ -163,7 +163,7 @@ export default class ULBClient extends Client {
   describeULB(request?: DescribeULBRequest): Promise<DescribeULBResponse> {
     const args = { Action: 'DescribeULB', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeULBResponse
+      resp => resp.toObject() as DescribeULBResponse
     );
   }
 
@@ -177,7 +177,7 @@ export default class ULBClient extends Client {
   ): Promise<DescribeULBSimpleResponse> {
     const args = { Action: 'DescribeULBSimple', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeULBSimpleResponse
+      resp => resp.toObject() as DescribeULBSimpleResponse
     );
   }
 
@@ -191,7 +191,7 @@ export default class ULBClient extends Client {
   ): Promise<DescribeVServerResponse> {
     const args = { Action: 'DescribeVServer', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeVServerResponse
+      resp => resp.toObject() as DescribeVServerResponse
     );
   }
 
@@ -205,7 +205,7 @@ export default class ULBClient extends Client {
   ): Promise<ReleaseBackendResponse> {
     const args = { Action: 'ReleaseBackend', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ReleaseBackendResponse
+      resp => resp.toObject() as ReleaseBackendResponse
     );
   }
 
@@ -217,7 +217,7 @@ export default class ULBClient extends Client {
   unbindSSL(request?: UnbindSSLRequest): Promise<UnbindSSLResponse> {
     const args = { Action: 'UnbindSSL', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UnbindSSLResponse
+      resp => resp.toObject() as UnbindSSLResponse
     );
   }
 
@@ -231,7 +231,7 @@ export default class ULBClient extends Client {
   ): Promise<UpdateBackendAttributeResponse> {
     const args = { Action: 'UpdateBackendAttribute', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateBackendAttributeResponse
+      resp => resp.toObject() as UpdateBackendAttributeResponse
     );
   }
 
@@ -243,7 +243,7 @@ export default class ULBClient extends Client {
   updatePolicy(request?: UpdatePolicyRequest): Promise<UpdatePolicyResponse> {
     const args = { Action: 'UpdatePolicy', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdatePolicyResponse
+      resp => resp.toObject() as UpdatePolicyResponse
     );
   }
 
@@ -257,7 +257,7 @@ export default class ULBClient extends Client {
   ): Promise<UpdateSSLAttributeResponse> {
     const args = { Action: 'UpdateSSLAttribute', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateSSLAttributeResponse
+      resp => resp.toObject() as UpdateSSLAttributeResponse
     );
   }
 
@@ -271,7 +271,7 @@ export default class ULBClient extends Client {
   ): Promise<UpdateULBAttributeResponse> {
     const args = { Action: 'UpdateULBAttribute', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateULBAttributeResponse
+      resp => resp.toObject() as UpdateULBAttributeResponse
     );
   }
 
@@ -285,7 +285,7 @@ export default class ULBClient extends Client {
   ): Promise<UpdateVServerAttributeResponse> {
     const args = { Action: 'UpdateVServerAttribute', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateVServerAttributeResponse
+      resp => resp.toObject() as UpdateVServerAttributeResponse
     );
   }
 }
@@ -371,7 +371,7 @@ export interface BindSSLRequest {
 /**
  * BindSSL - 将SSL证书绑定到VServer
  */
-export interface BindSSLResponse {}
+export type BindSSLResponse = {};
 
 /**
  * CreatePolicy - 创建VServer内容转发策略
@@ -606,7 +606,7 @@ export interface DeletePolicyRequest {
 /**
  * DeletePolicy - 删除内容转发策略
  */
-export interface DeletePolicyResponse {}
+export type DeletePolicyResponse = {};
 
 /**
  * DeleteSSL - 删除SSL证书
@@ -621,7 +621,7 @@ export interface DeleteSSLRequest {
 /**
  * DeleteSSL - 删除SSL证书
  */
-export interface DeleteSSLResponse {}
+export type DeleteSSLResponse = {};
 
 /**
  * DeleteULB - 删除负载均衡实例
@@ -640,7 +640,7 @@ export interface DeleteULBRequest {
 /**
  * DeleteULB - 删除负载均衡实例
  */
-export interface DeleteULBResponse {}
+export type DeleteULBResponse = {};
 
 /**
  * DeleteVServer - 删除VServer实例
@@ -659,7 +659,7 @@ export interface DeleteVServerRequest {
 /**
  * DeleteVServer - 删除VServer实例
  */
-export interface DeleteVServerResponse {}
+export type DeleteVServerResponse = {};
 
 /**
  * DescribeSSL - 获取SSL证书信息
@@ -1620,7 +1620,7 @@ export interface ReleaseBackendRequest {
 /**
  * ReleaseBackend - 从VServer释放后端资源实例
  */
-export interface ReleaseBackendResponse {}
+export type ReleaseBackendResponse = {};
 
 /**
  * UnbindSSL - 从VServer解绑SSL证书
@@ -1643,7 +1643,7 @@ export interface UnbindSSLRequest {
 /**
  * UnbindSSL - 从VServer解绑SSL证书
  */
-export interface UnbindSSLResponse {}
+export type UnbindSSLResponse = {};
 
 /**
  * UpdateBackendAttribute - 更新ULB后端资源实例(服务节点)属性
@@ -1678,7 +1678,7 @@ export interface UpdateBackendAttributeRequest {
 /**
  * UpdateBackendAttribute - 更新ULB后端资源实例(服务节点)属性
  */
-export interface UpdateBackendAttributeResponse {}
+export type UpdateBackendAttributeResponse = {};
 
 /**
  * UpdatePolicy - 更新内容转发规则，包括转发规则后的服务节点
@@ -1713,7 +1713,7 @@ export interface UpdatePolicyRequest {
 /**
  * UpdatePolicy - 更新内容转发规则，包括转发规则后的服务节点
  */
-export interface UpdatePolicyResponse {}
+export type UpdatePolicyResponse = {};
 
 /**
  * UpdateSSLAttribute - 更新修改SSL的属性，如：修改SSLName
@@ -1732,7 +1732,7 @@ export interface UpdateSSLAttributeRequest {
 /**
  * UpdateSSLAttribute - 更新修改SSL的属性，如：修改SSLName
  */
-export interface UpdateSSLAttributeResponse {}
+export type UpdateSSLAttributeResponse = {};
 
 /**
  * UpdateULBAttribute - 更新ULB名字业务组备注等属性字段
@@ -1759,7 +1759,7 @@ export interface UpdateULBAttributeRequest {
 /**
  * UpdateULBAttribute - 更新ULB名字业务组备注等属性字段
  */
-export interface UpdateULBAttributeResponse {}
+export type UpdateULBAttributeResponse = {};
 
 /**
  * UpdateVServerAttribute - 更新VServer实例属性
@@ -1818,4 +1818,4 @@ export interface UpdateVServerAttributeRequest {
 /**
  * UpdateVServerAttribute - 更新VServer实例属性
  */
-export interface UpdateVServerAttributeResponse {}
+export type UpdateVServerAttributeResponse = {};

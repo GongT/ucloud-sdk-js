@@ -1,7 +1,7 @@
 import Client from '../../core/client';
 import Request from '../../core/request';
-import { ConfigOptions } from '../../core/config';
-import { CredentialOptions } from '../../core/credential';
+import type { ConfigOptions } from '../../core/config';
+import type { CredentialOptions } from '../../core/credential';
 
 /**
  * This client is used to call actions of **cube** service
@@ -27,7 +27,7 @@ export default class CubeClient extends Client {
   ): Promise<CreateCubeDeploymentResponse> {
     const args = { Action: 'CreateCubeDeployment', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateCubeDeploymentResponse
+      resp => resp.toObject() as CreateCubeDeploymentResponse
     );
   }
 
@@ -41,7 +41,7 @@ export default class CubeClient extends Client {
   ): Promise<CreateCubePodResponse> {
     const args = { Action: 'CreateCubePod', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateCubePodResponse
+      resp => resp.toObject() as CreateCubePodResponse
     );
   }
 
@@ -55,7 +55,7 @@ export default class CubeClient extends Client {
   ): Promise<DeleteCubeDeploymentResponse> {
     const args = { Action: 'DeleteCubeDeployment', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteCubeDeploymentResponse
+      resp => resp.toObject() as DeleteCubeDeploymentResponse
     );
   }
 
@@ -69,7 +69,7 @@ export default class CubeClient extends Client {
   ): Promise<DeleteCubePodResponse> {
     const args = { Action: 'DeleteCubePod', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteCubePodResponse
+      resp => resp.toObject() as DeleteCubePodResponse
     );
   }
 
@@ -83,7 +83,7 @@ export default class CubeClient extends Client {
   ): Promise<GetCubeDeploymentResponse> {
     const args = { Action: 'GetCubeDeployment', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetCubeDeploymentResponse
+      resp => resp.toObject() as GetCubeDeploymentResponse
     );
   }
 
@@ -97,7 +97,7 @@ export default class CubeClient extends Client {
   ): Promise<GetCubeExecTokenResponse> {
     const args = { Action: 'GetCubeExecToken', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetCubeExecTokenResponse
+      resp => resp.toObject() as GetCubeExecTokenResponse
     );
   }
 
@@ -111,7 +111,7 @@ export default class CubeClient extends Client {
   ): Promise<GetCubeExtendInfoResponse> {
     const args = { Action: 'GetCubeExtendInfo', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetCubeExtendInfoResponse
+      resp => resp.toObject() as GetCubeExtendInfoResponse
     );
   }
 
@@ -125,7 +125,7 @@ export default class CubeClient extends Client {
   ): Promise<GetCubeMetricsResponse> {
     const args = { Action: 'GetCubeMetrics', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetCubeMetricsResponse
+      resp => resp.toObject() as GetCubeMetricsResponse
     );
   }
 
@@ -137,7 +137,7 @@ export default class CubeClient extends Client {
   getCubePod(request?: GetCubePodRequest): Promise<GetCubePodResponse> {
     const args = { Action: 'GetCubePod', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetCubePodResponse
+      resp => resp.toObject() as GetCubePodResponse
     );
   }
 
@@ -149,7 +149,7 @@ export default class CubeClient extends Client {
   getCubePrice(request?: GetCubePriceRequest): Promise<GetCubePriceResponse> {
     const args = { Action: 'GetCubePrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetCubePriceResponse
+      resp => resp.toObject() as GetCubePriceResponse
     );
   }
 
@@ -161,7 +161,7 @@ export default class CubeClient extends Client {
   getCubeToken(request?: GetCubeTokenRequest): Promise<GetCubeTokenResponse> {
     const args = { Action: 'GetCubeToken', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetCubeTokenResponse
+      resp => resp.toObject() as GetCubeTokenResponse
     );
   }
 
@@ -175,7 +175,7 @@ export default class CubeClient extends Client {
   ): Promise<ListCubeDeploymentResponse> {
     const args = { Action: 'ListCubeDeployment', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ListCubeDeploymentResponse
+      resp => resp.toObject() as ListCubeDeploymentResponse
     );
   }
 
@@ -187,7 +187,7 @@ export default class CubeClient extends Client {
   listCubePod(request?: ListCubePodRequest): Promise<ListCubePodResponse> {
     const args = { Action: 'ListCubePod', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ListCubePodResponse
+      resp => resp.toObject() as ListCubePodResponse
     );
   }
 
@@ -201,7 +201,7 @@ export default class CubeClient extends Client {
   ): Promise<ModifyCubeExtendInfoResponse> {
     const args = { Action: 'ModifyCubeExtendInfo', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyCubeExtendInfoResponse
+      resp => resp.toObject() as ModifyCubeExtendInfoResponse
     );
   }
 
@@ -215,7 +215,7 @@ export default class CubeClient extends Client {
   ): Promise<ModifyCubeTagResponse> {
     const args = { Action: 'ModifyCubeTag', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyCubeTagResponse
+      resp => resp.toObject() as ModifyCubeTagResponse
     );
   }
 
@@ -229,7 +229,7 @@ export default class CubeClient extends Client {
   ): Promise<RebootCubePodResponse> {
     const args = { Action: 'RebootCubePod', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RebootCubePodResponse
+      resp => resp.toObject() as RebootCubePodResponse
     );
   }
 
@@ -241,7 +241,7 @@ export default class CubeClient extends Client {
   renewCubePod(request?: RenewCubePodRequest): Promise<RenewCubePodResponse> {
     const args = { Action: 'RenewCubePod', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RenewCubePodResponse
+      resp => resp.toObject() as RenewCubePodResponse
     );
   }
 
@@ -255,7 +255,7 @@ export default class CubeClient extends Client {
   ): Promise<UpdateCubeDeploymentResponse> {
     const args = { Action: 'UpdateCubeDeployment', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateCubeDeploymentResponse
+      resp => resp.toObject() as UpdateCubeDeploymentResponse
     );
   }
 }
@@ -405,7 +405,7 @@ export interface DeleteCubeDeploymentRequest {
 /**
  * DeleteCubeDeployment - 删除Cube的Deployment
  */
-export interface DeleteCubeDeploymentResponse {}
+export type DeleteCubeDeploymentResponse = {};
 
 /**
  * DeleteCubePod - 删除Pod
@@ -432,7 +432,7 @@ export interface DeleteCubePodRequest {
 /**
  * DeleteCubePod - 删除Pod
  */
-export interface DeleteCubePodResponse {}
+export type DeleteCubePodResponse = {};
 
 /**
  * GetCubeDeployment - 获取Deployment的详细信息
@@ -848,7 +848,7 @@ export interface ModifyCubeExtendInfoRequest {
 /**
  * ModifyCubeExtendInfo - 修改Cube额外信息
  */
-export interface ModifyCubeExtendInfoResponse {}
+export type ModifyCubeExtendInfoResponse = {};
 
 /**
  * ModifyCubeTag - 修改业务组名字
@@ -895,7 +895,7 @@ export interface RebootCubePodRequest {
 /**
  * RebootCubePod - 重启Cube Pod
  */
-export interface RebootCubePodResponse {}
+export type RebootCubePodResponse = {};
 
 /**
  * RenewCubePod - 更新Pod

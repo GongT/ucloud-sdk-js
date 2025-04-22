@@ -1,7 +1,7 @@
 import Client from '../../core/client';
 import Request from '../../core/request';
-import { ConfigOptions } from '../../core/config';
-import { CredentialOptions } from '../../core/credential';
+import type { ConfigOptions } from '../../core/config';
+import type { CredentialOptions } from '../../core/credential';
 
 /**
  * This client is used to call actions of **uaccount** service
@@ -27,7 +27,7 @@ export default class UAccountClient extends Client {
   ): Promise<AddMemberToProjectResponse> {
     const args = { Action: 'AddMemberToProject', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as AddMemberToProjectResponse
+      resp => resp.toObject() as AddMemberToProjectResponse
     );
   }
 
@@ -39,7 +39,7 @@ export default class UAccountClient extends Client {
   freezeMember(request?: FreezeMemberRequest): Promise<FreezeMemberResponse> {
     const args = { Action: 'FreezeMember', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as FreezeMemberResponse
+      resp => resp.toObject() as FreezeMemberResponse
     );
   }
 
@@ -53,7 +53,7 @@ export default class UAccountClient extends Client {
   ): Promise<GetNetworkMaskResponse> {
     const args = { Action: 'GetNetworkMask', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetNetworkMaskResponse
+      resp => resp.toObject() as GetNetworkMaskResponse
     );
   }
 
@@ -67,7 +67,7 @@ export default class UAccountClient extends Client {
   ): Promise<GetProjectListResponse> {
     const args = { Action: 'GetProjectList', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetProjectListResponse
+      resp => resp.toObject() as GetProjectListResponse
     );
   }
 
@@ -79,7 +79,7 @@ export default class UAccountClient extends Client {
   getRegion(request?: GetRegionRequest): Promise<GetRegionResponse> {
     const args = { Action: 'GetRegion', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetRegionResponse
+      resp => resp.toObject() as GetRegionResponse
     );
   }
 
@@ -93,7 +93,7 @@ export default class UAccountClient extends Client {
   ): Promise<InviteSubaccountResponse> {
     const args = { Action: 'InviteSubaccount', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as InviteSubaccountResponse
+      resp => resp.toObject() as InviteSubaccountResponse
     );
   }
 
@@ -107,7 +107,7 @@ export default class UAccountClient extends Client {
   ): Promise<RemoveMemberFromProjectResponse> {
     const args = { Action: 'RemoveMemberFromProject', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RemoveMemberFromProjectResponse
+      resp => resp.toObject() as RemoveMemberFromProjectResponse
     );
   }
 
@@ -121,7 +121,7 @@ export default class UAccountClient extends Client {
   ): Promise<SetNetworkMaskResponse> {
     const args = { Action: 'SetNetworkMask', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as SetNetworkMaskResponse
+      resp => resp.toObject() as SetNetworkMaskResponse
     );
   }
 }
@@ -143,7 +143,7 @@ export interface AddMemberToProjectRequest {
 /**
  * AddMemberToProject - 添加成员到项目
  */
-export interface AddMemberToProjectResponse {}
+export type AddMemberToProjectResponse = {};
 
 /**
  * FreezeMember - 冻结成员
@@ -158,12 +158,12 @@ export interface FreezeMemberRequest {
 /**
  * FreezeMember - 冻结成员
  */
-export interface FreezeMemberResponse {}
+export type FreezeMemberResponse = {};
 
 /**
  * GetNetworkMask - 查询登录与API调用的网络掩码
  */
-export interface GetNetworkMaskRequest {}
+export type GetNetworkMaskRequest = {};
 
 /**
  * GetNetworkMask - 查询登录与API调用的网络掩码
@@ -244,7 +244,7 @@ export interface GetProjectListResponse {
 /**
  * GetRegion - 获取用户在各数据中心的权限等信息
  */
-export interface GetRegionRequest {}
+export type GetRegionRequest = {};
 
 /**
  * GetRegion - 获取用户在各数据中心的权限等信息
@@ -306,7 +306,7 @@ export interface InviteSubaccountRequest {
 /**
  * InviteSubaccount - 邀请子帐号成员
  */
-export interface InviteSubaccountResponse {}
+export type InviteSubaccountResponse = {};
 
 /**
  * RemoveMemberFromProject - 从项目中移除成员
@@ -321,7 +321,7 @@ export interface RemoveMemberFromProjectRequest {
 /**
  * RemoveMemberFromProject - 从项目中移除成员
  */
-export interface RemoveMemberFromProjectResponse {}
+export type RemoveMemberFromProjectResponse = {};
 
 /**
  * SetNetworkMask - 设置登录与API调用的网络掩码
@@ -344,4 +344,4 @@ export interface SetNetworkMaskRequest {
 /**
  * SetNetworkMask - 设置登录与API调用的网络掩码
  */
-export interface SetNetworkMaskResponse {}
+export type SetNetworkMaskResponse = {};

@@ -1,4 +1,4 @@
-import { DefaultLogger, Logger, LogLevel } from '../logger';
+import { DefaultLogger, type Logger, LogLevel } from '../logger';
 
 export type ConfigOptions = {
   region?: string;

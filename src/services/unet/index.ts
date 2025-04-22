@@ -1,7 +1,7 @@
 import Client from '../../core/client';
 import Request from '../../core/request';
-import { ConfigOptions } from '../../core/config';
-import { CredentialOptions } from '../../core/credential';
+import type { ConfigOptions } from '../../core/config';
+import type { CredentialOptions } from '../../core/credential';
 
 /**
  * This client is used to call actions of **unet** service
@@ -25,7 +25,7 @@ export default class UNetClient extends Client {
   allocateEIP(request?: AllocateEIPRequest): Promise<AllocateEIPResponse> {
     const args = { Action: 'AllocateEIP', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as AllocateEIPResponse
+      resp => resp.toObject() as AllocateEIPResponse
     );
   }
 
@@ -39,7 +39,7 @@ export default class UNetClient extends Client {
   ): Promise<AllocateShareBandwidthResponse> {
     const args = { Action: 'AllocateShareBandwidth', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as AllocateShareBandwidthResponse
+      resp => resp.toObject() as AllocateShareBandwidthResponse
     );
   }
 
@@ -56,7 +56,7 @@ export default class UNetClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as AssociateEIPWithShareBandwidthResponse
+      resp => resp.toObject() as AssociateEIPWithShareBandwidthResponse
     );
   }
 
@@ -68,7 +68,7 @@ export default class UNetClient extends Client {
   bindEIP(request?: BindEIPRequest): Promise<BindEIPResponse> {
     const args = { Action: 'BindEIP', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as BindEIPResponse
+      resp => resp.toObject() as BindEIPResponse
     );
   }
 
@@ -82,7 +82,7 @@ export default class UNetClient extends Client {
   ): Promise<CreateBandwidthPackageResponse> {
     const args = { Action: 'CreateBandwidthPackage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateBandwidthPackageResponse
+      resp => resp.toObject() as CreateBandwidthPackageResponse
     );
   }
 
@@ -96,7 +96,7 @@ export default class UNetClient extends Client {
   ): Promise<CreateFirewallResponse> {
     const args = { Action: 'CreateFirewall', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateFirewallResponse
+      resp => resp.toObject() as CreateFirewallResponse
     );
   }
 
@@ -110,7 +110,7 @@ export default class UNetClient extends Client {
   ): Promise<DeleteBandwidthPackageResponse> {
     const args = { Action: 'DeleteBandwidthPackage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteBandwidthPackageResponse
+      resp => resp.toObject() as DeleteBandwidthPackageResponse
     );
   }
 
@@ -124,7 +124,7 @@ export default class UNetClient extends Client {
   ): Promise<DeleteFirewallResponse> {
     const args = { Action: 'DeleteFirewall', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteFirewallResponse
+      resp => resp.toObject() as DeleteFirewallResponse
     );
   }
 
@@ -138,7 +138,7 @@ export default class UNetClient extends Client {
   ): Promise<DescribeBandwidthPackageResponse> {
     const args = { Action: 'DescribeBandwidthPackage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeBandwidthPackageResponse
+      resp => resp.toObject() as DescribeBandwidthPackageResponse
     );
   }
 
@@ -152,7 +152,7 @@ export default class UNetClient extends Client {
   ): Promise<DescribeBandwidthUsageResponse> {
     const args = { Action: 'DescribeBandwidthUsage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeBandwidthUsageResponse
+      resp => resp.toObject() as DescribeBandwidthUsageResponse
     );
   }
 
@@ -164,7 +164,7 @@ export default class UNetClient extends Client {
   describeEIP(request?: DescribeEIPRequest): Promise<DescribeEIPResponse> {
     const args = { Action: 'DescribeEIP', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeEIPResponse
+      resp => resp.toObject() as DescribeEIPResponse
     );
   }
 
@@ -178,7 +178,7 @@ export default class UNetClient extends Client {
   ): Promise<DescribeFirewallResponse> {
     const args = { Action: 'DescribeFirewall', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeFirewallResponse
+      resp => resp.toObject() as DescribeFirewallResponse
     );
   }
 
@@ -192,7 +192,7 @@ export default class UNetClient extends Client {
   ): Promise<DescribeFirewallResourceResponse> {
     const args = { Action: 'DescribeFirewallResource', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeFirewallResourceResponse
+      resp => resp.toObject() as DescribeFirewallResourceResponse
     );
   }
 
@@ -206,7 +206,7 @@ export default class UNetClient extends Client {
   ): Promise<DescribeShareBandwidthResponse> {
     const args = { Action: 'DescribeShareBandwidth', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeShareBandwidthResponse
+      resp => resp.toObject() as DescribeShareBandwidthResponse
     );
   }
 
@@ -220,7 +220,7 @@ export default class UNetClient extends Client {
   ): Promise<DescribeShareBandwidthPriceResponse> {
     const args = { Action: 'DescribeShareBandwidthPrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeShareBandwidthPriceResponse
+      resp => resp.toObject() as DescribeShareBandwidthPriceResponse
     );
   }
 
@@ -237,7 +237,7 @@ export default class UNetClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeShareBandwidthUpdatePriceResponse
+      resp => resp.toObject() as DescribeShareBandwidthUpdatePriceResponse
     );
   }
 
@@ -254,7 +254,7 @@ export default class UNetClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DisassociateEIPWithShareBandwidthResponse
+      resp => resp.toObject() as DisassociateEIPWithShareBandwidthResponse
     );
   }
 
@@ -268,7 +268,7 @@ export default class UNetClient extends Client {
   ): Promise<DisassociateFirewallResponse> {
     const args = { Action: 'DisassociateFirewall', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DisassociateFirewallResponse
+      resp => resp.toObject() as DisassociateFirewallResponse
     );
   }
 
@@ -282,7 +282,7 @@ export default class UNetClient extends Client {
   ): Promise<GetEIPPayModeResponse> {
     const args = { Action: 'GetEIPPayMode', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetEIPPayModeResponse
+      resp => resp.toObject() as GetEIPPayModeResponse
     );
   }
 
@@ -294,7 +294,7 @@ export default class UNetClient extends Client {
   getEIPPrice(request?: GetEIPPriceRequest): Promise<GetEIPPriceResponse> {
     const args = { Action: 'GetEIPPrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetEIPPriceResponse
+      resp => resp.toObject() as GetEIPPriceResponse
     );
   }
 
@@ -308,7 +308,7 @@ export default class UNetClient extends Client {
   ): Promise<GetEIPUpgradePriceResponse> {
     const args = { Action: 'GetEIPUpgradePrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetEIPUpgradePriceResponse
+      resp => resp.toObject() as GetEIPUpgradePriceResponse
     );
   }
 
@@ -325,7 +325,7 @@ export default class UNetClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetThroughputDailyBillingInfoResponse
+      resp => resp.toObject() as GetThroughputDailyBillingInfoResponse
     );
   }
 
@@ -339,7 +339,7 @@ export default class UNetClient extends Client {
   ): Promise<GrantFirewallResponse> {
     const args = { Action: 'GrantFirewall', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GrantFirewallResponse
+      resp => resp.toObject() as GrantFirewallResponse
     );
   }
 
@@ -353,7 +353,7 @@ export default class UNetClient extends Client {
   ): Promise<ModifyEIPBandwidthResponse> {
     const args = { Action: 'ModifyEIPBandwidth', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyEIPBandwidthResponse
+      resp => resp.toObject() as ModifyEIPBandwidthResponse
     );
   }
 
@@ -367,7 +367,7 @@ export default class UNetClient extends Client {
   ): Promise<ModifyEIPWeightResponse> {
     const args = { Action: 'ModifyEIPWeight', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyEIPWeightResponse
+      resp => resp.toObject() as ModifyEIPWeightResponse
     );
   }
 
@@ -379,7 +379,7 @@ export default class UNetClient extends Client {
   releaseEIP(request?: ReleaseEIPRequest): Promise<ReleaseEIPResponse> {
     const args = { Action: 'ReleaseEIP', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ReleaseEIPResponse
+      resp => resp.toObject() as ReleaseEIPResponse
     );
   }
 
@@ -393,7 +393,7 @@ export default class UNetClient extends Client {
   ): Promise<ReleaseShareBandwidthResponse> {
     const args = { Action: 'ReleaseShareBandwidth', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ReleaseShareBandwidthResponse
+      resp => resp.toObject() as ReleaseShareBandwidthResponse
     );
   }
 
@@ -407,7 +407,7 @@ export default class UNetClient extends Client {
   ): Promise<ResizeShareBandwidthResponse> {
     const args = { Action: 'ResizeShareBandwidth', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ResizeShareBandwidthResponse
+      resp => resp.toObject() as ResizeShareBandwidthResponse
     );
   }
 
@@ -421,7 +421,7 @@ export default class UNetClient extends Client {
   ): Promise<SetEIPPayModeResponse> {
     const args = { Action: 'SetEIPPayMode', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as SetEIPPayModeResponse
+      resp => resp.toObject() as SetEIPPayModeResponse
     );
   }
 
@@ -433,7 +433,7 @@ export default class UNetClient extends Client {
   unBindEIP(request?: UnBindEIPRequest): Promise<UnBindEIPResponse> {
     const args = { Action: 'UnBindEIP', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UnBindEIPResponse
+      resp => resp.toObject() as UnBindEIPResponse
     );
   }
 
@@ -447,7 +447,7 @@ export default class UNetClient extends Client {
   ): Promise<UpdateEIPAttributeResponse> {
     const args = { Action: 'UpdateEIPAttribute', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateEIPAttributeResponse
+      resp => resp.toObject() as UpdateEIPAttributeResponse
     );
   }
 
@@ -461,7 +461,7 @@ export default class UNetClient extends Client {
   ): Promise<UpdateFirewallResponse> {
     const args = { Action: 'UpdateFirewall', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateFirewallResponse
+      resp => resp.toObject() as UpdateFirewallResponse
     );
   }
 
@@ -475,7 +475,7 @@ export default class UNetClient extends Client {
   ): Promise<UpdateFirewallAttributeResponse> {
     const args = { Action: 'UpdateFirewallAttribute', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateFirewallAttributeResponse
+      resp => resp.toObject() as UpdateFirewallAttributeResponse
     );
   }
 }
@@ -615,7 +615,7 @@ export interface AssociateEIPWithShareBandwidthRequest {
 /**
  * AssociateEIPWithShareBandwidth - 将EIP加入共享带宽
  */
-export interface AssociateEIPWithShareBandwidthResponse {}
+export type AssociateEIPWithShareBandwidthResponse = {};
 
 /**
  * BindEIP - 将尚未使用的弹性IP绑定到指定的资源
@@ -642,7 +642,7 @@ export interface BindEIPRequest {
 /**
  * BindEIP - 将尚未使用的弹性IP绑定到指定的资源
  */
-export interface BindEIPResponse {}
+export type BindEIPResponse = {};
 
 /**
  * CreateBandwidthPackage - 为非共享带宽模式下, 已绑定资源实例的带宽计费弹性IP附加临时带宽包
@@ -725,7 +725,7 @@ export interface DeleteBandwidthPackageRequest {
 /**
  * DeleteBandwidthPackage - 删除弹性IP上已附加带宽包
  */
-export interface DeleteBandwidthPackageResponse {}
+export type DeleteBandwidthPackageResponse = {};
 
 /**
  * DeleteFirewall - 删除防火墙
@@ -740,7 +740,7 @@ export interface DeleteFirewallRequest {
 /**
  * DeleteFirewall - 删除防火墙
  */
-export interface DeleteFirewallResponse {}
+export type DeleteFirewallResponse = {};
 
 /**
  * DescribeBandwidthPackage - 获取某地域下的带宽包信息
@@ -1352,7 +1352,7 @@ export interface DisassociateEIPWithShareBandwidthRequest {
 /**
  * DisassociateEIPWithShareBandwidth - 将EIP移出共享带宽
  */
-export interface DisassociateEIPWithShareBandwidthResponse {}
+export type DisassociateEIPWithShareBandwidthResponse = {};
 
 /**
  * DisassociateFirewall - 解绑资源上的防火墙
@@ -1375,7 +1375,7 @@ export interface DisassociateFirewallRequest {
 /**
  * DisassociateFirewall - 解绑资源上的防火墙
  */
-export interface DisassociateFirewallResponse {}
+export type DisassociateFirewallResponse = {};
 
 /**
  * GetEIPPayMode - 获取弹性IP计费模式
@@ -1557,7 +1557,7 @@ export interface GrantFirewallRequest {
 /**
  * GrantFirewall - 将防火墙应用到资源上
  */
-export interface GrantFirewallResponse {}
+export type GrantFirewallResponse = {};
 
 /**
  * ModifyEIPBandwidth - 调整弹性IP的外网带宽
@@ -1576,7 +1576,7 @@ export interface ModifyEIPBandwidthRequest {
 /**
  * ModifyEIPBandwidth - 调整弹性IP的外网带宽
  */
-export interface ModifyEIPBandwidthResponse {}
+export type ModifyEIPBandwidthResponse = {};
 
 /**
  * ModifyEIPWeight - 修改弹性IP的外网出口权重
@@ -1595,7 +1595,7 @@ export interface ModifyEIPWeightRequest {
 /**
  * ModifyEIPWeight - 修改弹性IP的外网出口权重
  */
-export interface ModifyEIPWeightResponse {}
+export type ModifyEIPWeightResponse = {};
 
 /**
  * ReleaseEIP - 释放弹性IP资源, 所释放弹性IP必须为非绑定状态.
@@ -1610,7 +1610,7 @@ export interface ReleaseEIPRequest {
 /**
  * ReleaseEIP - 释放弹性IP资源, 所释放弹性IP必须为非绑定状态.
  */
-export interface ReleaseEIPResponse {}
+export type ReleaseEIPResponse = {};
 
 /**
  * ReleaseShareBandwidth - 关闭共享带宽
@@ -1633,7 +1633,7 @@ export interface ReleaseShareBandwidthRequest {
 /**
  * ReleaseShareBandwidth - 关闭共享带宽
  */
-export interface ReleaseShareBandwidthResponse {}
+export type ReleaseShareBandwidthResponse = {};
 
 /**
  * ResizeShareBandwidth - 调整共享带宽的带宽值
@@ -1652,7 +1652,7 @@ export interface ResizeShareBandwidthRequest {
 /**
  * ResizeShareBandwidth - 调整共享带宽的带宽值
  */
-export interface ResizeShareBandwidthResponse {}
+export type ResizeShareBandwidthResponse = {};
 
 /**
  * SetEIPPayMode - 设置弹性IP计费模式, 切换时会涉及付费/退费.
@@ -1675,7 +1675,7 @@ export interface SetEIPPayModeRequest {
 /**
  * SetEIPPayMode - 设置弹性IP计费模式, 切换时会涉及付费/退费.
  */
-export interface SetEIPPayModeResponse {}
+export type SetEIPPayModeResponse = {};
 
 /**
  * UnBindEIP - 将弹性IP从资源上解绑
@@ -1698,7 +1698,7 @@ export interface UnBindEIPRequest {
 /**
  * UnBindEIP - 将弹性IP从资源上解绑
  */
-export interface UnBindEIPResponse {}
+export type UnBindEIPResponse = {};
 
 /**
  * UpdateEIPAttribute - 更新弹性IP名称，业务组，备注等属性字段
@@ -1725,7 +1725,7 @@ export interface UpdateEIPAttributeRequest {
 /**
  * UpdateEIPAttribute - 更新弹性IP名称，业务组，备注等属性字段
  */
-export interface UpdateEIPAttributeResponse {}
+export type UpdateEIPAttributeResponse = {};
 
 /**
  * UpdateFirewall - 更新防火墙规则
@@ -1776,4 +1776,4 @@ export interface UpdateFirewallAttributeRequest {
 /**
  * UpdateFirewallAttribute - 更新防火墙规则
  */
-export interface UpdateFirewallAttributeResponse {}
+export type UpdateFirewallAttributeResponse = {};

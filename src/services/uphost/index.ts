@@ -1,7 +1,7 @@
 import Client from '../../core/client';
 import Request from '../../core/request';
-import { ConfigOptions } from '../../core/config';
-import { CredentialOptions } from '../../core/credential';
+import type { ConfigOptions } from '../../core/config';
+import type { CredentialOptions } from '../../core/credential';
 
 /**
  * This client is used to call actions of **uphost** service
@@ -25,7 +25,7 @@ export default class UPHostClient extends Client {
   createPHost(request?: CreatePHostRequest): Promise<CreatePHostResponse> {
     const args = { Action: 'CreatePHost', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreatePHostResponse
+      resp => resp.toObject() as CreatePHostResponse
     );
   }
 
@@ -39,7 +39,7 @@ export default class UPHostClient extends Client {
   ): Promise<CreatePHostImageResponse> {
     const args = { Action: 'CreatePHostImage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreatePHostImageResponse
+      resp => resp.toObject() as CreatePHostImageResponse
     );
   }
 
@@ -53,7 +53,7 @@ export default class UPHostClient extends Client {
   ): Promise<DescribeBaremetalMachineTypeResponse> {
     const args = { Action: 'DescribeBaremetalMachineType', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeBaremetalMachineTypeResponse
+      resp => resp.toObject() as DescribeBaremetalMachineTypeResponse
     );
   }
 
@@ -67,7 +67,7 @@ export default class UPHostClient extends Client {
   ): Promise<DescribePHostResponse> {
     const args = { Action: 'DescribePHost', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribePHostResponse
+      resp => resp.toObject() as DescribePHostResponse
     );
   }
 
@@ -81,7 +81,7 @@ export default class UPHostClient extends Client {
   ): Promise<DescribePHostImageResponse> {
     const args = { Action: 'DescribePHostImage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribePHostImageResponse
+      resp => resp.toObject() as DescribePHostImageResponse
     );
   }
 
@@ -95,7 +95,7 @@ export default class UPHostClient extends Client {
   ): Promise<DescribePHostMachineTypeResponse> {
     const args = { Action: 'DescribePHostMachineType', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribePHostMachineTypeResponse
+      resp => resp.toObject() as DescribePHostMachineTypeResponse
     );
   }
 
@@ -109,7 +109,7 @@ export default class UPHostClient extends Client {
   ): Promise<DescribePHostTagsResponse> {
     const args = { Action: 'DescribePHostTags', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribePHostTagsResponse
+      resp => resp.toObject() as DescribePHostTagsResponse
     );
   }
 
@@ -123,7 +123,7 @@ export default class UPHostClient extends Client {
   ): Promise<GetPHostDiskUpgradePriceResponse> {
     const args = { Action: 'GetPHostDiskUpgradePrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetPHostDiskUpgradePriceResponse
+      resp => resp.toObject() as GetPHostDiskUpgradePriceResponse
     );
   }
 
@@ -137,7 +137,7 @@ export default class UPHostClient extends Client {
   ): Promise<GetPHostPriceResponse> {
     const args = { Action: 'GetPHostPrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetPHostPriceResponse
+      resp => resp.toObject() as GetPHostPriceResponse
     );
   }
 
@@ -151,7 +151,7 @@ export default class UPHostClient extends Client {
   ): Promise<ModifyPHostImageInfoResponse> {
     const args = { Action: 'ModifyPHostImageInfo', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyPHostImageInfoResponse
+      resp => resp.toObject() as ModifyPHostImageInfoResponse
     );
   }
 
@@ -165,7 +165,7 @@ export default class UPHostClient extends Client {
   ): Promise<ModifyPHostInfoResponse> {
     const args = { Action: 'ModifyPHostInfo', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyPHostInfoResponse
+      resp => resp.toObject() as ModifyPHostInfoResponse
     );
   }
 
@@ -179,7 +179,7 @@ export default class UPHostClient extends Client {
   ): Promise<PoweroffPHostResponse> {
     const args = { Action: 'PoweroffPHost', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as PoweroffPHostResponse
+      resp => resp.toObject() as PoweroffPHostResponse
     );
   }
 
@@ -191,7 +191,7 @@ export default class UPHostClient extends Client {
   rebootPHost(request?: RebootPHostRequest): Promise<RebootPHostResponse> {
     const args = { Action: 'RebootPHost', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RebootPHostResponse
+      resp => resp.toObject() as RebootPHostResponse
     );
   }
 
@@ -205,7 +205,7 @@ export default class UPHostClient extends Client {
   ): Promise<ReinstallPHostResponse> {
     const args = { Action: 'ReinstallPHost', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ReinstallPHostResponse
+      resp => resp.toObject() as ReinstallPHostResponse
     );
   }
 
@@ -219,7 +219,7 @@ export default class UPHostClient extends Client {
   ): Promise<ResetPHostPasswordResponse> {
     const args = { Action: 'ResetPHostPassword', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ResetPHostPasswordResponse
+      resp => resp.toObject() as ResetPHostPasswordResponse
     );
   }
 
@@ -233,7 +233,7 @@ export default class UPHostClient extends Client {
   ): Promise<ResizePHostAttachedDiskResponse> {
     const args = { Action: 'ResizePHostAttachedDisk', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ResizePHostAttachedDiskResponse
+      resp => resp.toObject() as ResizePHostAttachedDiskResponse
     );
   }
 
@@ -245,7 +245,7 @@ export default class UPHostClient extends Client {
   startPHost(request?: StartPHostRequest): Promise<StartPHostResponse> {
     const args = { Action: 'StartPHost', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as StartPHostResponse
+      resp => resp.toObject() as StartPHostResponse
     );
   }
 
@@ -257,7 +257,7 @@ export default class UPHostClient extends Client {
   stopPHost(request?: StopPHostRequest): Promise<StopPHostResponse> {
     const args = { Action: 'StopPHost', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as StopPHostResponse
+      resp => resp.toObject() as StopPHostResponse
     );
   }
 
@@ -271,7 +271,7 @@ export default class UPHostClient extends Client {
   ): Promise<TerminatePHostResponse> {
     const args = { Action: 'TerminatePHost', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as TerminatePHostResponse
+      resp => resp.toObject() as TerminatePHostResponse
     );
   }
 
@@ -285,7 +285,7 @@ export default class UPHostClient extends Client {
   ): Promise<TerminatePHostImageResponse> {
     const args = { Action: 'TerminatePHostImage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as TerminatePHostImageResponse
+      resp => resp.toObject() as TerminatePHostImageResponse
     );
   }
 }

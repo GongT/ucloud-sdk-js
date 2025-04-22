@@ -1,4 +1,4 @@
-import { DefaultLogger, LogLevel } from './index';
+import { DefaultLogger, type LogLevel } from './index';
 
 describe('request', () => {
   test('test encode request', () => {

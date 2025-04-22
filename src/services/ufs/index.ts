@@ -1,7 +1,7 @@
 import Client from '../../core/client';
 import Request from '../../core/request';
-import { ConfigOptions } from '../../core/config';
-import { CredentialOptions } from '../../core/credential';
+import type { ConfigOptions } from '../../core/config';
+import type { CredentialOptions } from '../../core/credential';
 
 /**
  * This client is used to call actions of **ufs** service
@@ -27,7 +27,7 @@ export default class UFSClient extends Client {
   ): Promise<AddUFSVolumeMountPointResponse> {
     const args = { Action: 'AddUFSVolumeMountPoint', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as AddUFSVolumeMountPointResponse
+      resp => resp.toObject() as AddUFSVolumeMountPointResponse
     );
   }
 
@@ -41,7 +41,7 @@ export default class UFSClient extends Client {
   ): Promise<CreateUFSVolumeResponse> {
     const args = { Action: 'CreateUFSVolume', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUFSVolumeResponse
+      resp => resp.toObject() as CreateUFSVolumeResponse
     );
   }
 
@@ -55,7 +55,7 @@ export default class UFSClient extends Client {
   ): Promise<DescribeUFSVolume2Response> {
     const args = { Action: 'DescribeUFSVolume2', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUFSVolume2Response
+      resp => resp.toObject() as DescribeUFSVolume2Response
     );
   }
 
@@ -69,7 +69,7 @@ export default class UFSClient extends Client {
   ): Promise<DescribeUFSVolumeMountpointResponse> {
     const args = { Action: 'DescribeUFSVolumeMountpoint', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUFSVolumeMountpointResponse
+      resp => resp.toObject() as DescribeUFSVolumeMountpointResponse
     );
   }
 
@@ -83,7 +83,7 @@ export default class UFSClient extends Client {
   ): Promise<DescribeUFSVolumePriceResponse> {
     const args = { Action: 'DescribeUFSVolumePrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUFSVolumePriceResponse
+      resp => resp.toObject() as DescribeUFSVolumePriceResponse
     );
   }
 
@@ -97,7 +97,7 @@ export default class UFSClient extends Client {
   ): Promise<ExtendUFSVolumeResponse> {
     const args = { Action: 'ExtendUFSVolume', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ExtendUFSVolumeResponse
+      resp => resp.toObject() as ExtendUFSVolumeResponse
     );
   }
 
@@ -111,7 +111,7 @@ export default class UFSClient extends Client {
   ): Promise<RemoveUFSVolumeResponse> {
     const args = { Action: 'RemoveUFSVolume', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RemoveUFSVolumeResponse
+      resp => resp.toObject() as RemoveUFSVolumeResponse
     );
   }
 
@@ -125,7 +125,7 @@ export default class UFSClient extends Client {
   ): Promise<RemoveUFSVolumeMountPointResponse> {
     const args = { Action: 'RemoveUFSVolumeMountPoint', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RemoveUFSVolumeMountPointResponse
+      resp => resp.toObject() as RemoveUFSVolumeMountPointResponse
     );
   }
 
@@ -139,7 +139,7 @@ export default class UFSClient extends Client {
   ): Promise<UpdateUFSVolumeInfoResponse> {
     const args = { Action: 'UpdateUFSVolumeInfo', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateUFSVolumeInfoResponse
+      resp => resp.toObject() as UpdateUFSVolumeInfoResponse
     );
   }
 }
@@ -169,7 +169,7 @@ export interface AddUFSVolumeMountPointRequest {
 /**
  * AddUFSVolumeMountPoint - 添加文件系统挂载点
  */
-export interface AddUFSVolumeMountPointResponse {}
+export type AddUFSVolumeMountPointResponse = {};
 
 /**
  * CreateUFSVolume - 创建文件系统
@@ -435,7 +435,7 @@ export interface ExtendUFSVolumeRequest {
 /**
  * ExtendUFSVolume - 文件系统扩容
  */
-export interface ExtendUFSVolumeResponse {}
+export type ExtendUFSVolumeResponse = {};
 
 /**
  * RemoveUFSVolume - 删除UFS文件系统
@@ -450,7 +450,7 @@ export interface RemoveUFSVolumeRequest {
 /**
  * RemoveUFSVolume - 删除UFS文件系统
  */
-export interface RemoveUFSVolumeResponse {}
+export type RemoveUFSVolumeResponse = {};
 
 /**
  * RemoveUFSVolumeMountPoint - 删除文件系统挂载点
@@ -473,7 +473,7 @@ export interface RemoveUFSVolumeMountPointRequest {
 /**
  * RemoveUFSVolumeMountPoint - 删除文件系统挂载点
  */
-export interface RemoveUFSVolumeMountPointResponse {}
+export type RemoveUFSVolumeMountPointResponse = {};
 
 /**
  * UpdateUFSVolumeInfo - 更改文件系统相关信息（名称／备注）
@@ -496,4 +496,4 @@ export interface UpdateUFSVolumeInfoRequest {
 /**
  * UpdateUFSVolumeInfo - 更改文件系统相关信息（名称／备注）
  */
-export interface UpdateUFSVolumeInfoResponse {}
+export type UpdateUFSVolumeInfoResponse = {};

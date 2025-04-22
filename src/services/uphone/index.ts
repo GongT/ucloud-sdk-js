@@ -1,7 +1,7 @@
 import Client from '../../core/client';
 import Request from '../../core/request';
-import { ConfigOptions } from '../../core/config';
-import { CredentialOptions } from '../../core/credential';
+import type { ConfigOptions } from '../../core/config';
+import type { CredentialOptions } from '../../core/credential';
 
 /**
  * This client is used to call actions of **uphone** service
@@ -25,7 +25,7 @@ export default class UPhoneClient extends Client {
   createUPhone(request?: CreateUPhoneRequest): Promise<CreateUPhoneResponse> {
     const args = { Action: 'CreateUPhone', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUPhoneResponse
+      resp => resp.toObject() as CreateUPhoneResponse
     );
   }
 
@@ -39,7 +39,7 @@ export default class UPhoneClient extends Client {
   ): Promise<CreateUPhoneAppResponse> {
     const args = { Action: 'CreateUPhoneApp', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUPhoneAppResponse
+      resp => resp.toObject() as CreateUPhoneAppResponse
     );
   }
 
@@ -54,7 +54,7 @@ export default class UPhoneClient extends Client {
   ): Promise<CreateUPhoneAppVersionResponse> {
     const args = { Action: 'CreateUPhoneAppVersion', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUPhoneAppVersionResponse
+      resp => resp.toObject() as CreateUPhoneAppVersionResponse
     );
   }
 
@@ -68,7 +68,7 @@ export default class UPhoneClient extends Client {
   ): Promise<CreateUPhoneImageResponse> {
     const args = { Action: 'CreateUPhoneImage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUPhoneImageResponse
+      resp => resp.toObject() as CreateUPhoneImageResponse
     );
   }
 
@@ -82,7 +82,7 @@ export default class UPhoneClient extends Client {
   ): Promise<CreateUPhoneServerResponse> {
     const args = { Action: 'CreateUPhoneServer', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateUPhoneServerResponse
+      resp => resp.toObject() as CreateUPhoneServerResponse
     );
   }
 
@@ -94,7 +94,7 @@ export default class UPhoneClient extends Client {
   deleteUPhone(request?: DeleteUPhoneRequest): Promise<DeleteUPhoneResponse> {
     const args = { Action: 'DeleteUPhone', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUPhoneResponse
+      resp => resp.toObject() as DeleteUPhoneResponse
     );
   }
 
@@ -108,7 +108,7 @@ export default class UPhoneClient extends Client {
   ): Promise<DeleteUPhoneImageResponse> {
     const args = { Action: 'DeleteUPhoneImage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUPhoneImageResponse
+      resp => resp.toObject() as DeleteUPhoneImageResponse
     );
   }
 
@@ -122,7 +122,7 @@ export default class UPhoneClient extends Client {
   ): Promise<DeleteUPhoneServerResponse> {
     const args = { Action: 'DeleteUPhoneServer', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteUPhoneServerResponse
+      resp => resp.toObject() as DeleteUPhoneServerResponse
     );
   }
 
@@ -136,7 +136,7 @@ export default class UPhoneClient extends Client {
   ): Promise<DescribeUPhoneResponse> {
     const args = { Action: 'DescribeUPhone', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUPhoneResponse
+      resp => resp.toObject() as DescribeUPhoneResponse
     );
   }
 
@@ -150,7 +150,7 @@ export default class UPhoneClient extends Client {
   ): Promise<DescribeUPhoneAppResponse> {
     const args = { Action: 'DescribeUPhoneApp', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUPhoneAppResponse
+      resp => resp.toObject() as DescribeUPhoneAppResponse
     );
   }
 
@@ -164,7 +164,7 @@ export default class UPhoneClient extends Client {
   ): Promise<DescribeUPhoneAppVersionResponse> {
     const args = { Action: 'DescribeUPhoneAppVersion', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUPhoneAppVersionResponse
+      resp => resp.toObject() as DescribeUPhoneAppVersionResponse
     );
   }
 
@@ -178,7 +178,7 @@ export default class UPhoneClient extends Client {
   ): Promise<DescribeUPhoneCitiesResponse> {
     const args = { Action: 'DescribeUPhoneCities', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUPhoneCitiesResponse
+      resp => resp.toObject() as DescribeUPhoneCitiesResponse
     );
   }
 
@@ -192,7 +192,7 @@ export default class UPhoneClient extends Client {
   ): Promise<DescribeUPhoneDetailByAppResponse> {
     const args = { Action: 'DescribeUPhoneDetailByApp', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUPhoneDetailByAppResponse
+      resp => resp.toObject() as DescribeUPhoneDetailByAppResponse
     );
   }
 
@@ -206,7 +206,7 @@ export default class UPhoneClient extends Client {
   ): Promise<DescribeUPhoneImageResponse> {
     const args = { Action: 'DescribeUPhoneImage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUPhoneImageResponse
+      resp => resp.toObject() as DescribeUPhoneImageResponse
     );
   }
 
@@ -220,7 +220,7 @@ export default class UPhoneClient extends Client {
   ): Promise<DescribeUPhoneIpRegionsResponse> {
     const args = { Action: 'DescribeUPhoneIpRegions', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUPhoneIpRegionsResponse
+      resp => resp.toObject() as DescribeUPhoneIpRegionsResponse
     );
   }
 
@@ -234,7 +234,7 @@ export default class UPhoneClient extends Client {
   ): Promise<DescribeUPhoneJobResponse> {
     const args = { Action: 'DescribeUPhoneJob', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUPhoneJobResponse
+      resp => resp.toObject() as DescribeUPhoneJobResponse
     );
   }
 
@@ -248,7 +248,7 @@ export default class UPhoneClient extends Client {
   ): Promise<DescribeUPhoneModelResponse> {
     const args = { Action: 'DescribeUPhoneModel', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUPhoneModelResponse
+      resp => resp.toObject() as DescribeUPhoneModelResponse
     );
   }
 
@@ -262,7 +262,7 @@ export default class UPhoneClient extends Client {
   ): Promise<DescribeUPhoneServerResponse> {
     const args = { Action: 'DescribeUPhoneServer', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUPhoneServerResponse
+      resp => resp.toObject() as DescribeUPhoneServerResponse
     );
   }
 
@@ -276,7 +276,7 @@ export default class UPhoneClient extends Client {
   ): Promise<DescribeUPhoneServerModelResponse> {
     const args = { Action: 'DescribeUPhoneServerModel', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeUPhoneServerModelResponse
+      resp => resp.toObject() as DescribeUPhoneServerModelResponse
     );
   }
 
@@ -290,7 +290,7 @@ export default class UPhoneClient extends Client {
   ): Promise<GetUPhoneAllowanceResponse> {
     const args = { Action: 'GetUPhoneAllowance', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUPhoneAllowanceResponse
+      resp => resp.toObject() as GetUPhoneAllowanceResponse
     );
   }
 
@@ -304,7 +304,7 @@ export default class UPhoneClient extends Client {
   ): Promise<GetUPhonePriceResponse> {
     const args = { Action: 'GetUPhonePrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUPhonePriceResponse
+      resp => resp.toObject() as GetUPhonePriceResponse
     );
   }
 
@@ -318,7 +318,7 @@ export default class UPhoneClient extends Client {
   ): Promise<GetUPhoneRenewPriceResponse> {
     const args = { Action: 'GetUPhoneRenewPrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUPhoneRenewPriceResponse
+      resp => resp.toObject() as GetUPhoneRenewPriceResponse
     );
   }
 
@@ -332,7 +332,7 @@ export default class UPhoneClient extends Client {
   ): Promise<GetUPhoneScreenCaptureResponse> {
     const args = { Action: 'GetUPhoneScreenCapture', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUPhoneScreenCaptureResponse
+      resp => resp.toObject() as GetUPhoneScreenCaptureResponse
     );
   }
 
@@ -346,7 +346,7 @@ export default class UPhoneClient extends Client {
   ): Promise<GetUPhoneServerPriceResponse> {
     const args = { Action: 'GetUPhoneServerPrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUPhoneServerPriceResponse
+      resp => resp.toObject() as GetUPhoneServerPriceResponse
     );
   }
 
@@ -362,7 +362,7 @@ export default class UPhoneClient extends Client {
   ): Promise<GetUPhoneServerRenewPriceResponse> {
     const args = { Action: 'GetUPhoneServerRenewPrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUPhoneServerRenewPriceResponse
+      resp => resp.toObject() as GetUPhoneServerRenewPriceResponse
     );
   }
 
@@ -374,7 +374,7 @@ export default class UPhoneClient extends Client {
   importFile(request?: ImportFileRequest): Promise<ImportFileResponse> {
     const args = { Action: 'ImportFile', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ImportFileResponse
+      resp => resp.toObject() as ImportFileResponse
     );
   }
 
@@ -388,7 +388,7 @@ export default class UPhoneClient extends Client {
   ): Promise<InstallUPhoneAppVersionResponse> {
     const args = { Action: 'InstallUPhoneAppVersion', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as InstallUPhoneAppVersionResponse
+      resp => resp.toObject() as InstallUPhoneAppVersionResponse
     );
   }
 
@@ -402,7 +402,7 @@ export default class UPhoneClient extends Client {
   ): Promise<ModifyUPhoneNameResponse> {
     const args = { Action: 'ModifyUPhoneName', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyUPhoneNameResponse
+      resp => resp.toObject() as ModifyUPhoneNameResponse
     );
   }
 
@@ -416,7 +416,7 @@ export default class UPhoneClient extends Client {
   ): Promise<ModifyUPhoneRemarkResponse> {
     const args = { Action: 'ModifyUPhoneRemark', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyUPhoneRemarkResponse
+      resp => resp.toObject() as ModifyUPhoneRemarkResponse
     );
   }
 
@@ -430,7 +430,7 @@ export default class UPhoneClient extends Client {
   ): Promise<ModifyUPhoneServerNameResponse> {
     const args = { Action: 'ModifyUPhoneServerName', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyUPhoneServerNameResponse
+      resp => resp.toObject() as ModifyUPhoneServerNameResponse
     );
   }
 
@@ -444,7 +444,7 @@ export default class UPhoneClient extends Client {
   ): Promise<ModifyUPhoneServerRemarkResponse> {
     const args = { Action: 'ModifyUPhoneServerRemark', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ModifyUPhoneServerRemarkResponse
+      resp => resp.toObject() as ModifyUPhoneServerRemarkResponse
     );
   }
 
@@ -458,7 +458,7 @@ export default class UPhoneClient extends Client {
   ): Promise<PoweroffUPhoneResponse> {
     const args = { Action: 'PoweroffUPhone', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as PoweroffUPhoneResponse
+      resp => resp.toObject() as PoweroffUPhoneResponse
     );
   }
 
@@ -472,7 +472,7 @@ export default class UPhoneClient extends Client {
   ): Promise<PoweronUPhoneResponse> {
     const args = { Action: 'PoweronUPhone', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as PoweronUPhoneResponse
+      resp => resp.toObject() as PoweronUPhoneResponse
     );
   }
 
@@ -484,7 +484,7 @@ export default class UPhoneClient extends Client {
   rebootUPhone(request?: RebootUPhoneRequest): Promise<RebootUPhoneResponse> {
     const args = { Action: 'RebootUPhone', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RebootUPhoneResponse
+      resp => resp.toObject() as RebootUPhoneResponse
     );
   }
 
@@ -496,7 +496,7 @@ export default class UPhoneClient extends Client {
   renewUPhone(request?: RenewUPhoneRequest): Promise<RenewUPhoneResponse> {
     const args = { Action: 'RenewUPhone', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RenewUPhoneResponse
+      resp => resp.toObject() as RenewUPhoneResponse
     );
   }
 
@@ -508,7 +508,7 @@ export default class UPhoneClient extends Client {
   resetUPhone(request?: ResetUPhoneRequest): Promise<ResetUPhoneResponse> {
     const args = { Action: 'ResetUPhone', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ResetUPhoneResponse
+      resp => resp.toObject() as ResetUPhoneResponse
     );
   }
 
@@ -522,7 +522,7 @@ export default class UPhoneClient extends Client {
   ): Promise<RunAsyncCommandResponse> {
     const args = { Action: 'RunAsyncCommand', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RunAsyncCommandResponse
+      resp => resp.toObject() as RunAsyncCommandResponse
     );
   }
 
@@ -536,7 +536,7 @@ export default class UPhoneClient extends Client {
   ): Promise<RunSyncCommandResponse> {
     const args = { Action: 'RunSyncCommand', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RunSyncCommandResponse
+      resp => resp.toObject() as RunSyncCommandResponse
     );
   }
 
@@ -550,7 +550,7 @@ export default class UPhoneClient extends Client {
   ): Promise<SetUPhoneCallbackResponse> {
     const args = { Action: 'SetUPhoneCallback', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as SetUPhoneCallbackResponse
+      resp => resp.toObject() as SetUPhoneCallbackResponse
     );
   }
 
@@ -564,7 +564,7 @@ export default class UPhoneClient extends Client {
   ): Promise<SetUPhoneConfigResponse> {
     const args = { Action: 'SetUPhoneConfig', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as SetUPhoneConfigResponse
+      resp => resp.toObject() as SetUPhoneConfigResponse
     );
   }
 
@@ -576,7 +576,7 @@ export default class UPhoneClient extends Client {
   setUPhoneGPS(request?: SetUPhoneGPSRequest): Promise<SetUPhoneGPSResponse> {
     const args = { Action: 'SetUPhoneGPS', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as SetUPhoneGPSResponse
+      resp => resp.toObject() as SetUPhoneGPSResponse
     );
   }
 
@@ -590,7 +590,7 @@ export default class UPhoneClient extends Client {
   ): Promise<SetUPhoneManagerModeResponse> {
     const args = { Action: 'SetUPhoneManagerMode', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as SetUPhoneManagerModeResponse
+      resp => resp.toObject() as SetUPhoneManagerModeResponse
     );
   }
 
@@ -604,7 +604,7 @@ export default class UPhoneClient extends Client {
   ): Promise<SetUPhoneRootModeResponse> {
     const args = { Action: 'SetUPhoneRootMode', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as SetUPhoneRootModeResponse
+      resp => resp.toObject() as SetUPhoneRootModeResponse
     );
   }
 
@@ -618,7 +618,7 @@ export default class UPhoneClient extends Client {
   ): Promise<SetUPhoneSplashScreenResponse> {
     const args = { Action: 'SetUPhoneSplashScreen', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as SetUPhoneSplashScreenResponse
+      resp => resp.toObject() as SetUPhoneSplashScreenResponse
     );
   }
 
@@ -632,7 +632,7 @@ export default class UPhoneClient extends Client {
   ): Promise<SetUPhoneTokenResponse> {
     const args = { Action: 'SetUPhoneToken', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as SetUPhoneTokenResponse
+      resp => resp.toObject() as SetUPhoneTokenResponse
     );
   }
 
@@ -646,7 +646,7 @@ export default class UPhoneClient extends Client {
   ): Promise<UnInstallUPhoneAppVersionResponse> {
     const args = { Action: 'UnInstallUPhoneAppVersion', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UnInstallUPhoneAppVersionResponse
+      resp => resp.toObject() as UnInstallUPhoneAppVersionResponse
     );
   }
 
@@ -660,7 +660,7 @@ export default class UPhoneClient extends Client {
   ): Promise<UpdateUPhoneImageResponse> {
     const args = { Action: 'UpdateUPhoneImage', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateUPhoneImageResponse
+      resp => resp.toObject() as UpdateUPhoneImageResponse
     );
   }
 }
@@ -984,7 +984,7 @@ export interface DeleteUPhoneServerRequest {
 /**
  * DeleteUPhoneServer - 删除云手机服务器。
  */
-export interface DeleteUPhoneServerResponse {}
+export type DeleteUPhoneServerResponse = {};
 
 /**
  * DescribeUPhone - 获取云手机列表信息。
@@ -2537,7 +2537,7 @@ export interface PoweroffUPhoneRequest {
 /**
  * PoweroffUPhone - 关闭处于运行状态的云手机实例
  */
-export interface PoweroffUPhoneResponse {}
+export type PoweroffUPhoneResponse = {};
 
 /**
  * PoweronUPhone - 启动处于关闭状态的云手机实例
@@ -2560,7 +2560,7 @@ export interface PoweronUPhoneRequest {
 /**
  * PoweronUPhone - 启动处于关闭状态的云手机实例
  */
-export interface PoweronUPhoneResponse {}
+export type PoweronUPhoneResponse = {};
 
 /**
  * RebootUPhone - 重新启动云手机实例
@@ -2711,7 +2711,7 @@ export interface RenewUPhoneRequest {
 /**
  * RenewUPhone - 修改UPhone的device_id、imei、meid 以及其他相关配置，达到一键新机的效果
  */
-export interface RenewUPhoneResponse {}
+export type RenewUPhoneResponse = {};
 
 /**
  * ResetUPhone - 将云手机恢复为创建时的状态。
@@ -2839,7 +2839,7 @@ export interface SetUPhoneCallbackRequest {
 /**
  * SetUPhoneCallback - 设置云手机异步操作以及状态更新回调，支持云手机重置，安装应用，卸载应用，设备占用状态回调
  */
-export interface SetUPhoneCallbackResponse {}
+export type SetUPhoneCallbackResponse = {};
 
 /**
  * SetUPhoneConfig - 设置云手机画面参数（分辨率、DPI、帧率、码率）
@@ -2976,7 +2976,7 @@ export interface SetUPhoneManagerModeRequest {
 /**
  * SetUPhoneManagerMode - 管理员模式支持所有按键，普通用户模式禁用返回桌面
  */
-export interface SetUPhoneManagerModeResponse {}
+export type SetUPhoneManagerModeResponse = {};
 
 /**
  * SetUPhoneRootMode - 设置云手机Root模式
@@ -3035,7 +3035,7 @@ export interface SetUPhoneSplashScreenRequest {
 /**
  * SetUPhoneSplashScreen - 设置云手机启动画面，通过DescribeUPhone接口可以查询该地址
  */
-export interface SetUPhoneSplashScreenResponse {}
+export type SetUPhoneSplashScreenResponse = {};
 
 /**
  * SetUPhoneToken - 设置云手机RTC连接Token提高安全性
@@ -3062,7 +3062,7 @@ export interface SetUPhoneTokenRequest {
 /**
  * SetUPhoneToken - 设置云手机RTC连接Token提高安全性
  */
-export interface SetUPhoneTokenResponse {}
+export type SetUPhoneTokenResponse = {};
 
 /**
  * UnInstallUPhoneAppVersion - 传入应用版本Id，在云手机中根据应用版本的PackageName卸载相关应用。一次只支持卸载一个应用。

@@ -1,7 +1,7 @@
 import Client from '../../core/client';
 import Request from '../../core/request';
-import { ConfigOptions } from '../../core/config';
-import { CredentialOptions } from '../../core/credential';
+import type { ConfigOptions } from '../../core/config';
+import type { CredentialOptions } from '../../core/credential';
 
 /**
  * This client is used to call actions of **ucdn** service
@@ -27,7 +27,7 @@ export default class UCDNClient extends Client {
   ): Promise<AddCertificateResponse> {
     const args = { Action: 'AddCertificate', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as AddCertificateResponse
+      resp => resp.toObject() as AddCertificateResponse
     );
   }
 
@@ -41,7 +41,7 @@ export default class UCDNClient extends Client {
   ): Promise<ControlUcdnDomainCacheAccessResponse> {
     const args = { Action: 'ControlUcdnDomainCacheAccess', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as ControlUcdnDomainCacheAccessResponse
+      resp => resp.toObject() as ControlUcdnDomainCacheAccessResponse
     );
   }
 
@@ -55,7 +55,7 @@ export default class UCDNClient extends Client {
   ): Promise<DeleteCertificateResponse> {
     const args = { Action: 'DeleteCertificate', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteCertificateResponse
+      resp => resp.toObject() as DeleteCertificateResponse
     );
   }
 
@@ -72,7 +72,7 @@ export default class UCDNClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeNewUcdnPrefetchCacheTaskResponse
+      resp => resp.toObject() as DescribeNewUcdnPrefetchCacheTaskResponse
     );
   }
 
@@ -89,7 +89,7 @@ export default class UCDNClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeNewUcdnRefreshCacheTaskResponse
+      resp => resp.toObject() as DescribeNewUcdnRefreshCacheTaskResponse
     );
   }
 
@@ -103,7 +103,7 @@ export default class UCDNClient extends Client {
   ): Promise<GetCertificateV2Response> {
     const args = { Action: 'GetCertificateV2', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetCertificateV2Response
+      resp => resp.toObject() as GetCertificateV2Response
     );
   }
 
@@ -117,7 +117,7 @@ export default class UCDNClient extends Client {
   ): Promise<GetNewUcdnDomainHitRateResponse> {
     const args = { Action: 'GetNewUcdnDomainHitRate', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetNewUcdnDomainHitRateResponse
+      resp => resp.toObject() as GetNewUcdnDomainHitRateResponse
     );
   }
 
@@ -134,7 +134,7 @@ export default class UCDNClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetNewUcdnLogRefererStatisticsResponse
+      resp => resp.toObject() as GetNewUcdnLogRefererStatisticsResponse
     );
   }
 
@@ -148,7 +148,7 @@ export default class UCDNClient extends Client {
   ): Promise<GetNewUcdnLogUrlStatisticsResponse> {
     const args = { Action: 'GetNewUcdnLogUrlStatistics', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetNewUcdnLogUrlStatisticsResponse
+      resp => resp.toObject() as GetNewUcdnLogUrlStatisticsResponse
     );
   }
 
@@ -162,7 +162,7 @@ export default class UCDNClient extends Client {
   ): Promise<GetUcdnDomain95BandwidthV2Response> {
     const args = { Action: 'GetUcdnDomain95BandwidthV2', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUcdnDomain95BandwidthV2Response
+      resp => resp.toObject() as GetUcdnDomain95BandwidthV2Response
     );
   }
 
@@ -176,7 +176,7 @@ export default class UCDNClient extends Client {
   ): Promise<GetUcdnDomainBandwidthV2Response> {
     const args = { Action: 'GetUcdnDomainBandwidthV2', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUcdnDomainBandwidthV2Response
+      resp => resp.toObject() as GetUcdnDomainBandwidthV2Response
     );
   }
 
@@ -190,7 +190,7 @@ export default class UCDNClient extends Client {
   ): Promise<GetUcdnDomainConfigResponse> {
     const args = { Action: 'GetUcdnDomainConfig', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUcdnDomainConfigResponse
+      resp => resp.toObject() as GetUcdnDomainConfigResponse
     );
   }
 
@@ -204,7 +204,7 @@ export default class UCDNClient extends Client {
   ): Promise<GetUcdnDomainHitRateResponse> {
     const args = { Action: 'GetUcdnDomainHitRate', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUcdnDomainHitRateResponse
+      resp => resp.toObject() as GetUcdnDomainHitRateResponse
     );
   }
 
@@ -218,7 +218,7 @@ export default class UCDNClient extends Client {
   ): Promise<GetUcdnDomainHttpCodeV2Response> {
     const args = { Action: 'GetUcdnDomainHttpCodeV2', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUcdnDomainHttpCodeV2Response
+      resp => resp.toObject() as GetUcdnDomainHttpCodeV2Response
     );
   }
 
@@ -232,7 +232,7 @@ export default class UCDNClient extends Client {
   ): Promise<GetUcdnDomainInfoListResponse> {
     const args = { Action: 'GetUcdnDomainInfoList', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUcdnDomainInfoListResponse
+      resp => resp.toObject() as GetUcdnDomainInfoListResponse
     );
   }
 
@@ -246,7 +246,7 @@ export default class UCDNClient extends Client {
   ): Promise<GetUcdnDomainLogResponse> {
     const args = { Action: 'GetUcdnDomainLog', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUcdnDomainLogResponse
+      resp => resp.toObject() as GetUcdnDomainLogResponse
     );
   }
 
@@ -260,7 +260,7 @@ export default class UCDNClient extends Client {
   ): Promise<GetUcdnDomainLogV2Response> {
     const args = { Action: 'GetUcdnDomainLogV2', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUcdnDomainLogV2Response
+      resp => resp.toObject() as GetUcdnDomainLogV2Response
     );
   }
 
@@ -274,7 +274,7 @@ export default class UCDNClient extends Client {
   ): Promise<GetUcdnDomainOriginHttpCodeResponse> {
     const args = { Action: 'GetUcdnDomainOriginHttpCode', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUcdnDomainOriginHttpCodeResponse
+      resp => resp.toObject() as GetUcdnDomainOriginHttpCodeResponse
     );
   }
 
@@ -291,7 +291,7 @@ export default class UCDNClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUcdnDomainOriginHttpCodeDetailResponse
+      resp => resp.toObject() as GetUcdnDomainOriginHttpCodeDetailResponse
     );
   }
 
@@ -308,7 +308,7 @@ export default class UCDNClient extends Client {
       ...(request || {}),
     };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUcdnDomainOriginRequestNumResponse
+      resp => resp.toObject() as GetUcdnDomainOriginRequestNumResponse
     );
   }
 
@@ -322,7 +322,7 @@ export default class UCDNClient extends Client {
   ): Promise<GetUcdnDomainPrefetchEnableResponse> {
     const args = { Action: 'GetUcdnDomainPrefetchEnable', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUcdnDomainPrefetchEnableResponse
+      resp => resp.toObject() as GetUcdnDomainPrefetchEnableResponse
     );
   }
 
@@ -336,7 +336,7 @@ export default class UCDNClient extends Client {
   ): Promise<GetUcdnDomainRequestNumV3Response> {
     const args = { Action: 'GetUcdnDomainRequestNumV3', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUcdnDomainRequestNumV3Response
+      resp => resp.toObject() as GetUcdnDomainRequestNumV3Response
     );
   }
 
@@ -350,7 +350,7 @@ export default class UCDNClient extends Client {
   ): Promise<GetUcdnPassBandwidthV2Response> {
     const args = { Action: 'GetUcdnPassBandwidthV2', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUcdnPassBandwidthV2Response
+      resp => resp.toObject() as GetUcdnPassBandwidthV2Response
     );
   }
 
@@ -364,7 +364,7 @@ export default class UCDNClient extends Client {
   ): Promise<GetUcdnProIspBandwidthV2Response> {
     const args = { Action: 'GetUcdnProIspBandwidthV2', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUcdnProIspBandwidthV2Response
+      resp => resp.toObject() as GetUcdnProIspBandwidthV2Response
     );
   }
 
@@ -378,7 +378,7 @@ export default class UCDNClient extends Client {
   ): Promise<GetUcdnProIspRequestNumV2Response> {
     const args = { Action: 'GetUcdnProIspRequestNumV2', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUcdnProIspRequestNumV2Response
+      resp => resp.toObject() as GetUcdnProIspRequestNumV2Response
     );
   }
 
@@ -392,7 +392,7 @@ export default class UCDNClient extends Client {
   ): Promise<GetUcdnTrafficV2Response> {
     const args = { Action: 'GetUcdnTrafficV2', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetUcdnTrafficV2Response
+      resp => resp.toObject() as GetUcdnTrafficV2Response
     );
   }
 
@@ -406,7 +406,7 @@ export default class UCDNClient extends Client {
   ): Promise<PrefetchNewUcdnDomainCacheResponse> {
     const args = { Action: 'PrefetchNewUcdnDomainCache', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as PrefetchNewUcdnDomainCacheResponse
+      resp => resp.toObject() as PrefetchNewUcdnDomainCacheResponse
     );
   }
 
@@ -420,7 +420,7 @@ export default class UCDNClient extends Client {
   ): Promise<QueryIpLocationResponse> {
     const args = { Action: 'QueryIpLocation', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as QueryIpLocationResponse
+      resp => resp.toObject() as QueryIpLocationResponse
     );
   }
 
@@ -434,7 +434,7 @@ export default class UCDNClient extends Client {
   ): Promise<RefreshNewUcdnDomainCacheResponse> {
     const args = { Action: 'RefreshNewUcdnDomainCache', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as RefreshNewUcdnDomainCacheResponse
+      resp => resp.toObject() as RefreshNewUcdnDomainCacheResponse
     );
   }
 
@@ -448,7 +448,7 @@ export default class UCDNClient extends Client {
   ): Promise<SwitchUcdnChargeTypeResponse> {
     const args = { Action: 'SwitchUcdnChargeType', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as SwitchUcdnChargeTypeResponse
+      resp => resp.toObject() as SwitchUcdnChargeTypeResponse
     );
   }
 }
@@ -478,7 +478,7 @@ export interface AddCertificateRequest {
 /**
  * AddCertificate - 添加证书
  */
-export interface AddCertificateResponse {}
+export type AddCertificateResponse = {};
 
 /**
  * ControlUcdnDomainCacheAccess - 封禁解封缓存访问
@@ -497,7 +497,7 @@ export interface ControlUcdnDomainCacheAccessRequest {
 /**
  * ControlUcdnDomainCacheAccess - 封禁解封缓存访问
  */
-export interface ControlUcdnDomainCacheAccessResponse {}
+export type ControlUcdnDomainCacheAccessResponse = {};
 
 /**
  * DeleteCertificate - 删除证书
@@ -512,7 +512,7 @@ export interface DeleteCertificateRequest {
 /**
  * DeleteCertificate - 删除证书
  */
-export interface DeleteCertificateResponse {}
+export type DeleteCertificateResponse = {};
 
 /**
  * DescribeNewUcdnPrefetchCacheTask - 获取预取任务状态
@@ -3547,7 +3547,7 @@ export interface GetUcdnProIspRequestNumV2Response {
 /**
  * GetUcdnTrafficV2 - 获取流量信息
  */
-export interface GetUcdnTrafficV2Request {}
+export type GetUcdnTrafficV2Request = {};
 
 /**
  * GetUcdnTrafficV2 - 获取流量信息
@@ -3674,4 +3674,4 @@ export interface SwitchUcdnChargeTypeRequest {
 /**
  * SwitchUcdnChargeType - 切换账号计费方式
  */
-export interface SwitchUcdnChargeTypeResponse {}
+export type SwitchUcdnChargeTypeResponse = {};

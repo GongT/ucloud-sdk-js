@@ -1,7 +1,7 @@
 import Client from '../../core/client';
 import Request from '../../core/request';
-import { ConfigOptions } from '../../core/config';
-import { CredentialOptions } from '../../core/credential';
+import type { ConfigOptions } from '../../core/config';
+import type { CredentialOptions } from '../../core/credential';
 
 /**
  * This client is used to call actions of **ipsecvpn** service
@@ -27,7 +27,7 @@ export default class IPSecVPNClient extends Client {
   ): Promise<CreateRemoteVPNGatewayResponse> {
     const args = { Action: 'CreateRemoteVPNGateway', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateRemoteVPNGatewayResponse
+      resp => resp.toObject() as CreateRemoteVPNGatewayResponse
     );
   }
 
@@ -41,7 +41,7 @@ export default class IPSecVPNClient extends Client {
   ): Promise<CreateVPNGatewayResponse> {
     const args = { Action: 'CreateVPNGateway', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateVPNGatewayResponse
+      resp => resp.toObject() as CreateVPNGatewayResponse
     );
   }
 
@@ -55,7 +55,7 @@ export default class IPSecVPNClient extends Client {
   ): Promise<CreateVPNTunnelResponse> {
     const args = { Action: 'CreateVPNTunnel', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as CreateVPNTunnelResponse
+      resp => resp.toObject() as CreateVPNTunnelResponse
     );
   }
 
@@ -69,7 +69,7 @@ export default class IPSecVPNClient extends Client {
   ): Promise<DeleteRemoteVPNGatewayResponse> {
     const args = { Action: 'DeleteRemoteVPNGateway', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteRemoteVPNGatewayResponse
+      resp => resp.toObject() as DeleteRemoteVPNGatewayResponse
     );
   }
 
@@ -83,7 +83,7 @@ export default class IPSecVPNClient extends Client {
   ): Promise<DeleteVPNGatewayResponse> {
     const args = { Action: 'DeleteVPNGateway', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteVPNGatewayResponse
+      resp => resp.toObject() as DeleteVPNGatewayResponse
     );
   }
 
@@ -97,7 +97,7 @@ export default class IPSecVPNClient extends Client {
   ): Promise<DeleteVPNTunnelResponse> {
     const args = { Action: 'DeleteVPNTunnel', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DeleteVPNTunnelResponse
+      resp => resp.toObject() as DeleteVPNTunnelResponse
     );
   }
 
@@ -111,7 +111,7 @@ export default class IPSecVPNClient extends Client {
   ): Promise<DescribeRemoteVPNGatewayResponse> {
     const args = { Action: 'DescribeRemoteVPNGateway', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeRemoteVPNGatewayResponse
+      resp => resp.toObject() as DescribeRemoteVPNGatewayResponse
     );
   }
 
@@ -125,7 +125,7 @@ export default class IPSecVPNClient extends Client {
   ): Promise<DescribeVPNGatewayResponse> {
     const args = { Action: 'DescribeVPNGateway', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeVPNGatewayResponse
+      resp => resp.toObject() as DescribeVPNGatewayResponse
     );
   }
 
@@ -139,7 +139,7 @@ export default class IPSecVPNClient extends Client {
   ): Promise<DescribeVPNTunnelResponse> {
     const args = { Action: 'DescribeVPNTunnel', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as DescribeVPNTunnelResponse
+      resp => resp.toObject() as DescribeVPNTunnelResponse
     );
   }
 
@@ -153,7 +153,7 @@ export default class IPSecVPNClient extends Client {
   ): Promise<GetVPNGatewayPriceResponse> {
     const args = { Action: 'GetVPNGatewayPrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetVPNGatewayPriceResponse
+      resp => resp.toObject() as GetVPNGatewayPriceResponse
     );
   }
 
@@ -167,7 +167,7 @@ export default class IPSecVPNClient extends Client {
   ): Promise<GetVPNGatewayUpgradePriceResponse> {
     const args = { Action: 'GetVPNGatewayUpgradePrice', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as GetVPNGatewayUpgradePriceResponse
+      resp => resp.toObject() as GetVPNGatewayUpgradePriceResponse
     );
   }
 
@@ -181,7 +181,7 @@ export default class IPSecVPNClient extends Client {
   ): Promise<UpdateVPNGatewayResponse> {
     const args = { Action: 'UpdateVPNGateway', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateVPNGatewayResponse
+      resp => resp.toObject() as UpdateVPNGatewayResponse
     );
   }
 
@@ -195,7 +195,7 @@ export default class IPSecVPNClient extends Client {
   ): Promise<UpdateVPNTunnelAttributeResponse> {
     const args = { Action: 'UpdateVPNTunnelAttribute', ...(request || {}) };
     return this.invoke(new Request(args)).then(
-      (resp) => resp.toObject() as UpdateVPNTunnelAttributeResponse
+      resp => resp.toObject() as UpdateVPNTunnelAttributeResponse
     );
   }
 }
@@ -413,7 +413,7 @@ export interface DeleteRemoteVPNGatewayRequest {
 /**
  * DeleteRemoteVPNGateway - 删除客户VPN网关
  */
-export interface DeleteRemoteVPNGatewayResponse {}
+export type DeleteRemoteVPNGatewayResponse = {};
 
 /**
  * DeleteVPNGateway - 删除VPN网关
@@ -432,7 +432,7 @@ export interface DeleteVPNGatewayRequest {
 /**
  * DeleteVPNGateway - 删除VPN网关
  */
-export interface DeleteVPNGatewayResponse {}
+export type DeleteVPNGatewayResponse = {};
 
 /**
  * DeleteVPNTunnel - 删除VPN隧道
@@ -447,7 +447,7 @@ export interface DeleteVPNTunnelRequest {
 /**
  * DeleteVPNTunnel - 删除VPN隧道
  */
-export interface DeleteVPNTunnelResponse {}
+export type DeleteVPNTunnelResponse = {};
 
 /**
  * DescribeRemoteVPNGateway - 获取客户VPN网关信息
@@ -852,7 +852,7 @@ export interface UpdateVPNGatewayRequest {
 /**
  * UpdateVPNGateway - 更改VPN网关规格
  */
-export interface UpdateVPNGatewayResponse {}
+export type UpdateVPNGatewayResponse = {};
 
 /**
  * UpdateVPNTunnelAttribute - 更新VPN隧道属性
@@ -939,4 +939,4 @@ export interface UpdateVPNTunnelAttributeRequest {
 /**
  * UpdateVPNTunnelAttribute - 更新VPN隧道属性
  */
-export interface UpdateVPNTunnelAttributeResponse {}
+export type UpdateVPNTunnelAttributeResponse = {};

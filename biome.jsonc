@@ -1,0 +1,65 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "vcs": {
+    "enabled": true,
+    "defaultBranch": "main",
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "formatWithErrors": true
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "arrowParentheses": "asNeeded",
+      "jsxQuoteStyle": "double",
+      "lineWidth": 80,
+      "trailingCommas": "es5"
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "suspicious": {
+        "noDuplicateFontNames": "off",
+        "noExplicitAny": "off",
+        "noConfusingVoidType": "off"
+      },
+      "style": {
+        "noUselessElse": "off",
+        "useEnumInitializers": "off",
+        "noNonNullAssertion": "off",
+        "useSingleVarDeclarator": "off",
+        "noParameterAssign": "off"
+      },
+      "complexity": {
+        "noBannedTypes": "off"
+      },
+      "performance": {
+        "noDelete": "off"
+      },
+      "correctness": {
+        "useExhaustiveDependencies": "off",
+        "noUnsafeFinally": "off"
+      }
+    }
+  },
+  "organizeImports": {
+    "enabled": false
+  },
+  "files": {
+    "ignoreUnknown": true,
+    "ignore": [
+      "node_modules/**/*",
+      "dist/**/*",
+      "lib/**/*",
+      ".vscode/local-history"
+    ],
+    "include": ["**/*.ts", "**/*.tsx", "**/*.json", "**/*.jsonc"]
+  }
+}
