@@ -1,9 +1,9 @@
-import Request from './core/request';
-import Client from './core/client';
-import { Transport } from './core/transport';
+import Request from './core/request/index.js';
+import Client from './core/client.js';
+import { Transport } from './core/transport/index.js';
 import type { AxiosRequestConfig } from 'axios';
-import type Response from './core/response';
-import type { Context } from './core/middleware';
+import type Response from './core/response/index.js';
+import type { Context } from './core/middleware/index.js';
 
 describe('invoke', () => {
   const tests = [

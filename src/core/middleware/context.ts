@@ -1,8 +1,8 @@
-import type Credential from '../credential';
-import type Config from '../config';
-import type Request from '../request';
-import type Response from '../response';
-import type { UCloudError } from '../exception';
+import type Credential from '../credential/index.js';
+import type Config from '../config/index.js';
+import type Request from '../request/index.js';
+import type Response from '../response/index.js';
+import type { UCloudError } from '../exception/index.js';
 
 export class Context {
   credential: Credential;

@@ -1,22 +1,10 @@
-import Client from '../../core/client';
-import Request from '../../core/request';
-import type { ConfigOptions } from '../../core/config';
-import type { CredentialOptions } from '../../core/credential';
+import Client from '../../core/client.js';
+import Request from '../../core/request/index.js';
 
 /**
  * This client is used to call actions of **uk8s** service
  */
 export default class UK8SClient extends Client {
-  constructor({
-    config,
-    credential,
-  }: {
-    config: ConfigOptions;
-    credential: CredentialOptions;
-  }) {
-    super({ config, credential });
-  }
-
   /**
    * AddUK8SExistingUHost - 将预先创建好的云主机加入到UK8S集群，需要注意的是，该云主机依然会执行重装系统的操作。
    *

@@ -1,22 +1,10 @@
-import Client from '../../core/client';
-import Request from '../../core/request';
-import type { ConfigOptions } from '../../core/config';
-import type { CredentialOptions } from '../../core/credential';
+import Client from '../../core/client.js';
+import Request from '../../core/request/index.js';
 
 /**
  * This client is used to call actions of **pathx** service
  */
 export default class PathXClient extends Client {
-  constructor({
-    config,
-    credential,
-  }: {
-    config: ConfigOptions;
-    credential: CredentialOptions;
-  }) {
-    super({ config, credential });
-  }
-
   /**
    * BindPathXSSL - 绑定PathX SSL证书
    *

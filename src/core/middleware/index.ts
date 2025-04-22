@@ -1,4 +1,4 @@
-export { Context } from './context';
+export { Context } from './context.js';
 
 export type MiddlewareOptions = {
   request?: Function;

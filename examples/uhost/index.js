@@ -1,4 +1,4 @@
-const {Client} = require("../../lib/services");
+import {Client} from "../../lib/services/index.js";
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms))

@@ -1,5 +1,5 @@
-import type { Context, MiddlewareOptions } from './middleware';
-import Request from './request';
+import type { Context, MiddlewareOptions } from './middleware/index.js';
+import Request from './request/index.js';
 
 export const credentialMiddleware: MiddlewareOptions = {
   request: (ctx: Context) => {

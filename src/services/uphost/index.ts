@@ -1,22 +1,10 @@
-import Client from '../../core/client';
-import Request from '../../core/request';
-import type { ConfigOptions } from '../../core/config';
-import type { CredentialOptions } from '../../core/credential';
+import Client from '../../core/client.js';
+import Request from '../../core/request/index.js';
 
 /**
  * This client is used to call actions of **uphost** service
  */
 export default class UPHostClient extends Client {
-  constructor({
-    config,
-    credential,
-  }: {
-    config: ConfigOptions;
-    credential: CredentialOptions;
-  }) {
-    super({ config, credential });
-  }
-
   /**
    * CreatePHost - 指定数据中心，根据资源使用量创建指定数量的UPHost物理云主机实例。
    *

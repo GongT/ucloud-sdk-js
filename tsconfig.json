@@ -2,7 +2,6 @@
   "compilerOptions": {
     "outDir": "./lib",
     "rootDir": "./src",
-    "sourceRoot": ".",
     "tsBuildInfoFile": "./lib/.tsbuildinfo",
 
     "target": "ESNext",
@@ -70,5 +69,5 @@
     "incremental": true
   },
   "exclude": ["**/*.test.ts"],
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts"]
 }

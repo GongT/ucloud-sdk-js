@@ -1,4 +1,4 @@
-const { createHash } = require('node:crypto');
+import { createHash } from 'node:crypto';
 
 type argsT = { [index: string]: any };
 

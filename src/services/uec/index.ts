@@ -1,22 +1,10 @@
-import Client from '../../core/client';
-import Request from '../../core/request';
-import type { ConfigOptions } from '../../core/config';
-import type { CredentialOptions } from '../../core/credential';
+import Client from '../../core/client.js';
+import Request from '../../core/request/index.js';
 
 /**
  * This client is used to call actions of **uec** service
  */
 export default class UECClient extends Client {
-  constructor({
-    config,
-    credential,
-  }: {
-    config: ConfigOptions;
-    credential: CredentialOptions;
-  }) {
-    super({ config, credential });
-  }
-
   /**
    * BindUEcFirewall - 绑定防火墙，应用防火墙规则
    *

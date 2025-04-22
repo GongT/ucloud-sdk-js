@@ -1,11 +1,17 @@
 {
-  "name": "@ucloud-sdks/ucloud-sdk-js",
+  "name": "@gongt/ucloud-sdk-js",
   "description": "ucloud-sdk-js",
+  "type": "module",
   "version": "0.2.3",
   "author": "oas@ucloud.cn",
   "license": "MIT",
   "private": false,
-  "main": "./lib",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "types": "./lib/index.d.ts",
+  "source": "./src/index.ts",
   "files": ["package.json", "README", "LICENSE", "lib"],
   "scripts": {
     "start": "node lib/index.js",
@@ -14,10 +20,9 @@
     "watch": "tsc -p . -w",
     "test": "jest index.test.ts",
     "coverage": "jest",
-    "tslint": "tslint ./src/**/**/*.ts",
     "example": "npm run build && node examples/uhost/index.js",
-    "prettier:check": "biome check",
-    "prettier:write": "biome check --write"
+    "pretty:check": "biome check",
+    "pretty": "biome check --write"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",

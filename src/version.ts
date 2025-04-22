@@ -1,1 +1,4 @@
-export const VERSION = '0.0.1';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.filename);
+export const VERSION = require('../package.json').version;

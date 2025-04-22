@@ -1,4 +1,4 @@
-import Config from './index';
+import Config from './index.js';
 
 describe('config', () => {
   const cfg = new Config({});

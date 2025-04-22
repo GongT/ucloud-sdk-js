@@ -1,22 +1,10 @@
-import Client from '../../core/client';
-import Request from '../../core/request';
-import type { ConfigOptions } from '../../core/config';
-import type { CredentialOptions } from '../../core/credential';
+import Client from '../../core/client.js';
+import Request from '../../core/request/index.js';
 
 /**
  * This client is used to call actions of **uphone** service
  */
 export default class UPhoneClient extends Client {
-  constructor({
-    config,
-    credential,
-  }: {
-    config: ConfigOptions;
-    credential: CredentialOptions;
-  }) {
-    super({ config, credential });
-  }
-
   /**
    * CreateUPhone - 创建云手机
    *

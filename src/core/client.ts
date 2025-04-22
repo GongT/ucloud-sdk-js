@@ -1,53 +1,58 @@
-import { VERSION } from '../version';
-import Config, { type ConfigOptions } from './config';
-import Credential, { type CredentialOptions } from './credential';
-import { EXC_TYPE_TRANSPORT, UCloudError } from './exception';
-import { Context, type MiddlewareOptions } from './middleware';
+import { VERSION } from '../version.js';
+import Config, { type ConfigOptions } from './config/index.js';
+import Credential, { type CredentialOptions } from './credential/index.js';
+import { EXC_TYPE_TRANSPORT, UCloudError } from './exception/index.js';
+import { Context, type MiddlewareOptions } from './middleware/index.js';
 import {
   credentialMiddleware,
   defaultsMiddleware,
   logMiddleware,
-} from './middlewares';
-import type Request from './request';
-import type Response from './response';
-import { Transport } from './transport';
+} from './middlewares.js';
+import type Request from './request/index.js';
+import type Response from './response/index.js';
+import { Transport } from './transport/index.js';
 
-export default class Client {
-  config: Config;
+interface IOptions {
+  config: ConfigOptions;
+  credential: CredentialOptions;
+}
 
-  credential: Credential;
+export default abstract class Client {
+  protected readonly config: Config;
+  protected readonly credential: Credential;
+  protected readonly middlewares: MiddlewareOptions[];
+  protected transport: Transport;
 
-  middlewares: MiddlewareOptions[];
+  constructor(source: IOptions | Client) {
+    if (source instanceof Client) {
+      this.config = source.config;
+      this.credential = source.credential;
+      this.middlewares = source.middlewares;
+      this.transport = source.transport;
+    } else {
+      const { config, credential } = source;
+      this.config = new Config(config);
+      this.credential = new Credential(credential);
+      this.middlewares = [
+        defaultsMiddleware,
+        credentialMiddleware,
+        logMiddleware,
+      ];
 
-  transport: Transport;
-
-  constructor({
-    config,
-    credential,
-  }: {
-    config: ConfigOptions;
-    credential: CredentialOptions;
-  }) {
-    this.config = new Config(config);
-    this.credential = new Credential(credential);
-    this.middlewares = [
-      defaultsMiddleware,
-      credentialMiddleware,
-      logMiddleware,
-    ];
-
-    let ua = `JS-SDK/${VERSION}`;
-    if (config.userAgent) {
-      ua += config.userAgent;
+      let ua = `JS-SDK/${VERSION}`;
+      if (config.userAgent) {
+        ua += ' ';
+        ua += config.userAgent;
+      }
+      this.transport = new Transport({
+        baseUrl: this.config.baseUrl,
+        userAgent: ua,
+      });
     }
-    this.transport = new Transport({
-      baseUrl: this.config.baseUrl,
-      userAgent: ua,
-    });
   }
 
   useMiddleware(options: MiddlewareOptions) {
-    this.middlewares.push(options);
+    this.middlewares.unshift(options);
   }
 
   withTransport(transport: Transport) {
@@ -78,6 +83,9 @@ export default class Client {
         break; // success, stop retrying
       } catch (e: any) {
         ctx.exception = e;
+        if (e instanceof UCloudError) {
+          break;
+        }
         for (const middleware of this.middlewares) {
           if (!middleware.error) {
             continue;

@@ -12,15 +12,6 @@
     "indentWidth": 2,
     "formatWithErrors": true
   },
-  "javascript": {
-    "formatter": {
-      "quoteStyle": "single",
-      "arrowParentheses": "asNeeded",
-      "jsxQuoteStyle": "double",
-      "lineWidth": 80,
-      "trailingCommas": "es5"
-    }
-  },
   "linter": {
     "enabled": true,
     "rules": {
@@ -44,6 +35,19 @@
         "noDelete": "off"
       },
       "correctness": {
+        "useImportExtensions": {
+          "fix": "unsafe",
+          "level": "error",
+          "options": {
+            "suggestedExtensions": {
+              "ts": {
+                "component": "js",
+                "module": "js"
+              }
+            }
+          }
+        },
+        "noUnusedImports": "info",
         "useExhaustiveDependencies": "off",
         "noUnsafeFinally": "off"
       }
@@ -51,6 +55,15 @@
   },
   "organizeImports": {
     "enabled": false
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "arrowParentheses": "asNeeded",
+      "jsxQuoteStyle": "double",
+      "lineWidth": 80,
+      "trailingCommas": "es5"
+    }
   },
   "files": {
     "ignoreUnknown": true,

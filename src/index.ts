@@ -1,11 +1,11 @@
-export { Client } from './services';
+export { Client } from './services/index.js';
 
-export { default as Config } from './core/config';
-export { default as Credential } from './core/credential';
-export { UCloudError } from './core/exception';
+export { default as Config } from './core/config/index.js';
+export { default as Credential } from './core/credential/index.js';
+export { UCloudError } from './core/exception/index.js';
 export {
   Context as MiddlewareContext,
   MiddlewareOptions,
-} from './core/middleware';
-export { default as Request } from './core/request';
-export { default as Response } from './core/response';
+} from './core/middleware/index.js';
+export { default as Request } from './core/request/index.js';
+export { default as Response } from './core/response/index.js';

@@ -1,4 +1,4 @@
-import Credential from './index';
+import Credential from './index.js';
 
 describe('credential', () => {
   const cred = new Credential({

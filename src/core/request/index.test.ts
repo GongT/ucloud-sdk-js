@@ -1,4 +1,4 @@
-import Request from './index';
+import Request from './index.js';
 
 describe('request', () => {
   test('test encode request', () => {

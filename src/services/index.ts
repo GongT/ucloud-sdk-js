@@ -1,6 +1,4 @@
-import BaseClient from '../core/client';
-import type { ConfigOptions } from '../core/config';
-import type { CredentialOptions } from '../core/credential/index.js';
+import BaseClient from '../core/client.js';
 import CubeClient from './cube/index.js';
 import IPSecVPNClient from './ipsecvpn/index.js';
 import PathXClient from './pathx/index.js';
@@ -26,136 +24,95 @@ import UVMSClient from './uvms/index.js';
 import VPCClient from './vpc/index.js';
 
 export class Client extends BaseClient {
-  constructor({
-    config,
-    credential,
-  }: {
-    config: ConfigOptions;
-    credential: CredentialOptions;
-  }) {
-    super({ config, credential });
-  }
-
   cube() {
-    return new CubeClient({ config: this.config, credential: this.credential });
+    return new CubeClient(this);
   }
 
   ipsecvpn() {
-    return new IPSecVPNClient({
-      config: this.config,
-      credential: this.credential,
-    });
+    return new IPSecVPNClient(this);
   }
 
   pathx() {
-    return new PathXClient({
-      config: this.config,
-      credential: this.credential,
-    });
+    return new PathXClient(this);
   }
 
   uaccount() {
-    return new UAccountClient({
-      config: this.config,
-      credential: this.credential,
-    });
+    return new UAccountClient(this);
   }
 
   ubill() {
-    return new UBillClient({
-      config: this.config,
-      credential: this.credential,
-    });
+    return new UBillClient(this);
   }
 
   ucdn() {
-    return new UCDNClient({ config: this.config, credential: this.credential });
+    return new UCDNClient(this);
   }
 
   udb() {
-    return new UDBClient({ config: this.config, credential: this.credential });
+    return new UDBClient(this);
   }
 
   uddb() {
-    return new UDDBClient({ config: this.config, credential: this.credential });
+    return new UDDBClient(this);
   }
 
   udisk() {
-    return new UDiskClient({
-      config: this.config,
-      credential: this.credential,
-    });
+    return new UDiskClient(this);
   }
 
   udpn() {
-    return new UDPNClient({ config: this.config, credential: this.credential });
+    return new UDPNClient(this);
   }
 
   uec() {
-    return new UECClient({ config: this.config, credential: this.credential });
+    return new UECClient(this);
   }
 
   ufile() {
-    return new UFileClient({
-      config: this.config,
-      credential: this.credential,
-    });
+    return new UFileClient(this);
   }
 
   ufs() {
-    return new UFSClient({ config: this.config, credential: this.credential });
+    return new UFSClient(this);
   }
 
   uhost() {
-    return new UHostClient({
-      config: this.config,
-      credential: this.credential,
-    });
+    return new UHostClient(this);
   }
 
   uk8s() {
-    return new UK8SClient({ config: this.config, credential: this.credential });
+    return new UK8SClient(this);
   }
 
   ulb() {
-    return new ULBClient({ config: this.config, credential: this.credential });
+    return new ULBClient(this);
   }
 
   umem() {
-    return new UMemClient({ config: this.config, credential: this.credential });
+    return new UMemClient(this);
   }
 
   unet() {
-    return new UNetClient({ config: this.config, credential: this.credential });
+    return new UNetClient(this);
   }
 
   uphone() {
-    return new UPhoneClient({
-      config: this.config,
-      credential: this.credential,
-    });
+    return new UPhoneClient(this);
   }
 
   uphost() {
-    return new UPHostClient({
-      config: this.config,
-      credential: this.credential,
-    });
+    return new UPHostClient(this);
   }
 
   usms() {
-    return new USMSClient({ config: this.config, credential: this.credential });
+    return new USMSClient(this);
   }
 
   uvms() {
-    return new UVMSClient({ config: this.config, credential: this.credential });
+    return new UVMSClient(this);
   }
 
   vpc() {
-    return new VPCClient({ config: this.config, credential: this.credential });
+    return new VPCClient(this);
   }
 }
-
-module.exports = {
-  Client: Client,
-};

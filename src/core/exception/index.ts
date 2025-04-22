@@ -22,7 +22,7 @@ export class UCloudError extends Error {
     retCode?: number;
     requestId?: string;
   }) {
-    super(message);
+    super(`UCloudError(${retCode}): ${message}`);
     this.typ = typ;
     this.retCode = retCode;
     this.requestId = requestId;

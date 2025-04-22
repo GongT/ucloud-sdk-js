@@ -1,3 +1,9 @@
-*
-!lib/index.js
-README.md
+docs
+.*
+examples
+*.test.*
+biome.jsonc
+jest.config.js
+Makefile
+pnpm-lock.yaml
+VERSION

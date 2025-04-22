@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { EXC_TYPE_TRANSPORT, UCloudError } from '../exception';
-import type Request from '../request';
-import Response from '../response';
+import { EXC_TYPE_TRANSPORT, UCloudError } from '../exception/index.js';
+import type Request from '../request/index.js';
+import Response from '../response/index.js';
 
 export class Transport {
   baseUrl?: string;
