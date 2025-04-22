@@ -2,7 +2,7 @@
   "name": "@gongt/ucloud-sdk-js",
   "description": "ucloud-sdk-js",
   "type": "module",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "author": "oas@ucloud.cn",
   "license": "MIT",
   "private": false,

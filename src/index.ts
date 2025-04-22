@@ -5,7 +5,9 @@ export { default as Credential } from './core/credential/index.js';
 export { UCloudError } from './core/exception/index.js';
 export {
   Context as MiddlewareContext,
-  MiddlewareOptions,
+  type MiddlewareOptions,
 } from './core/middleware/index.js';
 export { default as Request } from './core/request/index.js';
 export { default as Response } from './core/response/index.js';
+
+export type { Logger } from './core/logger/index.js';
