@@ -2,7 +2,7 @@
   "name": "@gongt/ucloud-sdk-js",
   "description": "ucloud-sdk-js",
   "type": "module",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "author": "oas@ucloud.cn",
   "license": "MIT",
   "private": false,
@@ -12,7 +12,13 @@
   },
   "types": "./lib/index.d.ts",
   "source": "./src/index.ts",
-  "files": ["package.json", "README", "LICENSE", "lib"],
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "lib",
+    "src"
+  ],
   "scripts": {
     "start": "node lib/index.js",
     "start:example": "node --no-warnings example/index.js",
@@ -44,6 +50,10 @@
     "axios": "^1.8.4"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["@biomejs/biome", "core-js", "husky"]
+    "onlyBuiltDependencies": [
+      "@biomejs/biome",
+      "core-js",
+      "husky"
+    ]
   }
 }

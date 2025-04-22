@@ -8,7 +8,7 @@ export default class Response {
     this.requestId = requestId;
   }
 
-  toObject(): object {
+  toObject(): any {
     return this.data;
   }
 

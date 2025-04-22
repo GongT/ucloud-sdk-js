@@ -1,9 +1,0 @@
-docs
-.*
-examples
-*.test.*
-biome.jsonc
-jest.config.js
-Makefile
-pnpm-lock.yaml
-VERSION
