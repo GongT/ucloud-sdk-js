@@ -11,3 +11,4 @@ export { default as Request } from './core/request/index.js';
 export { default as Response } from './core/response/index.js';
 
 export type { Logger } from './core/logger/index.js';
+export type {CreateUHostInstanceRequest} from './services/uhost/index.js';

@@ -3,9 +3,8 @@
   "description": "ucloud-sdk-js",
   "type": "module",
   "version": "0.2.6",
-  "author": "oas@ucloud.cn",
   "license": "MIT",
-  "private": false,
+  "private": true,
   "exports": {
     ".": "./lib/index.js",
     "./package.json": "./package.json"
